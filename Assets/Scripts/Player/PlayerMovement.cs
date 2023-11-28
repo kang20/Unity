@@ -12,13 +12,15 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         animator = GetComponentInChildren<Animator>();
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        //커서 중간 고정
+        //Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        //스페이스 > 점프
         if(Input.GetKeyDown(KeyCode.Space))
         {
             animator.SetBool("isJump", true);
@@ -34,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.localPosition += moveDirection * speed * Time.deltaTime;
             Quaternion rotation = Quaternion.LookRotation(moveDirection);
+            //이동방향의 오일러 각 계산 및 회전
             transform.rotation = Quaternion.Lerp(PlayerModel.transform.rotation, rotation,  0.09f);
             
             animator.SetBool("isWalk", true);
