@@ -4,5 +4,20 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Lobby.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Person Scenarios/Kang_CPR.unity
+    guid: 8f53c31b2ff9d44218b2f961cbd1eb76
+  - enabled: 1
+    path: Assets/Scenes/Person Scenarios/Jung_Gas.unity
+    guid: a7676d54f5fd5499d84a50d537134fd4
+  - enabled: 1
+    path: Assets/Scenes/Person Scenarios/Kim_Volcano.unity
+    guid: 2c2e390b896e246babece7cdfc896b57
+  - enabled: 1
+    path: Assets/Scenes/Person Scenarios/Park_EarthQuake.unity
+    guid: 57eb94bcc89724205a8907bba27cd151
   m_configObjects: {}
