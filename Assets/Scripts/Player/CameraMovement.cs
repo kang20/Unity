@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
@@ -10,7 +11,7 @@ public class CameraMovement : MonoBehaviour
     [SerializeField]
     private GameObject CameraArm;
     [SerializeField]
-    private float sensitivity = 30f; // ¸¶¿ì½º ¹Î°¨µµ ¼³Á¤
+    private float sensitivity = 30f; // ï¿½ï¿½ï¿½ì½º ï¿½Î°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
     float mx = 0;
     float my = 0;
@@ -37,10 +38,20 @@ public class CameraMovement : MonoBehaviour
         transform.position = CameraArm.transform.position;
         transform.rotation = CameraArm.transform.rotation;
 
-        PlayerObj.transform.eulerAngles = new Vector3(0,mx,0); //¸¶¿ì½º ¼öÆò ÀÌµ¿ (ÇÃ·¹ÀÌ¾î È¸Àü >> Ä«¸Þ¶óµµ È¸ÀüµÊ)
+        PlayerObj.transform.eulerAngles = new Vector3(0,mx,0); //ï¿½ï¿½ï¿½ì½º ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½ (ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ È¸ï¿½ï¿½ >> Ä«ï¿½Þ¶ï¿½ È¸ï¿½ï¿½ï¿½ï¿½)
         
         Vector3 cameraRot = CameraArm.transform.eulerAngles;
         cameraRot.x = my;
-        CameraArm.transform.eulerAngles = cameraRot; //Ä«¸Þ¶ó ¼öÁ÷ ÀÌµ¿ (Ä«¸Þ¶ó¸¸ È¸Àü)
+        CameraArm.transform.eulerAngles = cameraRot; //Ä«ï¿½Þ¶ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½ (Ä«ï¿½Þ¶ï¿½ È¸ï¿½ï¿½)
+
+        if (Input.GetKeyDown("["))
+        {
+            sensitivity -= 100f;
+        }
+
+        if (Input.GetKeyDown("]"))
+        {
+            sensitivity += 100f;
+        }
     }
 }

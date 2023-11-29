@@ -7,12 +7,13 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     [SerializeField]
     private GameObject PlayerModel;
-    float speed = 3;
+    [SerializeField]
+    private float speed = 3;
 
     void Start()
     {
         animator = GetComponentInChildren<Animator>();
-        //Ä¿¼­ Áß°£ °íÁ¤
+        //Ä¿ï¿½ï¿½ ï¿½ß°ï¿½ ï¿½ï¿½ï¿½ï¿½
         //Cursor.lockState = CursorLockMode.Locked;
         //Cursor.visible = false;
     }
@@ -20,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //½ºÆäÀÌ½º > Á¡ÇÁ
+        //ï¿½ï¿½ï¿½ï¿½ï¿½Ì½ï¿½ > ï¿½ï¿½ï¿½ï¿½
         if(Input.GetKeyDown(KeyCode.Space))
         {
             animator.SetBool("isJump", true);
@@ -31,16 +32,16 @@ public class PlayerMovement : MonoBehaviour
         }
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
-        Vector3 moveDirection = transform.TransformDirection(new Vector3(x, 0, z)); //»ó´ëÁÂÇ¥ °è»ê
+        Vector3 moveDirection = transform.TransformDirection(new Vector3(x, 0, z)); //ï¿½ï¿½ï¿½ï¿½ï¿½Ç¥ ï¿½ï¿½ï¿½
         if (moveDirection != Vector3.zero)
         {
             transform.localPosition += moveDirection * speed * Time.deltaTime;
             Quaternion rotation = Quaternion.LookRotation(moveDirection);
-            //ÀÌµ¿¹æÇâÀÇ ¿ÀÀÏ·¯ °¢ °è»ê ¹× È¸Àü
+            //ï¿½Ìµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï·ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ È¸ï¿½ï¿½
             transform.rotation = Quaternion.Lerp(PlayerModel.transform.rotation, rotation,  0.09f);
             
             animator.SetBool("isWalk", true);
-            if(Input.GetKey(KeyCode.LeftShift)) //¶Ù±â ¹öÆ°
+            if(Input.GetKey(KeyCode.LeftShift)) //ï¿½Ù±ï¿½ ï¿½ï¿½Æ°
             {
                 animator.SetBool("isRun", true);
                 speed = 7;
@@ -59,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void LateUpdate()
     {
-        // ÇÃ·¹ÀÌ¾î ¸ðµ¨À» ÇÃ·¹ÀÌ¾î ¿ÀºêÁ§Æ®ÀÇ À§Ä¡·Î ÀÌµ¿
+        // ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½Ìµï¿½
         //transform.position = PlayerModel.transform.position;
     }
 }
