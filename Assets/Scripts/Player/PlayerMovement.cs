@@ -13,7 +13,6 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         animator = GetComponentInChildren<Animator>();
-        //Ŀ�� �߰� ����
         //Cursor.lockState = CursorLockMode.Locked;
         //Cursor.visible = false;
     }
@@ -21,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //�����̽� > ����
+        //jump
         if(Input.GetKeyDown(KeyCode.Space))
         {
             animator.SetBool("isJump", true);
@@ -32,16 +31,17 @@ public class PlayerMovement : MonoBehaviour
         }
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
-        Vector3 moveDirection = transform.TransformDirection(new Vector3(x, 0, z)); //�����ǥ ���
+        Vector3 moveDirection = transform.TransformDirection(new Vector3(x, 0, z)); //local position
         if (moveDirection != Vector3.zero)
         {
             transform.localPosition += moveDirection * speed * Time.deltaTime;
             Quaternion rotation = Quaternion.LookRotation(moveDirection);
-            //�̵������� ���Ϸ� �� ��� �� ȸ��
-            transform.rotation = Quaternion.Lerp(PlayerModel.transform.rotation, rotation,  0.09f);
-            
+            //player model rotates to forward vectors y axis
+            PlayerModel.transform.rotation = Quaternion.Euler(-90, rotation.eulerAngles.y,  0);
+
+
             animator.SetBool("isWalk", true);
-            if(Input.GetKey(KeyCode.LeftShift)) //�ٱ� ��ư
+            if(Input.GetKey(KeyCode.LeftShift)) //run
             {
                 animator.SetBool("isRun", true);
                 speed = 7;
@@ -57,10 +57,5 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isRun", false);
             animator.SetBool("isWalk", false);
         }
-    }
-    void LateUpdate()
-    {
-        // �÷��̾� ���� �÷��̾� ������Ʈ�� ��ġ�� �̵�
-        //transform.position = PlayerModel.transform.position;
     }
 }
