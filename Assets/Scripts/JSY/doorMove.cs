@@ -4,25 +4,15 @@ using UnityEngine;
 
 public class doorMove : MonoBehaviour
 {
-    bool isopen;
+    bool isopen = false;
     // Start is called before the first frame update
-    void Start()
-    {
-        isopen = false;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnMouseDown()
     {
         Debug.Log("´©¸§");
         Vector3 rotAxis;
         rotAxis = transform.position;
-        rotAxis.x += 1.2f;
+        rotAxis.x -= 1.2f;
         if(!isopen)
         {
             transform.Rotate(new Vector3(0, 90, 0));
