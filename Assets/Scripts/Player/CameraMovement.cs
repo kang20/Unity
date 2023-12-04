@@ -11,7 +11,7 @@ public class CameraMovement : MonoBehaviour
     [SerializeField]
     private GameObject CameraArm;
     [SerializeField]
-    private float sensitivity = 30f; // ���콺 �ΰ��� ����
+    private float sensitivity = 30f;
 
     float mx = 0;
     float my = 0;
@@ -38,11 +38,11 @@ public class CameraMovement : MonoBehaviour
         transform.position = CameraArm.transform.position;
         transform.rotation = CameraArm.transform.rotation;
 
-        PlayerObj.transform.eulerAngles = new Vector3(0,mx,0); //���콺 ���� �̵� (�÷��̾� ȸ�� >> ī�޶� ȸ����)
+        PlayerObj.transform.eulerAngles = new Vector3(0, mx, 0); //rotate player to mouse x axis
         
         Vector3 cameraRot = CameraArm.transform.eulerAngles;
         cameraRot.x = my;
-        CameraArm.transform.eulerAngles = cameraRot; //ī�޶� ���� �̵� (ī�޶� ȸ��)
+        CameraArm.transform.eulerAngles = cameraRot; //rotate camera arm to mouse y axis
 
         if (Input.GetKeyDown("["))
         {
