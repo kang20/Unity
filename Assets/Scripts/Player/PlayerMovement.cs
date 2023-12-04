@@ -9,10 +9,12 @@ public class PlayerMovement : MonoBehaviour
     private GameObject PlayerModel;
     [SerializeField]
     private float speed = 3;
+    private Rigidbody rb;
 
     void Start()
     {
         animator = GetComponentInChildren<Animator>();
+        rb = GetComponent<Rigidbody>();
         //Cursor.lockState = CursorLockMode.Locked;
         //Cursor.visible = false;
     }
@@ -24,6 +26,10 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             animator.SetBool("isJump", true);
+            if(animator.GetBool("isJump"))
+            {
+                rb.AddForce(new Vector3(0, 200, 0));
+            }
         }
         else
         {
@@ -34,7 +40,9 @@ public class PlayerMovement : MonoBehaviour
         Vector3 moveDirection = transform.TransformDirection(new Vector3(x, 0, z)); //local position
         if (moveDirection != Vector3.zero)
         {
-            transform.localPosition += moveDirection * speed * Time.deltaTime;
+            //transform.localPosition += moveDirection * speed * Time.deltaTime;
+            Vector3 newPosition = transform.position + moveDirection * speed * Time.deltaTime;
+            rb.MovePosition(newPosition);
             Quaternion rotation = Quaternion.LookRotation(moveDirection);
             //player model rotates to forward vectors y axis
             PlayerModel.transform.rotation = Quaternion.Euler(-90, rotation.eulerAngles.y,  0);
