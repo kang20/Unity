@@ -8,14 +8,14 @@ public class OptionBtn : MonoBehaviour
 {
     public GameObject optionsPanel; // 인스펙터에서 할당할 옵션 패널
     public Button setOptionBtn; // 인스펙터에서 할당할 설정 버튼
-    public Button setReturnBtn; // 인스펙터에서 할당할 설정 버튼
-    public Button setReturnBtn2; // 인스펙터에서 할당할 설정 버튼
+    public Button noSaveReturnBtn; // 저장 안 하고 옵션 닫기
+    public Button saveReturnBtn2; // 저장하고 옵션 닫기
     public GameObject[] buttons; // 숨길 버튼들
     void Start()
     {
         setOptionBtn.onClick.AddListener(OptionOpen); // 리스너 추가
-        setReturnBtn.onClick.AddListener(OptionClose); // 리스너 추가
-        setReturnBtn2.onClick.AddListener(OptionClose); // 리스너 추가
+        noSaveReturnBtn.onClick.AddListener(OptionClose); // 리스너 추가
+        saveReturnBtn2.onClick.AddListener(OptionClose); // 리스너 추가
     }
 
     void OptionOpen()
