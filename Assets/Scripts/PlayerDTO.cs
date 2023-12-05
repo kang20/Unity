@@ -1,22 +1,22 @@
 using System;
 
-
-public class PlayerDTO 
+[Serializable]
+public class PlayerDTO
 {
-    private String nickname; // 이름
-    private int score; // 사용자의 최고 점수
+    public String nickname; // 이름
+    public int score; // 사용자의 최고 점수
     // 사용자의 위치
-    private float pos_x;
-    private float pos_y;
-    private float pos_z;
+    public float pos_x;
+    public float pos_y;
+    public float pos_z;
     // 사용자의 회전 값
-    private float rot_x;
-    private float rot_y;
-    private float rot_z;
+    public float rot_x;
+    public float rot_y;
+    public float rot_z;
     // 사용자 에니매이션 bool 값
-    private bool is_jump;
-    private bool is_walk;
-    private bool is_run;
+    public bool is_jump;
+    public bool is_walk;
+    public bool is_run;
 
     public PlayerDTO(string nickname, int score, float posX, float posY, float posZ, float rotX, float rotY, float rotZ, bool isJump, bool isWalk, bool isRun)
     {
