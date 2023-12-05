@@ -7,10 +7,10 @@ using UnityEngine.UI;
 public class ToggleBtn : MonoBehaviour
 {
     public GameObject[] buttons; // 토글할 버튼들
-    public Button yourButton; // 인스펙터에서 할당할 버튼
+    public Button setBtn; // 인스펙터에서 할당할 버튼
     void Start()
     {
-        yourButton.onClick.AddListener(ToggleOpen); // 리스너 추가
+        setBtn.onClick.AddListener(ToggleOpen); // 리스너 추가
         foreach (GameObject button in buttons)
         {
             button.SetActive(false);
