@@ -4,19 +4,24 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private Animator animator;
+    private PlayerAnimation pa;
     [SerializeField]
     private GameObject PlayerModel;
     [SerializeField]
     private float speed = 3;
     private Rigidbody rb;
 
+    private const float RAY_DISTANCE = 2f;
+    private RaycastHit slopeHit;
+    private int groundlayer;
+
+    private Vector3 moveDirection;
+
     void Start()
     {
-        animator = GetComponentInChildren<Animator>();
-        rb = GetComponent<Rigidbody>();
-        //Cursor.lockState = CursorLockMode.Locked;
-        //Cursor.visible = false;
+        pa = GetComponentInChildren<PlayerAnimation>();
+        rb = GetComponentInChildren<Rigidbody>();
+        //groundlayer = LayerMask.GetMask("Ground");
     }
 
     // Update is called once per frame
@@ -25,45 +30,72 @@ public class PlayerMovement : MonoBehaviour
         //jump
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            animator.SetBool("isJump", true);
-            if(animator.GetBool("isJump"))
+            pa._isjump = true;
+
+            //ground check by raycast
+            Ray ray = new Ray(transform.position, Vector3.down);
+            if(Physics.Raycast(ray, 0.15f))
             {
                 rb.AddForce(new Vector3(0, 200, 0));
             }
         }
         else
         {
-            animator.SetBool("isJump", false);
+            pa._isjump = false;
         }
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
-        Vector3 moveDirection = transform.TransformDirection(new Vector3(x, 0, z)); //local position
+        moveDirection = transform.TransformDirection(new Vector3(x, 0, z)); //local position
+
+        //if (IsOnSlope())
+        //{
+        //    moveDirection = AdjustDirectionToSlope(moveDirection);
+        //}
+
         if (moveDirection != Vector3.zero)
         {
-            //transform.localPosition += moveDirection * speed * Time.deltaTime;
-            Vector3 newPosition = transform.position + moveDirection * speed * Time.deltaTime;
-            rb.MovePosition(newPosition);
-            Quaternion rotation = Quaternion.LookRotation(moveDirection);
-            //player model rotates to forward vectors y axis
-            PlayerModel.transform.rotation = Quaternion.Euler(-90, rotation.eulerAngles.y,  0);
-
-
-            animator.SetBool("isWalk", true);
+            pa._iswalk = true;
             if(Input.GetKey(KeyCode.LeftShift)) //run
             {
-                animator.SetBool("isRun", true);
+                pa._isrun = true;
                 speed = 7;
             }
             else
             {
-                animator.SetBool("isRun", false);
+                pa._isrun = false;
                 speed = 3;
             }
         }
         else
         {
-            animator.SetBool("isRun", false);
-            animator.SetBool("isWalk", false);
+            pa._iswalk = false;
         }
+    }
+    private void FixedUpdate()
+    {
+        if (moveDirection != Vector3.zero)
+        {
+            Vector3 newPosition = transform.position + moveDirection * speed * Time.deltaTime;
+            rb.MovePosition(newPosition);
+            Quaternion rotation = Quaternion.LookRotation(moveDirection);
+            //player model rotates to forward vectors y axis
+            PlayerModel.transform.rotation = Quaternion.Euler(0, rotation.eulerAngles.y, 0);
+        }
+    }
+
+    public bool IsOnSlope()
+    {
+        Ray ray = new Ray(transform.position, Vector3.down);
+        if (Physics.Raycast(ray, out slopeHit, RAY_DISTANCE, groundlayer))
+        {
+            var angle = Vector3.Angle(Vector3.up, slopeHit.normal);
+            return angle != 0f;
+        }
+        return false;
+    }
+
+    private Vector3 AdjustDirectionToSlope(Vector3 direction)
+    {
+        return Vector3.ProjectOnPlane(direction, slopeHit.normal).normalized;
     }
 }
