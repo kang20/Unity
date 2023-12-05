@@ -3,12 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
+[Serializable]
 public class initDTO 
 {
-    private String nickname;
-    private int score;
-    private bool islogin;
+    public String nickname;
+    public int score;
+    public bool islogin;
 
     public initDTO(string nickname, int score, bool islogin)
     {
