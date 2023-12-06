@@ -4,16 +4,46 @@ using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Animator animator;
+
+    public bool _iswalk = false;
+    public bool _isrun = false;
+    public bool _isjump = false;
+
+    private void Start()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (_isjump)
+        {
+            animator.SetBool("isJump", true);
+        }
+        else
+        {
+            animator.SetBool("isJump", false);
+        }
+
+        if (_iswalk)
+        {
+            animator.SetBool("isWalk", true);
+            
+            if (_isrun)
+            {
+                animator.SetBool("isRun", true);
+            }
+            else
+            {
+                animator.SetBool("isRun", false);
+            }
+        }
+        else
+        {
+            animator.SetBool("isWalk", false);
+        }
     }
 
 }
