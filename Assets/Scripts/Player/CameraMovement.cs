@@ -63,7 +63,7 @@ public class CameraMovement : MonoBehaviour
                 sensitivity += 100f;
             }
         }
-        if (Input.GetKeyDown(KeyCode.F1))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             isESC = !isESC;
             Cursor.lockState = isESC ? CursorLockMode.None : CursorLockMode.Locked;
