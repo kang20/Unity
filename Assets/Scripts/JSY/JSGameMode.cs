@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class JSGameMode : MonoBehaviour
@@ -40,6 +41,8 @@ public class JSGameMode : MonoBehaviour
         HPtxt = HP.GetComponentInChildren<Text>();
         HPtxt.text = "HP: " + PHealth.ToString();
 
+        EndUI.GetComponentInChildren<Button>().onClick.AddListener(ToLobby);
+
         StartCoroutine(SirenStartCoroutine());
     }
 
@@ -50,10 +53,7 @@ public class JSGameMode : MonoBehaviour
         HPtxt.text = "HP: " + PHealth.ToString();
         if(HP.value <= 0)
         {
-            transform.Find("Fill Area").gameObject.SetActive(false);
-            GuideText.color = Color.white;
-            PlayUI.SetActive(false);
-            EndUI.SetActive(true);
+            GameOver();
         }
     }
 
@@ -81,5 +81,20 @@ public class JSGameMode : MonoBehaviour
         {
             Gas[i].Play();
         }
+    }
+
+    public void GameOver()
+    {
+        PlayUI.SetActive(false);
+        EndUI.SetActive(true);
+        //endui ¼³Á¤
+        Camera.main.GetComponent<CameraMovement>().enabled = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    private void ToLobby()
+    {
+        SceneManager.LoadScene("Lobby");
     }
 }

@@ -5,16 +5,16 @@ using UnityEngine;
 public class JSPlayerMgr : MonoBehaviour
 {
     [SerializeField]
-    private JSGameMode JSGMode;
+    private JSGameMode JSGMode = JSGameMode.instance;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
+// Update is called once per frame
+void Update()
     {
         
     }
@@ -30,6 +30,14 @@ public class JSPlayerMgr : MonoBehaviour
         {
             Debug.Log("파티클 쳐맞음");
             JSGMode.PHealth -= 0.05f;
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name == "EndPoint")
+        { //게임모드 이동
+            JSGMode.GameOver();
+            gameObject.SetActive(false);
         }
     }
 }

@@ -7,6 +7,7 @@ public class doorMove : MonoBehaviour
     bool isopen = false;
     [SerializeField]
     bool needKey = false;
+
     // Start is called before the first frame update
 
     private void OnMouseDown()
