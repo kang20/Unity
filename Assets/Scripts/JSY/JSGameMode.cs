@@ -14,6 +14,9 @@ public class JSGameMode : MonoBehaviour
 
     //UI
     [SerializeField]
+    public GameObject StartUI;
+    
+    [SerializeField]
     public GameObject PlayUI;
     public Text GuideText;
 
@@ -32,18 +35,21 @@ public class JSGameMode : MonoBehaviour
     public float PHealth;
     private Text HPtxt;
 
+    private float TimeCount = 0;
+    private string Rating = "존나 못함";
+
     void Start()
     {
+        StartUI.GetComponentInChildren<Button>().onClick.AddListener(StartBtn);
+
         GuideText = PlayUI.transform.Find("GuideText").GetComponent<Text>();
         PHealth = 100;
         HP.value = PHealth;
 
         HPtxt = HP.GetComponentInChildren<Text>();
-        HPtxt.text = "HP: " + PHealth.ToString();
+        HPtxt.text = "HP: " + PHealth.ToString("#.##");
 
-        EndUI.GetComponentInChildren<Button>().onClick.AddListener(ToLobby);
-
-        StartCoroutine(SirenStartCoroutine());
+        EndUI.GetComponentInChildren<Button>().onClick.AddListener(ToLobbyBtn);
     }
 
     // Update is called once per frame
@@ -51,10 +57,6 @@ public class JSGameMode : MonoBehaviour
     {
         HP.value = PHealth;
         HPtxt.text = "HP: " + PHealth.ToString();
-        if(HP.value <= 0)
-        {
-            GameOver();
-        }
     }
 
     private IEnumerator SirenStartCoroutine()
@@ -62,7 +64,7 @@ public class JSGameMode : MonoBehaviour
         yield return new WaitForSeconds(10);
         //10초 대기
         //사이렌 키기
-
+        gameObject.GetComponent<AudioSource>().Play();
         //가스 코루틴 키기
         StartCoroutine(GasStartCoroutine());
     }
@@ -83,17 +85,37 @@ public class JSGameMode : MonoBehaviour
         }
     }
 
+    public IEnumerator SetGuideText(string str)
+    {
+        GuideText.text = str;
+        yield return new WaitForSeconds(1.5f);
+        GuideText.text = "";
+    }
+
     public void GameOver()
     {
+        gameObject.GetComponent<AudioSource>().Stop();
         PlayUI.SetActive(false);
         EndUI.SetActive(true);
         //endui 설정
+        Text Result = EndUI.transform.Find("ResultText").GetComponent<Text>();
+        Result.text = "    평가\n체력: " + PHealth.ToString("#.##") +
+                        "\n시간: " + (Time.realtimeSinceStartup - TimeCount).ToString("#.##") +
+                        "\n점수: " + 100.ToString() + " \n\n한줄평\n" + Rating;
         Camera.main.GetComponent<CameraMovement>().enabled = false;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
+    private void StartBtn()
+    {
+        Camera.main.GetComponent<CameraMovement>().enabled = true;
+        StartUI.SetActive(false);
+        PlayUI.SetActive(true);
+        TimeCount = Time.realtimeSinceStartup;
+        StartCoroutine(SirenStartCoroutine());
+    }
 
-    private void ToLobby()
+    private void ToLobbyBtn()
     {
         SceneManager.LoadScene("Lobby");
     }

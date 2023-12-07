@@ -18,7 +18,14 @@ public class doorMove : MonoBehaviour
         }
         else
         {
-            
+            if(JSGameMode.instance.ActionObj[4].activeSelf)
+            {
+                OpenDoor();
+            }
+            else
+            {
+                StartCoroutine(JSGameMode.instance.SetGuideText("열쇠가 필요합니다"));
+            }
         }
     }
 

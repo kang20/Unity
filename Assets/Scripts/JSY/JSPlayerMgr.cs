@@ -13,8 +13,8 @@ public class JSPlayerMgr : MonoBehaviour
 
     }
 
-// Update is called once per frame
-void Update()
+    // Update is called once per frame
+    void Update()
     {
         
     }
@@ -30,6 +30,12 @@ void Update()
         {
             Debug.Log("파티클 쳐맞음");
             JSGMode.PHealth -= 0.05f;
+        }
+        if (JSGMode.PHealth <= 0)
+        {
+            gameObject.SetActive(false);
+            //플레이어 담구기
+            JSGMode.GameOver();
         }
     }
     private void OnTriggerEnter(Collider other)
