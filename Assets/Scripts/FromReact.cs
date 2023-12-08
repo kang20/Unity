@@ -9,9 +9,9 @@ using UnityEngine;
 public class FromReact : MonoBehaviour
 {
     [DllImport("__Internal")] 
-    private static extern void info(string playerstr);
+    private static extern void info(string playerstr); // 플레이어의 상태 정보를 클라이언트(리액트로 보내는 함수)
     [DllImport("__Internal")] 
-    private static extern void newplay(string initstr);
+    private static extern void newplay(string initstr);// 플레이어의 플레이어가 생성했다는 메세지를 클라이언트(리액트)로 보내는 함수
 
     public initDTO _initDto;
     private string initstr ;
@@ -43,25 +43,26 @@ public class FromReact : MonoBehaviour
     {
         initstr = JsonUtility.ToJson(_initDto);
 #if UNITY_WEBGL == true && UNITY_EDITOR == false
-        info(initstr);
+        newplay(initstr);
 #else
-        Debug.Log("Error Unity init json : " + initstr);
+        Debug.Log("유니티(실행 위치) -> 리액트 : " + initstr);
 #endif
-        Debug.Log("Unity init json : " + initstr);
+        Debug.Log("유니티(실행 위치) -> 리액트 : " + initstr);
     }
 
     // Unity -> React    
+    // player 정보를 리액트로 보내는 유니티 내부 함수
     public void playerfromUnity()
     {
         playerstr = JsonUtility.ToJson(_playerDto);
         Debug.Log(_playerDto);
 
 #if UNITY_WEBGL == true && UNITY_EDITOR == false
-        newplay(playerstr);
+        info(playerstr);
 #else
-        Debug.Log("Error Unity player json : " + playerstr);
+        Debug.Log("유니티(실행 위치) -> 리액트 : " + playerstr);
 #endif
-        Debug.Log("Unity init player json : " + playerstr);
+        Debug.Log("유니티(실행 위치) -> 리액트: " + playerstr);
     }
 
     
@@ -69,13 +70,13 @@ public class FromReact : MonoBehaviour
     public void initfromReact(string reactInit)
     {
         _initDto = JsonUtility.FromJson<initDTO>(reactInit);
-        Debug.Log("리액트 -> 유니티 init : " + reactInit);
+        Debug.Log("리액트 -> 유니티(실행 위치) init : " + reactInit);
     }    
 
     // React -> Unity
     public void playerfromReact(string reactPlayer)
     {
         _playerDto = JsonUtility.FromJson<PlayerDTO>(reactPlayer);
-        Debug.Log("리액트 -> 유니티 player : " + reactPlayer);
+        Debug.Log("리액트 -> 유니티 player(실행위치) : " + reactPlayer);
     }
 }

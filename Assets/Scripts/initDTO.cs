@@ -6,7 +6,7 @@ using UnityEngine;
 [Serializable]
 public class initDTO 
 {
-    public String nickname;
+    public String nickname; // 
     public int score;
     public bool islogin;
 
