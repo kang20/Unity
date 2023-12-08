@@ -66,6 +66,8 @@ public class CameraMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F))
         {
             isESC = !isESC;
+            CameraArm.transform.parent.GetComponent<PlayerMovement>().enabled =
+                CameraArm.transform.parent.GetComponent<PlayerMovement>().enabled == true ? false : true;
             Cursor.lockState = isESC ? CursorLockMode.None : CursorLockMode.Locked;
             Cursor.visible = !Cursor.visible;
         }
