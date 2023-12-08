@@ -98,4 +98,12 @@ public class PlayerMovement : MonoBehaviour
     {
         return Vector3.ProjectOnPlane(direction, slopeHit.normal).normalized;
     }
+
+    private void OnDisable()
+    {
+        pa._isjump = false;
+        pa._isrun = false;
+        pa._iswalk = false;
+        pa.GetComponent<Animator>().Play("HumanArmature_Man_Idle");
+    }
 }

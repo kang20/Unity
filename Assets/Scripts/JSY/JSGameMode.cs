@@ -36,7 +36,8 @@ public class JSGameMode : MonoBehaviour
     private Text HPtxt;
 
     private float TimeCount = 0;
-    private string Rating = "존나 못함";
+    public int Point = 0;
+    private float Rating = 0;
 
     void Start()
     {
@@ -98,14 +99,32 @@ public class JSGameMode : MonoBehaviour
         PlayUI.SetActive(false);
         EndUI.SetActive(true);
         //endui 설정
+        Rating = PHealth - (Time.realtimeSinceStartup - TimeCount) + Point;
         Text Result = EndUI.transform.Find("ResultText").GetComponent<Text>();
         Result.text = "    평가\n체력: " + PHealth.ToString("#.##") +
                         "\n시간: " + (Time.realtimeSinceStartup - TimeCount).ToString("#.##") +
-                        "\n점수: " + 100.ToString() + " \n\n한줄평\n" + Rating;
+                        "\n점수: " + Point.ToString() + " \n\n한줄평\n";
+        switch(Rating)
+        {
+            case 1:
+                Result.text += "너무 못했어요";
+                break;
+            case 2:
+                Result.text += "못했어요";
+                break;
+            case 3:
+                Result.text += "잘했어요";
+                break;
+            case 4:
+                Result.text += "진짜 잘했어요";
+                break;
+        }
+        Time.timeScale = 0;
         Camera.main.GetComponent<CameraMovement>().enabled = false;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
+
     private void StartBtn()
     {
         Camera.main.GetComponent<CameraMovement>().enabled = true;
