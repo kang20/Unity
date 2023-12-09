@@ -18,6 +18,9 @@ public class FromReact : MonoBehaviour
 
     public PlayerDTO _playerDto;
     private string playerstr;
+
+    public GameMode LobbyMode;
+
     void Start()
     {
         _initDto = new initDTO("admin", 100, true);
@@ -40,7 +43,7 @@ public class FromReact : MonoBehaviour
 
     // Unity -> React
     public void initfromUnity()
-    {
+    {//로비 씬 재 입장 시 사용
         initstr = JsonUtility.ToJson(_initDto);
 #if UNITY_WEBGL == true && UNITY_EDITOR == false
         newplay(initstr);
@@ -53,7 +56,7 @@ public class FromReact : MonoBehaviour
     // Unity -> React    
     // player 정보를 리액트로 보내는 유니티 내부 함수
     public void playerfromUnity()
-    {
+    {//로컬 플레이어 정보 변경 시 호출
         playerstr = JsonUtility.ToJson(_playerDto);
         Debug.Log(_playerDto);
 
@@ -70,13 +73,25 @@ public class FromReact : MonoBehaviour
     public void initfromReact(string reactInit)
     {
         _initDto = JsonUtility.FromJson<initDTO>(reactInit);
+        if (_initDto.islogin)
+        {
+            LobbyMode.AddPlayerInfo(_initDto);
+            playerfromUnity();
+        }
+        else
+        {
+            LobbyMode.DeletePlayerInfo(_initDto);
+        }
         Debug.Log("리액트 -> 유니티(실행 위치) init : " + reactInit);
-    }    
+    }
 
     // React -> Unity
     public void playerfromReact(string reactPlayer)
     {
         _playerDto = JsonUtility.FromJson<PlayerDTO>(reactPlayer);
+
+        LobbyMode.UpdatePlayerInfo(_playerDto);
+        
         Debug.Log("리액트 -> 유니티 player(실행위치) : " + reactPlayer);
     }
 }

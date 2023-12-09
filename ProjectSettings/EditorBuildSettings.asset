@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Lobby.unity
     guid: 52c1799cd434c974cbc972ae4bd11605
   - enabled: 0
@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Person Scenarios/Kang_CPR.unity
     guid: 8f53c31b2ff9d44218b2f961cbd1eb76
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Person Scenarios/Jung_Gas.unity
     guid: b0fcc7f00de9c0349afb8c0bebca161f
   - enabled: 0

@@ -19,7 +19,12 @@ public class PlayerManager : MonoBehaviour
     }
 
     public int PlayerPerson = 3; //카메라 인칭
-    
+
+    public string Nickname;
+    public int Score;
+    public bool isLogin;
+    //각 씬 별 점수
+
     // Start is called before the first frame update
     void Start()
     {

@@ -42,7 +42,7 @@ public class getObj : MonoBehaviour
 
     private void OutputInfo()
     {
-        JSGameMode.instance.gameObject.GetComponent<AudioSource>().Stop();
+        JSGameMode.instance.gameObject.GetComponent<AudioSource>().mute = true;
         Time.timeScale = 0; //Ω√∞£ ∏ÿ√ﬂ±‚ >> ƒ⁄∑Á∆æµµ ¥Ÿ ∏ÿ√„
         Camera.main.GetComponent<CameraMovement>().enabled = false;
         Cursor.lockState = CursorLockMode.None;
@@ -57,7 +57,7 @@ public class getObj : MonoBehaviour
         InfoPanel.SetActive(false);
 
         Time.timeScale = 1;
-        JSGameMode.instance.gameObject.GetComponent<AudioSource>().Play();
+        JSGameMode.instance.gameObject.GetComponent<AudioSource>().mute = false;
         Camera.main.GetComponent<CameraMovement>().enabled = true;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
