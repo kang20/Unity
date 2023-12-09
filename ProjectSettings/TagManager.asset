@@ -11,6 +11,7 @@ TagManager:
   - button f2
   - button f4
   - button f3
+  - Item
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,11 @@ TagManager:
   - Water
   - UI
   - Ground
+<<<<<<< Updated upstream
   - Player
+=======
+  - Item
+>>>>>>> Stashed changes
   - 
   - 
   - 
@@ -47,4 +52,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Inventory_Base
+    uniqueID: 3844517409
+    locked: 0
+  - name: Inventory_Slot
+    uniqueID: 3066114669
     locked: 0
