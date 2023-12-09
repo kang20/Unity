@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16ae6455071ed154a99f47b3983ffc23, type: 3}
+  m_Name: Radio
+  m_EditorClassIdentifier: 
+  itemName: Radio
+  itemType: 0
+  itemImage: {fileID: 21300000, guid: 86e34a7488cec5844bece934131ebfeb, type: 3}
+  itemPrefab: {fileID: 6722350335412952734, guid: 25278de2949f7cf45af7d28508cf6416, type: 3}
+  itemDescription: "\uB77C\uB514\uC624 : \uC678\uBD80 \uC0C1\uD669\uC744 \uD30C\uC545\uD560
+    \uC218 \uC788\uB294 \uB77C\uB514\uC624\uC774\uB2E4."
