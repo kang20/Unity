@@ -5,6 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - CPRPlayer
+  - door
+  - button f6
+  - button f1
+  - button f5
+  - button f2
+  - button f4
+  - button f3
+  - Building
   layers:
   - Default
   - TransparentFX
@@ -12,7 +20,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - buildings
   - 
   - 
   - 

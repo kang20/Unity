@@ -64,9 +64,9 @@ public class HJ_GameMode : MonoBehaviour
 
     private IEnumerator EarthQuake_Coroutine()
     {
-        for (int i = 0; i < 15; i++)
+        for (int i = 0; i < 10; i++)
         {
-            GuideText.text = "지진이 곧 발생합니다 " + (15 - i).ToString() + "초";
+            GuideText.text = "지진이 곧 발생합니다 " + (10 - i).ToString() + "초";
             yield return new WaitForSeconds(1);
         }
         GuideText.text = "지진이 곧 발생합니다 " + (0).ToString() + "초";
@@ -131,8 +131,8 @@ public class HJ_GameMode : MonoBehaviour
             ShakeTester shakeTester = shakeTesterObj.GetComponent<ShakeTester>();
             if (shakeTester != null)
             {
-                // ShakeTester 컴포넌트의 StartShake 메서드를 3초 후에 호출합니다.
-                shakeTester.Invoke("StartShake", 3f);
+                // ShakeTester 컴포넌트의 StartShake 메서드를 15초 후에 호출합니다.
+                shakeTester.Invoke("StartShake", 15f);
             }
             else
             {
@@ -143,7 +143,7 @@ public class HJ_GameMode : MonoBehaviour
         {
             Debug.LogError("'ShakeTester' GameObject를 찾을 수 없습니다.");
         }
-        //StartCoroutine(SirenStartCoroutine());
+        StartCoroutine(SirenStartCoroutine());
     }
 
     private void ToLobbyBtn()

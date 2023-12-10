@@ -38,7 +38,7 @@ public class CPRCameraMovement : MonoBehaviour
                 mx += mouseX * sensitivity * Time.deltaTime;
                 my += mouseY * sensitivity * Time.deltaTime;
 
-                if (PlayerManager.instance.PlayerPerson == 3)
+                if (LocalPlayerManager.instance.PlayerPerson == 3)
                 {
                     my = Mathf.Clamp(my, -7, 35);
                     CameraArm.transform.localPosition = new Vector3(2, 6, -5);
