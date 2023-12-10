@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using FirstGearGames.SmoothCameraShaker;
+using FirstGearGames.SmoothCameraShaker.Demo;
 
 public class ShakeTester : MonoBehaviour
 {
@@ -12,6 +13,13 @@ public class ShakeTester : MonoBehaviour
     private float smoothShakeTime = 5f; // 여진 5초 발생
     private bool isShakeStopped = false; // 쉐이크가 정지되었는지 확인하기 위한 플래그
     // 8초간 P파 -> 8초간 S파 -> 8초간 여진
+    private Resettable[] _resettables = new Resettable[0];
+    
+    private void Awake()
+    {
+        _resettables = FindObjectsOfType<Resettable>();
+    }
+
     private void Update()
     {
         if (hasShaken)
@@ -40,6 +48,16 @@ public class ShakeTester : MonoBehaviour
     private void EnableAudioSource()
     {
         Debug.Log("enableaudio");
+        foreach (Resettable r in _resettables)
+        {
+            if (r is Rock)
+            { 
+                r.PerformReset();
+                MakeKinematic(r.gameObject, false);
+            }
+        }
+        
+        
         AudioSource audioSource = gameObject.GetComponent<AudioSource>();
         if (audioSource != null)
         {
@@ -69,5 +87,14 @@ public class ShakeTester : MonoBehaviour
         Debug.Log("stop");
         CameraShakerHandler.StopAll();
         this.enabled = false; // 스크립트 비활성화
+    }
+    
+    private void MakeKinematic(GameObject obj, bool kinematic)
+    {
+        Rigidbody rb = obj.GetComponent<Rigidbody>();
+        if (rb != null)
+        { 
+            rb.isKinematic = kinematic;
+        }
     }
 }
