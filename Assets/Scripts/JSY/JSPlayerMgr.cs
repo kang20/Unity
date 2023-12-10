@@ -11,25 +11,25 @@ public class JSPlayerMgr : MonoBehaviour
     {
         if (!JSGMode.ActionObj[0].activeSelf)
         {
-            Debug.Log("ÆÄÆ¼Å¬ ÃÄ¸ÂÀ½");
+            Debug.Log("íŒŒí‹°í´ ì³ë§ìŒ");
             JSGMode.PHealth -= 1.5f;
         }
         else
         {
-            Debug.Log("ÆÄÆ¼Å¬ ÃÄ¸ÂÀ½");
+            Debug.Log("íŒŒí‹°í´ ì³ë§ìŒ");
             JSGMode.PHealth -= 0.05f;
         }
         if (JSGMode.PHealth <= 0)
         {
             gameObject.SetActive(false);
-            //ÇÃ·¹ÀÌ¾î ´ã±¸±â
+            //í”Œë ˆì´ì–´ ë‹´êµ¬ê¸°
             JSGMode.GameOver();
         }
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name == "EndPoint")
-        { //°ÔÀÓ¸ğµå ÀÌµ¿
+        { //ê²Œì„ëª¨ë“œ ì´ë™
             JSGMode.GameOver();
             enabled = false;
         }
