@@ -12,7 +12,7 @@ public class JSPlayerMgr : MonoBehaviour
         if (!JSGMode.ActionObj[0].activeSelf)
         {
             Debug.Log("파티클 쳐맞음");
-            JSGMode.PHealth -= 1.5f;
+            JSGMode.PHealth -= 3f;
         }
         else
         {
