@@ -1400,6 +1400,7 @@ GameObject:
   - component: {fileID: 8911259754865454048}
   - component: {fileID: 3263714848894136730}
   - component: {fileID: 8182977576062870355}
+  - component: {fileID: 3518362975039607534}
   m_Layer: 0
   m_Name: LPO
   m_TagString: Untagged
@@ -1460,6 +1461,24 @@ MonoBehaviour:
   _iswalk: 0
   _isrun: 0
   _isjump: 0
+--- !u!114 &3518362975039607534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8133772664902594906}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dc21c1d00d11c84da191156bd358dcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 0
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  actionText: {fileID: 0}
+  theInventory: {fileID: 0}
 --- !u!1 &8689700349942722655
 GameObject:
   m_ObjectHideFlags: 0
