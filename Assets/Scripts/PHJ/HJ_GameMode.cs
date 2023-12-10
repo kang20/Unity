@@ -59,10 +59,6 @@ public class HJ_GameMode : MonoBehaviour
     private IEnumerator SirenStartCoroutine()
     {
         yield return new WaitForSeconds(5);
-        //5�� ���
-        //���̷� Ű��
-        gameObject.GetComponent<AudioSource>().enabled = true;
-        //���� �ڷ�ƾ ����
         StartCoroutine(EarthQuake_Coroutine());
     }
 
