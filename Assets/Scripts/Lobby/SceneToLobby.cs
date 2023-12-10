@@ -16,6 +16,7 @@ public class SceneToLobby : MonoBehaviour
 
     public void MoveLobby()
     {
+        GameObject.Find("PlayerManager").GetComponent<LocalPlayerManager>().isLogin = true;
         SceneManager.LoadScene("Lobby");
     }
 }

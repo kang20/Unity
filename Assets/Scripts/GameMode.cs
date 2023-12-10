@@ -6,41 +6,36 @@ public class GameMode : MonoBehaviour
 {
     public Dictionary<string, GameObject> OnlinePlayerInfo = new Dictionary<string, GameObject>(); //온라인 플레이어들의 정보를 저장하는 딕셔너리
     [SerializeField]
-    private GameObject LocalPlayer;
+    public GameObject LocalPlayer;
+    public LocalPlayerManager LocalPMgr;
+
     [SerializeField]
     private GameObject OnlinePlayer;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        LocalPMgr = GameObject.Find("PlayerManager").GetComponent<LocalPlayerManager>();
     }
 
     public void AddPlayerInfo(initDTO Key)
     {
-        if(OnlinePlayerInfo.Count == 0)
+        if (LocalPMgr.Nickname == "")
         { //첫 입장 (로컬 플레이어 정보 획득)
             Debug.Log("게임 입장");
-            LocalPlayer.GetComponent<PlayerManager>().Nickname = Key.nickname;
-            LocalPlayer.GetComponent<PlayerManager>().Score = Key.score;
-            LocalPlayer.GetComponent<PlayerManager>().isLogin = Key.islogin;
+            LocalPMgr.Nickname = Key.nickname;
+            LocalPMgr.Score = Key.score;
+            LocalPMgr.isLogin = Key.islogin;
         }
         else if (OnlinePlayerInfo.ContainsKey(Key.nickname))
-        { //존재하는 플레이어 init 왔을 시
+        { //이미 존재하는 플레이어의 init이 왔을 시
             Debug.LogError("initfromReact: 이미 존재하는 플레이어" + Key.nickname);
         }
         else
         {//플레이 도중 새 플레이어 접속 시 플레이어 생성
             GameObject OP = Instantiate(OnlinePlayer);
-            OP.GetComponent<PlayerManager>().Nickname = Key.nickname;
-            OP.GetComponent<PlayerManager>().Score = Key.score;
-            OP.GetComponent<PlayerManager>().isLogin = Key.islogin;
+            OP.GetComponent<OnlinePlayerManager>().Nickname = Key.nickname;
+            OP.GetComponent<OnlinePlayerManager>().Score = Key.score;
+            OP.GetComponent<OnlinePlayerManager>().isLogin = Key.islogin;
             OP.transform.position = new Vector3(-120, 0, -120);
             OnlinePlayerInfo.Add(Key.nickname, OP);
         }
@@ -57,8 +52,8 @@ public class GameMode : MonoBehaviour
         else
         {//처음 접속 시 로비에 있던 플레이어 생성
             GameObject OP = Instantiate(OnlinePlayer);
-            OP.GetComponent<PlayerManager>().Nickname = Key.nickname;
-            OP.GetComponent<PlayerManager>().Score = Key.score;
+            OP.GetComponent<OnlinePlayerManager>().Nickname = Key.nickname;
+            OP.GetComponent<OnlinePlayerManager>().Score = Key.score;
             OP.transform.position = new Vector3(Key.pos_x, Key.pos_y, Key.pos_z);
             OP.transform.rotation = Quaternion.Euler(Key.rot_x, Key.rot_y, Key.rot_z);
             OP.GetComponent<PlayerAnimation>().UpdateStat(Key.is_walk, Key.is_run, Key.is_jump);

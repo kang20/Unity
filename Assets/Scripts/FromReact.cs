@@ -14,7 +14,7 @@ public class FromReact : MonoBehaviour
     private static extern void newplay(string initstr);// 플레이어의 플레이어가 생성했다는 메세지를 클라이언트(리액트)로 보내는 함수
 
     public initDTO _initDto;
-    private string initstr ;
+    private string initstr;
 
     public PlayerDTO _playerDto;
     private string playerstr;
@@ -23,28 +23,34 @@ public class FromReact : MonoBehaviour
 
     void Start()
     {
-        _initDto = new initDTO("admin", 100, true);
-        _playerDto = new PlayerDTO("admin", 200, 5f, 5f, 5f, 10f, 10f, 10f, true, true, false);
+        if(LobbyMode.LocalPMgr.Nickname != "")
+        { //플레이어 로비 복귀 시 호출
+            Debug.LogError("플레이어 복귀");
+            initfromUnity();
+        }
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            initfromUnity();
-        }
+        //플레이어 입/퇴장시 호출
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    initfromUnity();
+        //}
 
-        if (Input.GetKeyDown(KeyCode.A))
+        //플레이어 정보 변경 시 호출
+        if (LobbyMode.LocalPlayer.GetComponentInChildren<PlayerAnimation>().transform.hasChanged)
         {
+            Debug.LogError("로컬 플레이어 정보 바뀜");
             playerfromUnity();
+            LobbyMode.LocalPlayer.GetComponentInChildren<PlayerAnimation>().transform.hasChanged = false;
         }
     }
 
-
     // Unity -> React
     public void initfromUnity()
-    {//로비 씬 재 입장 시 사용
-        initstr = JsonUtility.ToJson(_initDto);
+    {//로비 씬 재입장 or 퇴장 시 사용
+        initstr = JsonUtility.ToJson(new initDTO(LobbyMode.LocalPMgr.Nickname, LobbyMode.LocalPMgr.Score, LobbyMode.LocalPMgr.isLogin));
 #if UNITY_WEBGL == true && UNITY_EDITOR == false
         newplay(initstr);
 #else
@@ -57,8 +63,8 @@ public class FromReact : MonoBehaviour
     // player 정보를 리액트로 보내는 유니티 내부 함수
     public void playerfromUnity()
     {//로컬 플레이어 정보 변경 시 호출
-        playerstr = JsonUtility.ToJson(_playerDto);
-        Debug.Log(_playerDto);
+        playerstr = JsonUtility.ToJson(LobbyMode.LocalPMgr.LocalPlayerDTO);
+        Debug.Log(playerstr);
 
 #if UNITY_WEBGL == true && UNITY_EDITOR == false
         info(playerstr);
@@ -76,7 +82,6 @@ public class FromReact : MonoBehaviour
         if (_initDto.islogin)
         {
             LobbyMode.AddPlayerInfo(_initDto);
-            playerfromUnity();
         }
         else
         {

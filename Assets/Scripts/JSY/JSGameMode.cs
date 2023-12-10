@@ -139,6 +139,7 @@ public class JSGameMode : MonoBehaviour
 
     private void ToLobbyBtn()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("Lobby");
     }
 }

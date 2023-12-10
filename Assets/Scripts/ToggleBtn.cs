@@ -8,6 +8,7 @@ public class ToggleBtn : MonoBehaviour
 {
     public GameObject[] buttons; // 토글할 버튼들
     public Button setBtn; // 인스펙터에서 할당할 버튼
+    public FromReact _FromReact;
     void Start()
     {
         setBtn.onClick.AddListener(ToggleOpen); // 리스너 추가
@@ -17,10 +18,10 @@ public class ToggleBtn : MonoBehaviour
         }
         
         // 각 버튼에 씬 로드 함수를 할당
-        buttons[0].GetComponent<Button>().onClick.AddListener(() => LoadScene("Kang_CPR"));
-        buttons[1].GetComponent<Button>().onClick.AddListener(() => LoadScene("Park_EarthQuake"));
-        buttons[2].GetComponent<Button>().onClick.AddListener(() => LoadScene("Jung_Gas"));
-        buttons[3].GetComponent<Button>().onClick.AddListener(() => LoadScene("Kim_Volcano"));
+        buttons[0].GetComponent<Button>().onClick.AddListener(Btn1Listener);
+        buttons[1].GetComponent<Button>().onClick.AddListener(Btn2Listener);
+        buttons[2].GetComponent<Button>().onClick.AddListener(Btn3Listener);
+        buttons[3].GetComponent<Button>().onClick.AddListener(Btn4Listener);
     }
 
     public void ToggleOpen()
@@ -35,5 +36,30 @@ public class ToggleBtn : MonoBehaviour
     void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName); // 씬 로드
+    }
+
+    void Btn1Listener()
+    {
+        GameObject.Find("PlayerManager").GetComponent<LocalPlayerManager>().isLogin = false;
+        _FromReact.initfromUnity();
+        LoadScene("Kang_CPR");
+    }
+    void Btn2Listener()
+    {
+        GameObject.Find("PlayerManager").GetComponent<LocalPlayerManager>().isLogin = false;
+        _FromReact.initfromUnity();
+        LoadScene("Park_EarthQuake");
+    }
+    void Btn3Listener()
+    {
+        GameObject.Find("PlayerManager").GetComponent<LocalPlayerManager>().isLogin = false;
+        _FromReact.initfromUnity();
+        LoadScene("Jung_Gas");
+    }
+    void Btn4Listener()
+    {
+        GameObject.Find("PlayerManager").GetComponent<LocalPlayerManager>().isLogin = false;
+        _FromReact.initfromUnity();
+        LoadScene("Kim_Volcano");
     }
 }

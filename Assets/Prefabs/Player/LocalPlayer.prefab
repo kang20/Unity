@@ -1401,7 +1401,7 @@ GameObject:
   - component: {fileID: 3263714848894136730}
   - component: {fileID: 8182977576062870355}
   m_Layer: 0
-  m_Name: Playermodel
+  m_Name: LPO
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1457,6 +1457,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7989ca01007c32343ac298e45bc5e092, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _iswalk: 0
+  _isrun: 0
+  _isjump: 0
 --- !u!1 &8689700349942722655
 GameObject:
   m_ObjectHideFlags: 0
