@@ -27,7 +27,7 @@ public class CameraMovement : MonoBehaviour
     void Update()
     {
         if (!isESC)
-        { 
+        {
             float mouseX = Input.GetAxis("Mouse X");
             float mouseY = -Input.GetAxis("Mouse Y");
             mx += mouseX * sensitivity * Time.deltaTime;
