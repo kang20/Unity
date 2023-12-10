@@ -46,4 +46,11 @@ public class PlayerAnimation : MonoBehaviour
         }
     }
 
+    public void UpdateStat(bool w, bool r, bool j)
+    {
+        _iswalk = w;
+        _isrun = r;
+        _isjump = j;
+    }
+
 }

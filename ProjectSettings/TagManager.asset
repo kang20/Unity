@@ -3,14 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - door
-  - button f6
-  - button f1
-  - button f5
-  - button f2
-  - button f4
-  - button f3
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -18,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - Ground
+  - 
   - 
   - 
   - 

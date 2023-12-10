@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,7 @@ public class OptionBtn : MonoBehaviour
     public Button noSaveReturnBtn; // 저장 안 하고 옵션 닫기
     public Button saveReturnBtn2; // 저장하고 옵션 닫기
     public GameObject[] buttons; // 숨길 버튼들
+    private bool isOpen = false;
     void Start()
     {
         setOptionBtn.onClick.AddListener(OptionOpen); // 리스너 추가
@@ -50,6 +52,24 @@ public class OptionBtn : MonoBehaviour
         {
             canvasGroup.alpha = 0f; // 패널을 투명하게 만듭니다.
             canvasGroup.blocksRaycasts = false; // 패널이 레이캐스트를 막지 않도록 합니다.
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (!isOpen)
+            {
+                OptionOpen();
+                isOpen = true;
+
+            }
+            else
+            {
+                OptionClose();
+                isOpen = false;
+            }
         }
     }
 }

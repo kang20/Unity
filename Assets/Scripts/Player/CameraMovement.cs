@@ -33,7 +33,7 @@ public class CameraMovement : MonoBehaviour
             mx += mouseX * sensitivity * Time.deltaTime;
             my += mouseY * sensitivity * Time.deltaTime;
 
-            if (PlayerManager.instance.PlayerPerson == 3)
+            if (LocalPlayerManager.instance.PlayerPerson == 3)
             {
                 my = Mathf.Clamp(my, -7, 35);
                 CameraArm.transform.localPosition = new Vector3(2, 6, -5);
@@ -66,6 +66,8 @@ public class CameraMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F))
         {
             isESC = !isESC;
+            CameraArm.transform.parent.GetComponent<PlayerMovement>().enabled =
+                CameraArm.transform.parent.GetComponent<PlayerMovement>().enabled == true ? false : true;
             Cursor.lockState = isESC ? CursorLockMode.None : CursorLockMode.Locked;
             Cursor.visible = !Cursor.visible;
         }
