@@ -113,6 +113,5 @@ public class CPRPlayerMovement : MonoBehaviour
         pa._isrun = false;
         pa._iswalk = false;
         pa._isCPR = false;
-        pa.GetComponent<Animator>().Play("HumanArmature_Man_Idle");
     }
 }
