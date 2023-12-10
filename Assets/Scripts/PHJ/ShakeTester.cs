@@ -22,9 +22,7 @@ public class ShakeTester : MonoBehaviour
             // 0 이하가 되면 쉐이크를 멈추고 스크립트를 비활성화합니다.
             if (shakeTime <= 0f)
             {
-                // 모든 CameraShaker 인스턴스를 멈춥니다.
-                CameraShakerHandler.StopAll();
-                this.enabled = false; // Update가 더 이상 호출되지 않도록 스크립트를 비활성화합니다.
+                CameraShakerHandler.SetScaleAll(5f, true);
             }
         }
         else
