@@ -12,13 +12,16 @@ public class ShakeTester : MonoBehaviour
     private float stopShakeDelay = 8f; // 쉐이크 정지까지의 지연 시간
     private float smoothShakeTime = 5f; // 여진 5초 발생
     private bool isShakeStopped = false; // 쉐이크가 정지되었는지 확인하기 위한 플래그
+    private float yeoShakeTime = 10f; // 여진 5초 발생
     // 8초간 P파 -> 8초간 S파 -> 8초간 여진
     private Resettable[] _resettables = new Resettable[0];
+    private bool yeo = false;
     
     private void Awake()
     {
         _resettables = FindObjectsOfType<Resettable>();
     }
+    
 
     private void Update()
     {
@@ -42,9 +45,21 @@ public class ShakeTester : MonoBehaviour
         Invoke("EnableAudioSource", 1f);
 
         CameraShakerHandler.Shake(QuakeShake);
-        hasShaken = true;
+        hasShaken = true;        
+        
+        // 코루틴을 시작하여 120초 뒤에 smoothShake를 10초간 실행
+        StartCoroutine(DelayedSmoothShake(40f, 10f));
     }
-
+    
+    // 120초 기다린 후 10초간 smoothShake를 실행하는 코루틴
+    private IEnumerator DelayedSmoothShake(float delay, float duration)
+    {
+        Debug.Log("여진발생");
+        yield return new WaitForSeconds(delay);
+        SmoothShake();
+        yield return new WaitForSeconds(duration);
+        StopShake();
+    }
     private void EnableAudioSource()
     {
         Debug.Log("enableaudio");
@@ -87,6 +102,27 @@ public class ShakeTester : MonoBehaviour
         Debug.Log("stop");
         CameraShakerHandler.StopAll();
         this.enabled = false; // 스크립트 비활성화
+        // 여진
+        if(!yeo)
+            Invoke("yeoShake", 120f);
+    }
+    
+    void yeoShake()
+    {
+        Debug.Log("yeoShake");
+        CameraShakerHandler.SetScaleAll(1f, true);
+        if (hasShaken)
+        {
+            yeoShakeTime -= Time.deltaTime;
+
+            if (yeoShakeTime <= 0f && !isShakeStopped)
+            {
+                // 8초 후에 쉐이크 정지
+                yeo = true;
+                Invoke("StopShake", stopShakeDelay);
+                isShakeStopped = true;
+            }
+        }
     }
     
     private void MakeKinematic(GameObject obj, bool kinematic)
