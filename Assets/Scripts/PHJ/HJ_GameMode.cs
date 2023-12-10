@@ -83,7 +83,6 @@ public class HJ_GameMode : MonoBehaviour
 
     public void GameOver()
     {
-        gameObject.GetComponent<AudioSource>().enabled = false;
         PlayUI.SetActive(false);
         EndUI.SetActive(true);
         //endui ����
