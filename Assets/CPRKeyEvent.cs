@@ -4,16 +4,21 @@ using UnityEngine;
 
 public class CPRKeyEvent : MonoBehaviour
 {
+    public GameObject cpr;
+
     public GameObject checkstat; // 상태확인 패널
     public Transform CPRplayer;
     public Transform cprspot;
-
+    private CPRPlayerAnimation pa;
     public bool is_statQ = false;
 
+
+    public GameObject cprstartpanel;
 
     private void Start()
     {
         checkstat.SetActive(false);
+        pa = cpr.GetComponentInChildren<CPRPlayerAnimation>();
     }
 
 
@@ -26,8 +31,10 @@ public class CPRKeyEvent : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Q) && !is_statQ)
             {
+                pa._isCPR = true;
                 is_statQ = true;
                 checkstat.SetActive(false);
+                cprstartpanel.SetActive(true);
                 CPRplayer.position = cprspot.position;
                 CPRplayer.rotation = cprspot.rotation;
             }
