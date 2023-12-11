@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
+using UnityEditor.Timeline.Actions;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.UIElements.Experimental;
 
 public class CPRgameMode : MonoBehaviour
 {
@@ -40,6 +42,64 @@ public class CPRgameMode : MonoBehaviour
     public Text endingresult;
 
 
+
+    // AED panel
+    public GameObject AEDdetail_1;
+    public GameObject AEDdetail_2;
+    public GameObject AEDQuiz;
+    public GameObject AEDdetail_4;
+    public GameObject AEDdetail_5;
+    public GameObject AEDdetail_6;
+
+    public void AED1to2()
+    {
+        AEDdetail_1.SetActive(false);
+        AEDdetail_2.SetActive(true);
+    }
+
+    public void AED2to3()
+    {
+        AEDdetail_2.SetActive(false);
+        AEDQuiz.SetActive(true);
+    }
+
+    private int AEDQuiz_n = 0;
+
+
+    public void AEDQuiztrue()
+    {
+        AEDQuiz_n += 1;
+    }
+    public void AEDQuizfalse()
+    {
+        AEDQuiz_n += 1;
+        isPerfect = false ;
+    }
+    public void AEDQuizto4()
+    {
+        AEDQuiz.SetActive(false);
+        AEDdetail_4.SetActive(true);
+    }
+    public void AED4to5()
+    {
+        AEDdetail_4.SetActive(false);
+        AEDdetail_5.SetActive(true);
+    }
+    public void AED5to6()
+    {
+        AEDdetail_5.SetActive(false);
+        AEDdetail_6.SetActive(true);
+    }
+
+
+
+
+
+    public Text uncorrectTXT;
+
+
+
+
     void Start()
     {
         StartUI.SetActive(false);
@@ -49,6 +109,8 @@ public class CPRgameMode : MonoBehaviour
         BreathPanel.SetActive(false);
         ending.SetActive(false);
 
+
+        uncorrectTXT.text = "";
 
         pa = cpr.GetComponentInChildren<CPRPlayerAnimation>();
         ke = Patient.GetComponentInChildren<CPRKeyEvent>();
@@ -93,7 +155,14 @@ public class CPRgameMode : MonoBehaviour
         BreathPanel.SetActive(true);
     }
 
-
+    void Update()
+    {
+        if(AEDQuiz_n == 2)
+        {
+            AEDQuiz_n = 0; // 초기화
+            AEDQuizto4();
+        }
+    }
 
     public void BreathTruenext()
     {
@@ -108,49 +177,80 @@ public class CPRgameMode : MonoBehaviour
         breathDetail.SetActive(true);
     }
 
-    public void breathDetailnext()
+    public void breathDetailnext() // cpr 시나리오 끝
     {
         breathDetail.SetActive(false);
+        cprAEDending();
+        isPerfect = true;
+    }
+    public void AED6tonext() // aed 시나리오 끝
+    {
+        AEDdetail_6.SetActive(false);
+        cprAEDending();
+
+        isPerfect = true;
+    }
+
+    public void cprAEDending()
+    {
         pa._isCPR = false;
+
+
         ke.is_statQ = false;
-
         pa._isCPR = true;
-        Invoke("CPR_anime", 3f);
 
-        if(isPerfect)
+        if (!isPerfect)
         {
-            Ending();
+            uncorrectTXT.text = "정확하지 않은 응급처치";
+            Invoke("RMtxt", 3f);
         }
+        Invoke("CPR_anime", 3f);
+        if (isPerfect)
+        {
+            uncorrectTXT.text = "정확한 응급처치";
+            Invoke("RMtxt", 3f);
+            Invoke("Ending", 3f);
+        }
+    }
+
+    public void RMtxt()
+    {
+        uncorrectTXT.text = "";
     }
 
     public void Ending()
     {
         ending.SetActive(true);
+        int score = (int)HP.currenthp;
 
-        if(HP.currenthp < 50) // 차선 
+        string resultText ="";
+        string scoreText = "";
+
+        if (HP.currenthp < 50)
         {
-            endingscore.text = "결과 : 5 분 이상 소요\nsocre:50";
-            endingresult.text = "최적의 골든 타임은 아니지만 그래도 알맞은 응급처치는 하였습니다\n 한 사람의 생명을 구했습니다!";
+            resultText = "최적의 골든 타임은 아니지만 그래도 알맞은 응급처치는 하였습니다\n 한 사람의 생명을 구했습니다!";
+            scoreText = $"결과 : 5 분 이상 소요\nscore:{score}";
         }
-        else if(HP.currenthp > 50 && HP.currenthp <= 100 ) // 최선
+        else if (HP.currenthp > 50 && HP.currenthp <= 100)
         {
-            endingscore.text = "결과 : 5 분 이내 소요\nsocre:100\"";
-            endingresult.text = "축하합니다!\n정확하고 신속한 응급처치 덕에 \n 한 사람의 생명을 구했습니다!!";
+            resultText = "축하합니다!\n정확하고 신속한 응급처치 덕에 \n 한 사람의 생명을 구했습니다!!";
+            scoreText = $"결과 : 5 분 이내 소요\nscore:{score}";
         }
-        else if(HP.currenthp == 0) // 최악
+        else if (HP.currenthp == 0)
         {
-            endingscore.text = "결과 : 10 분 초과\nsocre:0";
-            endingresult.text = "정확하지 못한 응급처치 때문에 한 사람의 목숨을 구하지 못했습니다.\n 오른쪽 CPR 가이드를 참고하여 주세요!";
+            resultText = "정확하지 못한 응급처치 때문에 한 사람의 목숨을 구하지 못했습니다.\n 오른쪽 CPR 가이드를 참고하여 주세요!";
+            scoreText = $"결과 : 10 분 초과\nscore:{score}";
         }
 
+        endingscore.text = scoreText;
+        endingresult.text = resultText;
+
+        LocalPlayerManager.instance.Score += score;
     }
     public void CPR_anime()
     {
         pa._isCPR = false;
     }
-
-
-
     public void ToLobbyBtn()
     {
         SceneManager.LoadScene("Lobby");
