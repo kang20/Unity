@@ -10,6 +10,8 @@ public class CPRCameraMovement : MonoBehaviour
     private GameObject LocalPlayerObj;
     [SerializeField]
     private GameObject CameraArm;
+
+
     [SerializeField]
     private float sensitivity = 30f;
 
@@ -17,8 +19,10 @@ public class CPRCameraMovement : MonoBehaviour
     private float my = 0;
 
     private bool isESC = false;
-
     private CPRPlayerAnimation pa;
+
+
+
 
     private void Start()
     {
@@ -29,7 +33,7 @@ public class CPRCameraMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!pa._isCPR)
+        if (!pa._isCPR )
         {
             if (!isESC)
             {
