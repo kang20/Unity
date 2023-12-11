@@ -16,5 +16,6 @@ public class ItemMaker : ScriptableObject
     public ItemType itemType;
     public Sprite itemImage;
     public GameObject itemPrefab;
+    public bool usePermit = false;
     public string itemDescription;
 }
