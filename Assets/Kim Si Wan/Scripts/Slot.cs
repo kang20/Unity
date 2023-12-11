@@ -51,7 +51,7 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler, I
             go_CountImage.SetActive(false);
         }
 
-        player.GetComponent<PlayerStatus>().setBelongings(itemMaker.itemName);
+        player.GetComponent<PlayerStatus>().setBelongings(itemMaker);
 
         SetColor(1);
     }
@@ -69,6 +69,7 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler, I
     // Delete Slot
     private void ClearSlot()
     {
+        player.GetComponent<PlayerStatus>().deleteBelongings(itemMaker);
         itemMaker = null;
         itemCount = 0;
         itemImage.sprite = null;
@@ -85,7 +86,10 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler, I
             isEnter = true;
             Vector3 descriptionPos = new Vector3(this.transform.position.x + 67, this.transform.position.y - 67, this.transform.position.z);
             ItemDescription.transform.position = descriptionPos;
-            descriptionText.text = "\n" + itemMaker.itemDescription + "\n\n우클릭 시 사용";
+            if(itemMaker.itemType == ItemMaker.ItemType.Used)
+                descriptionText.text = "\n" + itemMaker.itemDescription + "\n\n우클릭 시 사용";
+            else if (itemMaker.itemType == ItemMaker.ItemType.ETC)
+                descriptionText.text = "\n" + itemMaker.itemDescription + "\n\n특정 물체 클릭 후 사용";
             Panel.SetActive(true);
         }
     }
@@ -94,17 +98,16 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler, I
     public void OnPointerClick(PointerEventData eventData) {
         if (eventData.button == PointerEventData.InputButton.Right)
         {
+            if (itemMaker.usePermit == false)
+                return;
+
             if (itemMaker != null)
             {
-                if (itemMaker.itemType == ItemMaker.ItemType.Equipment)
-                {
-                    // 장착
-
-                }
-                else if (itemMaker.itemType == ItemMaker.ItemType.Used)
+                if (itemMaker.itemType == ItemMaker.ItemType.Used)
                 {
                     // 단순 상태효과 상승
                     Debug.Log(itemMaker.itemName + " 을 사용했습니다.");
+                    useTool(itemMaker.itemName);
                     SetSlotCount(-1);
                 }
                 else
@@ -122,6 +125,31 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler, I
             isEnter = false;
             Panel.SetActive(false);
         }
+    }
+
+    public void useTool(string itemName) {
+        PlayerStatus playerStatus = player.GetComponent<PlayerStatus>();
+
+        if (itemName == "Food") 
+            playerStatus.usedFood = true;
+        else if (itemName == "WaterBottle")
+            playerStatus.usedWater = true;
+        else if (itemName == "Clothes")
+            playerStatus.usedClothes = true;
+        else if (itemName == "FirstAid")
+            playerStatus.usedFirstAid = true;
+        else if (itemName == "Radio")
+            playerStatus.usedRadio = true;
+        else if (itemName == "Battery")
+            playerStatus.usedBattery = true;
+        else if (itemName == "Mask")
+            playerStatus.usedMask = true;
+        else if (itemName == "FlashLight")
+            playerStatus.usedFlashLight = true;
+        else if (itemName == "Tape")
+            playerStatus.usedTape = true;
+        else if (itemName == "Towel")
+            playerStatus.usedTowel = true;
     }
 }
 
