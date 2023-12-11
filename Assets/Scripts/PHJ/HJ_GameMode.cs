@@ -74,7 +74,7 @@ public class HJ_GameMode : MonoBehaviour
         LobbyTobtn.onClick.AddListener(ToLobbyBtn);
         left_Lobbybtn.SetActive(false);
 
-        Camera.main.GetComponent<CameraMovement>().enabled = false;
+        //Camera.main.GetComponent<HJ_CameraMovement>().enabled = false;
         GuideText = PlayUI.transform.Find("GuideText").GetComponent<Text>();
         PHealth = 100;
         HP.value = PHealth;
@@ -144,7 +144,7 @@ public class HJ_GameMode : MonoBehaviour
             Result.text += "C";
         }
         Time.timeScale = 0;
-        Camera.main.GetComponent<CameraMovement>().enabled = false;
+        Camera.main.GetComponent<HJ_CameraMovement>().enabled = false;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
@@ -155,7 +155,7 @@ public class HJ_GameMode : MonoBehaviour
     }
     private void StartBtn()
     {
-        Camera.main.GetComponent<CameraMovement>().enabled = true;
+        Camera.main.GetComponent<HJ_CameraMovement>().enabled = true;
         left_Lobbybtn.SetActive(true);
         StartPanel2.SetActive(false);
         PlayUI.SetActive(true);
