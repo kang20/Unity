@@ -18,7 +18,6 @@ public class LocalPlayerManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    public int PlayerPerson = 3; //Ä«¸Þ¶ó ÀÎÄª
 
     public string Nickname;
     public int Score;
@@ -26,15 +25,27 @@ public class LocalPlayerManager : MonoBehaviour
     public GameObject LocalPlayerModel;
     public PlayerDTO LocalPlayerDTO;
 
+    public float MainSound;
+    public float EffectSound;
+    public float MouseSensitivity;
+    public int PlayerPerson; //Ä«¸Þ¶ó ÀÎÄª
+
+
     void Start()
     {
         LocalPlayerModel = GameObject.Find("LPO");
+        MainSound = 0.5f;
+        EffectSound = 0.5f;
+        MouseSensitivity = 0.5f;
+        PlayerPerson = 3;
     }
 
     private void Update()
     {
         if (LocalPlayerModel != null)
         {
+            LocalPlayerDTO.setNickname(Nickname);
+            LocalPlayerDTO.setScore(Score);
             LocalPlayerDTO.setPosX(LocalPlayerModel.transform.position.x);
             LocalPlayerDTO.setPosY(LocalPlayerModel.transform.position.y);
             LocalPlayerDTO.setPosZ(LocalPlayerModel.transform.position.z);

@@ -11,7 +11,7 @@ public class CameraMovement : MonoBehaviour
     [SerializeField]
     private GameObject CameraArm;
     [SerializeField]
-    private float sensitivity = 30f;
+    private float sensitivity;
 
     private float mx = 0;
     private float my = 0;
@@ -53,22 +53,22 @@ public class CameraMovement : MonoBehaviour
             cameraRot.x = my;
             CameraArm.transform.eulerAngles = cameraRot; //rotate camera arm to mouse y axis
 
-            if (Input.GetKeyDown("["))
+            if(sensitivity != LocalPlayerManager.instance.MouseSensitivity)
             {
-                sensitivity -= 100f;
-            }
-            if (Input.GetKeyDown("]"))
-            {
-                sensitivity += 100f;
+                sensitivity = 100 + LocalPlayerManager.instance.MouseSensitivity * 400;
             }
         }
         if (Input.GetKeyDown(KeyCode.F))
         {
-            isESC = !isESC;
-            CameraArm.transform.parent.GetComponent<PlayerMovement>().enabled =
-                CameraArm.transform.parent.GetComponent<PlayerMovement>().enabled == true ? false : true;
-            Cursor.lockState = isESC ? CursorLockMode.None : CursorLockMode.Locked;
-            Cursor.visible = !Cursor.visible;
+            RevertMouseInput();
         }
+    }
+    public void RevertMouseInput()
+    {
+        isESC = !isESC;
+        CameraArm.transform.parent.GetComponent<PlayerMovement>().enabled =
+            CameraArm.transform.parent.GetComponent<PlayerMovement>().enabled == true ? false : true;
+        Cursor.lockState = isESC ? CursorLockMode.None : CursorLockMode.Locked;
+        Cursor.visible = !Cursor.visible;
     }
 }
