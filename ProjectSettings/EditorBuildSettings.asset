@@ -10,23 +10,32 @@ EditorBuildSettings:
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/Lobby.unity
-    guid: 872b5094993eadf4789d6c93cd9cfa27
-  - enabled: 1
-    path: Assets/Scenes/Person Scenarios/Kang_CPR.unity
-    guid: 8f53c31b2ff9d44218b2f961cbd1eb76
-  - enabled: 1
-    path: Assets/Scenes/Person Scenarios/Jung_Gas.unity
-    guid: b0fcc7f00de9c0349afb8c0bebca161f
-  - enabled: 1
-    path: Assets/Scenes/Person Scenarios/Kim_Volcano.unity
-    guid: 2c2e390b896e246babece7cdfc896b57
+    guid: 52c1799cd434c974cbc972ae4bd11605
   - enabled: 1
     path: Assets/Scenes/Person Scenarios/Park_EarthQuake.unity
     guid: 57eb94bcc89724205a8907bba27cd151
   - enabled: 0
+    path: Assets/Scenes/Person Scenarios/Kang_CPR.unity
+    guid: 8f53c31b2ff9d44218b2f961cbd1eb76
+  - enabled: 0
+    path: Assets/Scenes/Person Scenarios/Jung_Gas.unity
+    guid: b0fcc7f00de9c0349afb8c0bebca161f
+  - enabled: 0
+    path: Assets/Scenes/Person Scenarios/Kim_Volcano.unity
+    guid: 2c2e390b896e246babece7cdfc896b57
+  - enabled: 0
+    path: Assets/Scenes/Person Scenarios/Kang_CPR.unity
+    guid: 8f53c31b2ff9d44218b2f961cbd1eb76
+  - enabled: 0
+    path: Assets/Scenes/Person Scenarios/Jung_Gas.unity
+    guid: b0fcc7f00de9c0349afb8c0bebca161f
+  - enabled: 0
+    path: Assets/Scenes/Person Scenarios/Kim_Volcano.unity
+    guid: 2c2e390b896e246babece7cdfc896b57
+  - enabled: 0
     path: Assets/Scenes/Option.unity
     guid: 7ce4999184e1d4954a91854723b5e7a3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Kim Si Wan/Scenes/Indoor.unity
     guid: b80122945d1459f498f35faeda17e025
   - enabled: 0
