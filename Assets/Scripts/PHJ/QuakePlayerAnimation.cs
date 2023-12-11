@@ -9,7 +9,7 @@ public class QuakePlayerAnimation : MonoBehaviour
     public bool _iswalk = false;
     public bool _isrun = false;
     public bool _isjump = false;
-    public bool _isCPR = false;
+    public bool _isCrouching;
 
     private void Start()
     {
@@ -40,12 +40,20 @@ public class QuakePlayerAnimation : MonoBehaviour
             {
                 animator.SetBool("isRun", false);
             }
+
         }
         else
         {
             animator.SetBool("isWalk", false);
         }
-        
+        if (_isCrouching)
+        {
+            animator.SetBool("isCrouching", true);
+        }
+        else
+        {
+            animator.SetBool("isCrouching", false);
+        }
     }
 
 }
