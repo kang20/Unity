@@ -63,6 +63,16 @@ public class QuakePlayerMovement : MonoBehaviour
         //    moveDirection = AdjustDirectionToSlope(moveDirection);
         //}
 
+        // 마우스 좌클릭 감지
+        if (Input.GetMouseButton(0))
+        {
+            pa._ishandsUp = true; // 머리 보호하는 애니메이션 활성화
+        }
+        else
+        {
+            pa._ishandsUp = false; // 애니메이션 비활성화
+        }
+        
         if (moveDirection != Vector3.zero)
         {
             pa._iswalk = true;

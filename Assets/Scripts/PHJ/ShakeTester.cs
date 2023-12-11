@@ -21,7 +21,6 @@ public class ShakeTester : MonoBehaviour
     {
         _resettables = FindObjectsOfType<Resettable>();
     }
-    
 
     private void Update()
     {
