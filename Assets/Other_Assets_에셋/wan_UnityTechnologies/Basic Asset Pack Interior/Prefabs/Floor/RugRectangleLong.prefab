@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2836887033620729970}
   - component: {fileID: 1220895715479199703}
   - component: {fileID: 3969229720712637213}
+  - component: {fileID: 4146334173645088365}
   m_Layer: 0
   m_Name: RugRectangleLong
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4146334173645088365
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3176573852084882120}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.517579, y: 0.081354804, z: 15.666665}
+  m_Center: {x: 0.0000006556511, y: 0.040677402, z: 0}

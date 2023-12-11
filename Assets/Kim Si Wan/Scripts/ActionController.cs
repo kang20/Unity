@@ -9,6 +9,8 @@ public class ActionController : MonoBehaviour
     private float range;            // Pickup item distance
 
     private bool pickupActivated = false;  // Can pickup?
+    private bool doorOpenActivated = false;  // Can open?
+    private bool isOpen = false;
 
     private RaycastHit hitInfo;     // Pickup item inform
 
@@ -33,6 +35,7 @@ public class ActionController : MonoBehaviour
         {
             CheckItem();
             CanPickUp();
+            OpenDoor();
         }
     }
 
@@ -45,6 +48,12 @@ public class ActionController : MonoBehaviour
             {
                 ItemInfoAppear();
             }
+            else if (hitInfo.transform.tag == "door")
+            {
+                doorOpenActivated = true;
+                actionText.gameObject.SetActive(true);
+                actionText.text = " ¹® ¿­±â/´Ý±â " + "<color=yellow>" + "(E)" + "</color>";
+            }
         }
         else
             ItemInfoDisappear();
@@ -54,12 +63,14 @@ public class ActionController : MonoBehaviour
     {
         pickupActivated = true;
         actionText.gameObject.SetActive(true);
+        Debug.Log("zzzzz");
         actionText.text = hitInfo.transform.GetComponent<Item>().itemMaker.itemName + " È¹µæ " + "<color=yellow>" + "(E)" + "</color>";
     }
 
     private void ItemInfoDisappear()
     {
         pickupActivated = false;
+        doorOpenActivated = false;
         actionText.gameObject.SetActive(false);
     }
 
@@ -73,6 +84,20 @@ public class ActionController : MonoBehaviour
                 theInventory.AcquireItem(hitInfo.transform.GetComponent<Item>().itemMaker);
                 Destroy(hitInfo.transform.gameObject);
                 ItemInfoDisappear();
+            }
+        }
+    }
+    private void OpenDoor(){
+        if (doorOpenActivated) {
+            if (hitInfo.transform != null) {
+                if (!isOpen){
+                    hitInfo.transform.rotation = Quaternion.Euler(new Vector3(0, 90, 0));
+                    isOpen = true;
+                }
+                else{
+                    hitInfo.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+                    isOpen = false;
+                }
             }
         }
     }
