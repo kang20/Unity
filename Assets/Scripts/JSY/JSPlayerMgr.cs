@@ -7,6 +7,9 @@ public class JSPlayerMgr : MonoBehaviour
     [SerializeField]
     private JSGameMode JSGMode = JSGameMode.instance;
 
+    [SerializeField]
+    private AudioClip GetClip;
+
     private void OnParticleCollision(GameObject other)
     {
         if (!JSGMode.ActionObj[0].activeSelf)
@@ -24,6 +27,8 @@ public class JSPlayerMgr : MonoBehaviour
     {
         if (other.gameObject.name == "EndPoint")
         { //게임모드 이동
+            Camera.main.GetComponent<AudioSource>().clip = GetClip;
+            Camera.main.GetComponent<AudioSource>().Play();
             JSGMode.GameOver();
             enabled = false;
         }

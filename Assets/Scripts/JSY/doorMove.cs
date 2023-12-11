@@ -9,6 +9,9 @@ public class doorMove : MonoBehaviour
     bool needKey = false;
     [SerializeField]
     GameObject Playermodel;
+
+    [SerializeField]
+    private AudioClip DoorClip;
     // Start is called before the first frame update
 
     private void OnMouseDown()
@@ -19,12 +22,16 @@ public class doorMove : MonoBehaviour
             if (!needKey)
             {
                 OpenDoor();
+                Camera.main.GetComponent<AudioSource>().clip = DoorClip;
+                Camera.main.GetComponent<AudioSource>().Play();
             }
             else
             {
                 if (JSGameMode.instance.ActionObj[4].activeSelf)
                 {
                     OpenDoor();
+                    Camera.main.GetComponent<AudioSource>().clip = DoorClip;
+                    Camera.main.GetComponent<AudioSource>().Play();
                 }
                 else
                 {

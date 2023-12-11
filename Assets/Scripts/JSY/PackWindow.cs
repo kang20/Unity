@@ -10,6 +10,8 @@ public class PackWindow : MonoBehaviour
     [SerializeField]
     GameObject Playermodel;
 
+    [SerializeField]
+    private AudioClip TapeClip;
     private void OnMouseDown()
     {
         float distance = Vector3.Distance(Playermodel.transform.position, transform.position);
@@ -21,8 +23,9 @@ public class PackWindow : MonoBehaviour
             }
             else
             {
+                Camera.main.GetComponent<AudioSource>().clip = TapeClip;
+                Camera.main.GetComponent<AudioSource>().Play();
                 JSGameMode.instance.Point += 4;
-                StartCoroutine(JSGameMode.instance.SetGuideText("창문을 밀봉했습니다"));
                 gameObject.SetActive(false);
                 PackedWindow.SetActive(true);
             }

@@ -46,10 +46,12 @@ public class JSGameMode : MonoBehaviour
     [SerializeField]
     private AudioSource SirenAudio;
     [SerializeField]
-    private AudioSource ExplosionAudio;
+    private AudioClip ExplosionClip;
 
     void Start()
     {
+        SirenAudio.volume = LocalPlayerManager.instance.MainSound;
+        Camera.main.GetComponent<AudioSource>().volume = LocalPlayerManager.instance.EffectSound;
         StartUI.GetComponentInChildren<Button>().onClick.AddListener(StartBtn);
 
         GuideText = PlayUI.transform.Find("GuideText").GetComponent<Text>();
@@ -95,7 +97,8 @@ public class JSGameMode : MonoBehaviour
         GuideText.text = "화생방 사태까지 " + (0).ToString() + "초";
         yield return new WaitForSeconds(1);
         GuideText.text = "";
-        ExplosionAudio.Play();
+        Camera.main.GetComponent<AudioSource>().clip = ExplosionClip;
+        Camera.main.GetComponent<AudioSource>().Play();
         for (int i = 0; i < Gas.Length; i++)
         {
             Gas[i].Play();

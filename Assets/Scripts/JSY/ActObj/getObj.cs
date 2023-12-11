@@ -12,7 +12,7 @@ public class getObj : MonoBehaviour
     private GameObject InfoPanel;
 
     [SerializeField]
-    private AudioSource GetSound;
+    private AudioClip GetClip;
 
     private void OnMouseDown()
     {
@@ -50,6 +50,8 @@ public class getObj : MonoBehaviour
             {
                 OutputInfo();
             }
+            Camera.main.GetComponent<AudioSource>().clip = GetClip;
+            Camera.main.GetComponent<AudioSource>().Play();
             StartCoroutine(JSGameMode.instance.SetGuideText(Obj.name + " È¹µæ"));
         }
     }

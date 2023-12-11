@@ -28,7 +28,6 @@ public class OptionBtn : MonoBehaviour
     private bool isOpen = false;
     void Start()
     {
-        PersonValue = LocalPlayerManager.instance.PlayerPerson;
         setOptionBtn.onClick.AddListener(OptionOpen); // 리스너 추가
         noSaveReturnBtn.onClick.AddListener(OptionClose); // 리스너 추가
         saveReturnBtn2.onClick.AddListener(SaveOptionClose); // 리스너 추가
@@ -53,8 +52,14 @@ public class OptionBtn : MonoBehaviour
 
     void OptionOpen()
     {
-        ButtonSound.Play();
         isOpen = true;
+        ButtonSound.Play();
+
+        MainSound.value = LocalPlayerManager.instance.MainSound;
+        EffectSound.value = LocalPlayerManager.instance.EffectSound;
+        MouseSensitivity.value = LocalPlayerManager.instance.MouseSensitivity;
+        PersonValue = LocalPlayerManager.instance.PlayerPerson;
+
         if (LocalPlayerManager.instance.PlayerPerson == 1)
         {
             _1stView.interactable = false;
@@ -87,6 +92,7 @@ public class OptionBtn : MonoBehaviour
         MainSound.value = LocalPlayerManager.instance.MainSound;
         EffectSound.value = LocalPlayerManager.instance.EffectSound;
         MouseSensitivity.value = LocalPlayerManager.instance.MouseSensitivity;
+        PersonValue = LocalPlayerManager.instance.PlayerPerson;
 
         foreach (GameObject button in buttons)
         {
@@ -115,11 +121,7 @@ public class OptionBtn : MonoBehaviour
         LocalPlayerManager.instance.MouseSensitivity = MouseSensitivity.value;
         LocalPlayerManager.instance.PlayerPerson = PersonValue;
         GmMode.GetComponent<AudioSource>().volume = MainSound.value * 0.5f;
-        AudioSource[] EffectSounds = Camera.main.GetComponents<AudioSource>();
-        for(int i = 0; i < EffectSounds.Length; i++)
-        {
-            EffectSounds[i].volume = EffectSound.value;
-        }
+        AudioSource EffectSounds = Camera.main.GetComponent<AudioSource>();
 
         foreach (GameObject button in buttons)
         {
