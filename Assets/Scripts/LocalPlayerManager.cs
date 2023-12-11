@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class LocalPlayerManager : MonoBehaviour
 {
@@ -25,6 +26,11 @@ public class LocalPlayerManager : MonoBehaviour
     public GameObject LocalPlayerModel;
     public PlayerDTO LocalPlayerDTO;
 
+    void Start()
+    {
+        LocalPlayerModel = GameObject.Find("LPO");
+    }
+
     private void Update()
     {
         if (LocalPlayerModel != null)
@@ -38,6 +44,10 @@ public class LocalPlayerManager : MonoBehaviour
             LocalPlayerDTO.setWalk(LocalPlayerModel.GetComponent<PlayerAnimation>()._iswalk);
             LocalPlayerDTO.setRun(LocalPlayerModel.GetComponent<PlayerAnimation>()._isrun);
             LocalPlayerDTO.setJump(LocalPlayerModel.GetComponent<PlayerAnimation>()._isjump);
+            if (LocalPlayerModel.GetComponentInChildren<TextMeshPro>().text == "")
+            {
+                LocalPlayerModel.GetComponentInChildren<TextMeshPro>().text = Score.ToString() + "  " + Nickname;
+            }
         }
         else
         {

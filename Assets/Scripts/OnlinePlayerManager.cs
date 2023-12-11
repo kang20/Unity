@@ -12,7 +12,7 @@ public class OnlinePlayerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponentInChildren<TextMeshPro>().text = Nickname;
+        GetComponentInChildren<TextMeshPro>().text = Score.ToString() + "  " + Nickname;
     }
 
     // Update is called once per frame

@@ -22,6 +22,10 @@ public class JSGameMode : MonoBehaviour
 
     [SerializeField]
     public GameObject EndUI;
+    [SerializeField]
+    public GameObject EndImage;
+    [SerializeField]
+    Sprite[] End_Image;
 
     //GAS
     [SerializeField]
@@ -113,32 +117,39 @@ public class JSGameMode : MonoBehaviour
         //endui 설정
         Rating = PHealth - (Time.realtimeSinceStartup - TimeCount) + Point;
         Text Result = EndUI.transform.Find("ResultText").GetComponent<Text>();
-        Result.text = "    평가\n체력: " + PHealth.ToString("#.##") +
+        Result.text = "    평가\n\n체력: " + PHealth.ToString("#.##") +
                         "\n시간: " + (Time.realtimeSinceStartup - TimeCount).ToString("#.##") +
-                        "\n점수: " + Point.ToString() + " \n\n숙련 등급\n";
+                        "\n오브젝트 점수: " + Point.ToString() + " \n\n숙련 등급";
 
         //점수에 따른 평가 출력
         //체력 100, 점수 170
         if(PHealth < 0)
         {
             Result.text += "F";
+            Rating = 0;
+            EndImage.GetComponent<Image>().sprite = End_Image[4];
+        }
+        else if(Rating > 250)
+        {
+            Result.text += "S";
+            EndImage.GetComponent<Image>().sprite = End_Image[0];
         }
         else if(Rating > 200)
         {
-            Result.text += "S";
+            Result.text += "A";
+            EndImage.GetComponent<Image>().sprite = End_Image[1];
         }
         else if(Rating > 150)
         {
-            Result.text += "A";
-        }
-        else if( Rating > 100)
-        {
             Result.text += "B";
+            EndImage.GetComponent<Image>().sprite = End_Image[2];
         }
         else
         {
             Result.text += "C";
+            EndImage.GetComponent<Image>().sprite = End_Image[3];
         }
+        LocalPlayerManager.instance.Score += (int)(Rating / 400 * 100);
         Time.timeScale = 0;
         Camera.main.GetComponent<CameraMovement>().enabled = false;
         Cursor.lockState = CursorLockMode.None;
