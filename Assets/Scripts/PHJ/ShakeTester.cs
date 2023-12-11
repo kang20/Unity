@@ -12,7 +12,10 @@ public class ShakeTester : MonoBehaviour
     private float stopShakeDelay = 8f; // 쉐이크 정지까지의 지연 시간
     private float smoothShakeTime = 5f; // 여진 5초 발생
     private bool isShakeStopped = false; // 쉐이크가 정지되었는지 확인하기 위한 플래그
-    private float yeoShakeTime = 10f; // 여진 5초 발생
+    private float yeoShakeTime = 60f; // 여진 5초 발생
+    
+    [SerializeField]
+    private ShakeData _earthquakeData = null;
     // 8초간 P파 -> 8초간 S파 -> 8초간 여진
     private Resettable[] _resettables = new Resettable[0];
     private bool yeo = false;
@@ -28,9 +31,19 @@ public class ShakeTester : MonoBehaviour
         if (hasShaken)
         {
             shakeTime -= Time.deltaTime;
+            yeoShakeTime -= Time.deltaTime;
+
+            if (yeoShakeTime <= 0f)
+            {
+                Debug.Log("yeoShake");
+                CameraShakerHandler.SetScaleAll(1f, true);
+                // 8초 후에 쉐이크 정지
+                yeo = true;
+            }
 
             if (shakeTime <= 0f && !isShakeStopped)
             {
+                Debug.Log("S파");
                 CameraShakerHandler.SetScaleAll(3f, true);
                 // 8초 후에 쉐이크 여진 발생
                 Invoke("SmoothShake", stopShakeDelay);
@@ -48,7 +61,7 @@ public class ShakeTester : MonoBehaviour
         hasShaken = true;        
         
         // 코루틴을 시작하여 120초 뒤에 smoothShake를 10초간 실행
-        StartCoroutine(DelayedSmoothShake(40f, 10f));
+        // StartCoroutine(DelayedSmoothShake(40f, 10f));
     }
     
     // 120초 기다린 후 10초간 smoothShake를 실행하는 코루틴
@@ -72,7 +85,6 @@ public class ShakeTester : MonoBehaviour
             }
         }
         
-        
         AudioSource audioSource = gameObject.GetComponent<AudioSource>();
         if (audioSource != null)
         {
@@ -87,7 +99,7 @@ public class ShakeTester : MonoBehaviour
         if (hasShaken)
         {
             smoothShakeTime -= Time.deltaTime;
-
+            
             if (smoothShakeTime <= 0f && !isShakeStopped)
             {
                 // 8초 후에 쉐이크 정지
@@ -101,28 +113,7 @@ public class ShakeTester : MonoBehaviour
     {
         Debug.Log("stop");
         CameraShakerHandler.StopAll();
-        this.enabled = false; // 스크립트 비활성화
-        // 여진
-        if(!yeo)
-            Invoke("yeoShake", 120f);
-    }
-    
-    void yeoShake()
-    {
-        Debug.Log("yeoShake");
-        CameraShakerHandler.SetScaleAll(1f, true);
-        if (hasShaken)
-        {
-            yeoShakeTime -= Time.deltaTime;
-
-            if (yeoShakeTime <= 0f && !isShakeStopped)
-            {
-                // 8초 후에 쉐이크 정지
-                yeo = true;
-                Invoke("StopShake", stopShakeDelay);
-                isShakeStopped = true;
-            }
-        }
+        smoothShakeTime = 8f;
     }
     
     private void MakeKinematic(GameObject obj, bool kinematic)
