@@ -28,6 +28,11 @@ public class HJ_GameMode : MonoBehaviour
     [SerializeField]
     public GameObject EndUI;
     public Button datail_next1;
+    [SerializeField]
+    public GameObject EndImage;
+    [SerializeField]
+    Sprite[] End_Image;
+
 
     public GameObject DetailPanel1;
     public Button datail_next2;
@@ -49,6 +54,31 @@ public class HJ_GameMode : MonoBehaviour
     public int Point = 0;
     private float Rating = 0;
 
+
+    void Start()
+    {
+        start_next.onClick.AddListener(nextPanel);
+        GameStart.onClick.AddListener(StartBtn); // 리스너 추가
+        datail_next1.onClick.AddListener(Detail_Load1);
+        datail_next2.onClick.AddListener(Detail_Load2);
+        datail_next3.onClick.AddListener(Detail_Load3);
+        LobbyTobtn.onClick.AddListener(ToLobbyBtn);
+        left_Lobbybtn.SetActive(false);
+
+        GuideText = PlayUI.transform.Find("GuideText").GetComponent<Text>();
+        PHealth = 100;
+        HP.value = PHealth;
+
+        HPtxt = HP.GetComponentInChildren<Text>();
+        HPtxt.text = "HP: " + PHealth.ToString("#.##");
+    }
+
+    void Update()
+    {
+        Debug.Log(HP.value);
+        HP.value = PHealth;
+        HPtxt.text = "HP: " + PHealth.ToString("#.#");
+    }
     public void Detail_Load1()
     {
         EndUI.SetActive(false);
@@ -64,31 +94,6 @@ public class HJ_GameMode : MonoBehaviour
         DetailPanel2.SetActive(false);
         DetailPanel3.SetActive(true);
     }
-    void Start()
-    {
-        start_next.onClick.AddListener(nextPanel);
-        GameStart.onClick.AddListener(StartBtn); // 리스너 추가
-        datail_next1.onClick.AddListener(Detail_Load1);
-        datail_next2.onClick.AddListener(Detail_Load2);
-        datail_next3.onClick.AddListener(Detail_Load3);
-        LobbyTobtn.onClick.AddListener(ToLobbyBtn);
-        left_Lobbybtn.SetActive(false);
-
-        //Camera.main.GetComponent<HJ_CameraMovement>().enabled = false;
-        GuideText = PlayUI.transform.Find("GuideText").GetComponent<Text>();
-        PHealth = 100;
-        HP.value = PHealth;
-
-        HPtxt = HP.GetComponentInChildren<Text>();
-        HPtxt.text = "HP: " + PHealth.ToString("#.##");
-    }
-
-    void Update()
-    {
-        HP.value = PHealth;
-        HPtxt.text = "HP: " + PHealth.ToString();
-    }
-
     private IEnumerator SirenStartCoroutine()
     {
         yield return new WaitForSeconds(5);
@@ -99,7 +104,8 @@ public class HJ_GameMode : MonoBehaviour
     {
         for (int i = 0; i < 10; i++)
         {
-            GuideText.text = "지진이 곧 발생합니다 " + (10 - i).ToString() + "초";
+            GuideText.text = "지진이 곧 발생합니다 " + (10 - i).ToString() + "초"
+                             + "\n" + "안전하게 대피 장소로 도망치세요.";
             yield return new WaitForSeconds(1);
         }
         GuideText.text = "지진이 곧 발생합니다 " + (0).ToString() + "초";
@@ -119,30 +125,42 @@ public class HJ_GameMode : MonoBehaviour
         left_Lobbybtn.SetActive(false);
         PlayUI.SetActive(false);
         EndUI.SetActive(true);
-        //endui ����
-        Rating = PHealth - (Time.realtimeSinceStartup - TimeCount) + Point;
+        //endui 설정
+        Rating = PHealth;
         Text Result = EndUI.transform.Find("ResultText").GetComponent<Text>();
-        Result.text = "    ��\nü��: " + PHealth.ToString("#.##") +
-                        "\n�ð�: " + (Time.realtimeSinceStartup - TimeCount).ToString("#.##") +
-                        "\n����: " + Point.ToString() + " \n\n���� ���\n";
-
-        //������ ���� �� ���
-        if(Rating > 120)
+        Result.text = "    평가\n\n체력: " + PHealth.ToString("#.##") +
+                      "\n진행시간: " + (Time.realtimeSinceStartup - TimeCount).ToString("#") + "초" +
+                      " \n\n숙련 등급 : ";
+    
+        //점수에 따른 평가 출력
+        //체력 100, 점수 170
+        if(PHealth < 0)
+        {
+            Result.text += "F";
+            Rating = 0;
+            EndImage.GetComponent<Image>().sprite = End_Image[4];
+        }
+        else if(PHealth > 85)
         {
             Result.text += "S";
+            EndImage.GetComponent<Image>().sprite = End_Image[0];
         }
-        else if(Rating > 90)
+        else if(PHealth <= 85 && PHealth > 80)
         {
             Result.text += "A";
+            EndImage.GetComponent<Image>().sprite = End_Image[1];
         }
-        else if( Rating > 60)
+        else if(PHealth <= 80 && PHealth > 75)
         {
             Result.text += "B";
+            EndImage.GetComponent<Image>().sprite = End_Image[2];
         }
         else
         {
             Result.text += "C";
+            EndImage.GetComponent<Image>().sprite = End_Image[3];
         }
+        LocalPlayerManager.instance.Score += (int)(Rating / 400 * 100);
         Time.timeScale = 0;
         Camera.main.GetComponent<HJ_CameraMovement>().enabled = false;
         Cursor.lockState = CursorLockMode.None;

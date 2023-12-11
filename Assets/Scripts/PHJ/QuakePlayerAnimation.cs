@@ -5,12 +5,13 @@ using UnityEngine;
 public class QuakePlayerAnimation : MonoBehaviour
 {
     private Animator animator;
+    public static QuakePlayerAnimation instance = null;
 
     public bool _iswalk = false;
     public bool _isrun = false;
     public bool _isjump = false;
-    public bool _isCrouching;
-    public bool _ishandsUp;
+    public bool _isCrouching = false;
+    public bool _ishandsUp = false;
 
     private void Start()
     {
