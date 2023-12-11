@@ -70,10 +70,7 @@ public class CPRPlayerMovement : MonoBehaviour
         {
             pa._iswalk = false;
         }
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            pa._isCPR = true;
-        }
+
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             pa._isCPR = false;

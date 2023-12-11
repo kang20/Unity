@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16ae6455071ed154a99f47b3983ffc23, type: 3}
+  m_Name: Clothes
+  m_EditorClassIdentifier: 
+  itemName: Clothes
+  itemType: 1
+  itemImage: {fileID: 21300000, guid: 76f80f52e1e8720469563660e7640e37, type: 3}
+  itemPrefab: {fileID: 8119463719272015251, guid: 4cc992ff567807a4f9a2d8dba2715232, type: 3}
+  itemDescription: "\uC637 : \uCD94\uC704\uB97C \uACAC\uB514\uAC8C \uD574\uC8FC\uB294
+    \uC637"

@@ -15,8 +15,11 @@ public class HJ_GameMode : MonoBehaviour
     //UI
     [SerializeField]
     public GameObject StartPanel;
+    public Button start_next;
+    
+    [SerializeField]
+    public GameObject StartPanel2;
     public Button GameStart;
-    public GameObject Lobbybtn;
     
     [SerializeField]
     public GameObject PlayUI;
@@ -24,6 +27,18 @@ public class HJ_GameMode : MonoBehaviour
 
     [SerializeField]
     public GameObject EndUI;
+    public Button datail_next1;
+
+    public GameObject DetailPanel1;
+    public Button datail_next2;
+
+    public GameObject DetailPanel2;
+    public Button datail_next3;
+
+    public GameObject DetailPanel3;
+    public GameObject left_Lobbybtn;
+
+    public Button LobbyTobtn;
 
 
     public Slider HP;
@@ -34,10 +49,30 @@ public class HJ_GameMode : MonoBehaviour
     public int Point = 0;
     private float Rating = 0;
 
+    public void Detail_Load1()
+    {
+        EndUI.SetActive(false);
+        DetailPanel1.SetActive(true);
+    }
+    public void Detail_Load2()
+    {
+        DetailPanel1.SetActive(false);
+        DetailPanel2.SetActive(true);
+    }
+    public void Detail_Load3()
+    {
+        DetailPanel2.SetActive(false);
+        DetailPanel3.SetActive(true);
+    }
     void Start()
     {
+        start_next.onClick.AddListener(nextPanel);
         GameStart.onClick.AddListener(StartBtn); // 리스너 추가
-        Lobbybtn.SetActive(false);
+        datail_next1.onClick.AddListener(Detail_Load1);
+        datail_next2.onClick.AddListener(Detail_Load2);
+        datail_next3.onClick.AddListener(Detail_Load3);
+        LobbyTobtn.onClick.AddListener(ToLobbyBtn);
+        left_Lobbybtn.SetActive(false);
 
         Camera.main.GetComponent<CameraMovement>().enabled = false;
         GuideText = PlayUI.transform.Find("GuideText").GetComponent<Text>();
@@ -46,8 +81,6 @@ public class HJ_GameMode : MonoBehaviour
 
         HPtxt = HP.GetComponentInChildren<Text>();
         HPtxt.text = "HP: " + PHealth.ToString("#.##");
-
-        EndUI.GetComponentInChildren<Button>().onClick.AddListener(ToLobbyBtn);
     }
 
     void Update()
@@ -59,18 +92,14 @@ public class HJ_GameMode : MonoBehaviour
     private IEnumerator SirenStartCoroutine()
     {
         yield return new WaitForSeconds(5);
-        //5�� ���
-        //���̷� Ű��
-        gameObject.GetComponent<AudioSource>().enabled = true;
-        //���� �ڷ�ƾ ����
         StartCoroutine(EarthQuake_Coroutine());
     }
 
     private IEnumerator EarthQuake_Coroutine()
     {
-        for (int i = 0; i < 15; i++)
+        for (int i = 0; i < 10; i++)
         {
-            GuideText.text = "지진이 곧 발생합니다 " + (15 - i).ToString() + "초";
+            GuideText.text = "지진이 곧 발생합니다 " + (10 - i).ToString() + "초";
             yield return new WaitForSeconds(1);
         }
         GuideText.text = "지진이 곧 발생합니다 " + (0).ToString() + "초";
@@ -87,7 +116,7 @@ public class HJ_GameMode : MonoBehaviour
 
     public void GameOver()
     {
-        gameObject.GetComponent<AudioSource>().enabled = false;
+        left_Lobbybtn.SetActive(false);
         PlayUI.SetActive(false);
         EndUI.SetActive(true);
         //endui ����
@@ -119,12 +148,16 @@ public class HJ_GameMode : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
-
+    void nextPanel()
+    {
+        StartPanel.SetActive(false);
+        StartPanel2.SetActive(true);
+    }
     private void StartBtn()
     {
         Camera.main.GetComponent<CameraMovement>().enabled = true;
-        Lobbybtn.SetActive(true);
-        StartPanel.SetActive(false);
+        left_Lobbybtn.SetActive(true);
+        StartPanel2.SetActive(false);
         PlayUI.SetActive(true);
         TimeCount = Time.realtimeSinceStartup;
         
@@ -136,8 +169,8 @@ public class HJ_GameMode : MonoBehaviour
             ShakeTester shakeTester = shakeTesterObj.GetComponent<ShakeTester>();
             if (shakeTester != null)
             {
-                // ShakeTester 컴포넌트의 StartShake 메서드를 3초 후에 호출합니다.
-                shakeTester.Invoke("StartShake", 3f);
+                // ShakeTester 컴포넌트의 StartShake 메서드를 15초 후에 호출합니다.
+                shakeTester.Invoke("StartShake", 15f);
             }
             else
             {
@@ -148,7 +181,7 @@ public class HJ_GameMode : MonoBehaviour
         {
             Debug.LogError("'ShakeTester' GameObject를 찾을 수 없습니다.");
         }
-        //StartCoroutine(SirenStartCoroutine());
+        StartCoroutine(SirenStartCoroutine());
     }
 
     private void ToLobbyBtn()

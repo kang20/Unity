@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6580871636668884310}
   - component: {fileID: 7853196344982809331}
   - component: {fileID: 5411320411076451897}
+  - component: {fileID: 3361251407739925068}
   m_Layer: 0
   m_Name: RugDoorMat
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3361251407739925068
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5771401742044889068}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.367154, y: 0.081354804, z: 1.888452}
+  m_Center: {x: 0.0000010728836, y: 0.040677402, z: 0}

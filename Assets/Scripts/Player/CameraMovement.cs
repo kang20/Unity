@@ -23,7 +23,7 @@ public class CameraMovement : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
-    // Update is called once per frame
+    
     void Update()
     {
         if (!isESC)
@@ -36,7 +36,7 @@ public class CameraMovement : MonoBehaviour
             if (LocalPlayerManager.instance.PlayerPerson == 3)
             {
                 my = Mathf.Clamp(my, -7, 35);
-                CameraArm.transform.localPosition = new Vector3(2, 6, -5);
+                CameraArm.transform.localPosition = new Vector3(0.3f, 3.9f, -2.5f);
             }
             else
             {
@@ -57,7 +57,6 @@ public class CameraMovement : MonoBehaviour
             {
                 sensitivity -= 100f;
             }
-
             if (Input.GetKeyDown("]"))
             {
                 sensitivity += 100f;
@@ -66,8 +65,8 @@ public class CameraMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F))
         {
             isESC = !isESC;
-            CameraArm.transform.parent.GetComponent<PlayerMovement>().enabled =
-                CameraArm.transform.parent.GetComponent<PlayerMovement>().enabled == true ? false : true;
+            CameraArm.transform.parent.GetComponent<QuakePlayerMovement>().enabled =
+                CameraArm.transform.parent.GetComponent<QuakePlayerMovement>().enabled == true ? false : true;
             Cursor.lockState = isESC ? CursorLockMode.None : CursorLockMode.Locked;
             Cursor.visible = !Cursor.visible;
         }
