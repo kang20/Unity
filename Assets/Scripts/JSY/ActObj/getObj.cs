@@ -26,7 +26,6 @@ public class getObj : MonoBehaviour
             else if (Obj.name == "방독면")
             {
                 JSGameMode.instance.Point += 50;
-                OutputInfo();
             }
             else if (Obj.name == "라디오")
             {
@@ -35,6 +34,18 @@ public class getObj : MonoBehaviour
             else if (Obj.name == "물")
             {
                 JSGameMode.instance.Point += 20;
+            }
+            else if (Obj.name == "여분의 옷")
+            {
+                JSGameMode.instance.Point += 20;
+            }
+            else if (Obj.name == "테이프")
+            {
+                JSGameMode.instance.Point += 20;
+            }
+            if(InfoPanel != null)
+            {
+                OutputInfo();
             }
             StartCoroutine(JSGameMode.instance.SetGuideText(Obj.name + " 획득"));
         }

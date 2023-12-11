@@ -41,7 +41,7 @@ public class FromReact : MonoBehaviour
         //플레이어 정보 변경 시 호출
         if (LobbyMode.LocalPlayer.GetComponentInChildren<PlayerAnimation>().transform.hasChanged)
         {
-            Debug.LogError("로컬 플레이어 정보 바뀜");
+            Debug.Log("로컬 플레이어 정보 바뀜");
             playerfromUnity();
             LobbyMode.LocalPlayer.GetComponentInChildren<PlayerAnimation>().transform.hasChanged = false;
         }

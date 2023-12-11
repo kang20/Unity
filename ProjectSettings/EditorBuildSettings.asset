@@ -31,5 +31,5 @@ EditorBuildSettings:
     guid: c490d761646f8be4e93260efff9dd5d8
   - enabled: 1
     path: Assets/Scenes/Lobby.unity
-    guid: 872b5094993eadf4789d6c93cd9cfa27
+    guid: 52c1799cd434c974cbc972ae4bd11605
   m_configObjects: {}

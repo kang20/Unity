@@ -22,6 +22,10 @@ public class JSGameMode : MonoBehaviour
 
     [SerializeField]
     public GameObject EndUI;
+    [SerializeField]
+    public GameObject EndImage;
+    [SerializeField]
+    Sprite[] End_Image;
 
     //GAS
     [SerializeField]
@@ -39,6 +43,11 @@ public class JSGameMode : MonoBehaviour
     public int Point = 0;
     private float Rating = 0;
 
+    [SerializeField]
+    private AudioSource SirenAudio;
+    [SerializeField]
+    private AudioSource ExplosionAudio;
+
     void Start()
     {
         StartUI.GetComponentInChildren<Button>().onClick.AddListener(StartBtn);
@@ -48,8 +57,14 @@ public class JSGameMode : MonoBehaviour
         HP.value = PHealth;
 
         HPtxt = HP.GetComponentInChildren<Text>();
-        HPtxt.text = "HP: " + PHealth.ToString("#.##");
-
+        if (PHealth >= 0)
+        {
+            HPtxt.text = "HP: " + PHealth.ToString("#.##");
+        }
+        else
+        {
+            HPtxt.text = "HP: 0";
+        }
         EndUI.GetComponentInChildren<Button>().onClick.AddListener(ToLobbyBtn);
     }
 
@@ -57,29 +72,30 @@ public class JSGameMode : MonoBehaviour
     void Update()
     {
         HP.value = PHealth;
-        HPtxt.text = "HP: " + PHealth.ToString();
+        HPtxt.text = "HP: " + PHealth.ToString("#.##");
     }
 
     private IEnumerator SirenStartCoroutine()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
         //5초 대기
         //사이렌 키기
-        gameObject.GetComponent<AudioSource>().enabled = true;
+        SirenAudio.enabled = true;
         //가스 코루틴 시작
         StartCoroutine(GasStartCoroutine());
     }
 
     private IEnumerator GasStartCoroutine()
     {
-        for (int i = 0; i < 15; i++)
+        for (int i = 0; i < 10; i++)
         {
-            GuideText.text = "화생방 사태까지 " + (15 - i).ToString() + "초";
+            GuideText.text = "화생방 사태까지 " + (10 - i).ToString() + "초";
             yield return new WaitForSeconds(1);
         }
         GuideText.text = "화생방 사태까지 " + (0).ToString() + "초";
         yield return new WaitForSeconds(1);
         GuideText.text = "";
+        ExplosionAudio.Play();
         for (int i = 0; i < Gas.Length; i++)
         {
             Gas[i].Play();
@@ -95,33 +111,45 @@ public class JSGameMode : MonoBehaviour
 
     public void GameOver()
     {
-        gameObject.GetComponent<AudioSource>().enabled = false;
+        SirenAudio.enabled = false;
         PlayUI.SetActive(false);
         EndUI.SetActive(true);
         //endui 설정
         Rating = PHealth - (Time.realtimeSinceStartup - TimeCount) + Point;
         Text Result = EndUI.transform.Find("ResultText").GetComponent<Text>();
-        Result.text = "    평가\n체력: " + PHealth.ToString("#.##") +
+        Result.text = "    평가\n\n체력: " + PHealth.ToString("#.##") +
                         "\n시간: " + (Time.realtimeSinceStartup - TimeCount).ToString("#.##") +
-                        "\n점수: " + Point.ToString() + " \n\n숙련 등급\n";
+                        "\n오브젝트 점수: " + Point.ToString() + " \n\n숙련 등급";
 
         //점수에 따른 평가 출력
-        if(Rating > 120)
+        //체력 100, 점수 170
+        if(PHealth < 0)
+        {
+            Result.text += "F";
+            Rating = 0;
+            EndImage.GetComponent<Image>().sprite = End_Image[4];
+        }
+        else if(Rating > 250)
         {
             Result.text += "S";
+            EndImage.GetComponent<Image>().sprite = End_Image[0];
         }
-        else if(Rating > 90)
+        else if(Rating > 200)
         {
             Result.text += "A";
+            EndImage.GetComponent<Image>().sprite = End_Image[1];
         }
-        else if( Rating > 60)
+        else if(Rating > 150)
         {
             Result.text += "B";
+            EndImage.GetComponent<Image>().sprite = End_Image[2];
         }
         else
         {
             Result.text += "C";
+            EndImage.GetComponent<Image>().sprite = End_Image[3];
         }
+        LocalPlayerManager.instance.Score += (int)(Rating / 400 * 100);
         Time.timeScale = 0;
         Camera.main.GetComponent<CameraMovement>().enabled = false;
         Cursor.lockState = CursorLockMode.None;

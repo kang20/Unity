@@ -325,7 +325,6 @@ GameObject:
   - component: {fileID: 3606612}
   - component: {fileID: 3606615}
   - component: {fileID: 3606614}
-  - component: {fileID: 3606613}
   m_Layer: 0
   m_Name: Road Tile Small
   m_TagString: Untagged
@@ -348,19 +347,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1214
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &3606613
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3606611}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 0.00000043711395, z: 10}
-  m_Center: {x: 0, y: 3.637979e-12, z: 0}
 --- !u!23 &3606614
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -519,7 +505,6 @@ GameObject:
   - component: {fileID: 8442999}
   - component: {fileID: 8443002}
   - component: {fileID: 8443001}
-  - component: {fileID: 8443000}
   m_Layer: 0
   m_Name: Road Split Line
   m_TagString: Untagged
@@ -542,19 +527,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1188
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &8443000
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8442998}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.35999998, y: 0.20000044, z: 4}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &8443001
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -907,7 +879,6 @@ GameObject:
   - component: {fileID: 18176283}
   - component: {fileID: 18176286}
   - component: {fileID: 18176285}
-  - component: {fileID: 18176284}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -930,19 +901,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1109
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &18176284
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 18176282}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 4.5000245e-16, y: 0.1, z: 8.4703296e-23}
 --- !u!23 &18176285
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1295,7 +1253,6 @@ GameObject:
   - component: {fileID: 21809208}
   - component: {fileID: 21809211}
   - component: {fileID: 21809210}
-  - component: {fileID: 21809209}
   m_Layer: 0
   m_Name: Road Lane Half
   m_TagString: Untagged
@@ -1318,19 +1275,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1103
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &21809209
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 21809207}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000045, z: 10}
-  m_Center: {x: 4.5000245e-16, y: 0.1, z: 8.4703296e-23}
 --- !u!23 &21809210
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1489,7 +1433,6 @@ GameObject:
   - component: {fileID: 23298272}
   - component: {fileID: 23298275}
   - component: {fileID: 23298274}
-  - component: {fileID: 23298273}
   m_Layer: 0
   m_Name: Road Concrete Tile Small
   m_TagString: Untagged
@@ -1512,19 +1455,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1055
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &23298273
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 23298271}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 0.0000004371139, z: 10}
-  m_Center: {x: 0, y: -5.684342e-14, z: 0}
 --- !u!23 &23298274
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1586,7 +1516,6 @@ GameObject:
   - component: {fileID: 25409993}
   - component: {fileID: 25409996}
   - component: {fileID: 25409995}
-  - component: {fileID: 25409994}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -1609,19 +1538,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1107
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &25409994
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 25409992}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 4.5000245e-16, y: 0.1, z: 8.4703296e-23}
 --- !u!23 &25409995
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1974,7 +1890,6 @@ GameObject:
   - component: {fileID: 32449599}
   - component: {fileID: 32449602}
   - component: {fileID: 32449601}
-  - component: {fileID: 32449600}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -1997,19 +1912,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1105
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &32449600
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 32449598}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!23 &32449601
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2733,7 +2635,6 @@ GameObject:
   - component: {fileID: 44382885}
   - component: {fileID: 44382888}
   - component: {fileID: 44382887}
-  - component: {fileID: 44382886}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -2756,19 +2657,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1124
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &44382886
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 44382884}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 4.5000245e-16, y: 0.1, z: 8.4703296e-23}
 --- !u!23 &44382887
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3121,7 +3009,6 @@ GameObject:
   - component: {fileID: 47267178}
   - component: {fileID: 47267181}
   - component: {fileID: 47267180}
-  - component: {fileID: 47267179}
   m_Layer: 0
   m_Name: Road Concrete Tile
   m_TagString: Untagged
@@ -3144,19 +3031,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1076
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &47267179
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 47267177}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.0000008742278, z: 20}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &47267180
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3412,7 +3286,6 @@ GameObject:
   - component: {fileID: 48827470}
   - component: {fileID: 48827473}
   - component: {fileID: 48827472}
-  - component: {fileID: 48827471}
   m_Layer: 0
   m_Name: Road T_Intersection_01
   m_TagString: Untagged
@@ -3435,19 +3308,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1189
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &48827471
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 48827469}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 4.5000245e-16, y: 0.1, z: 8.4703296e-23}
 --- !u!23 &48827472
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4044,7 +3904,6 @@ GameObject:
   - component: {fileID: 59640250}
   - component: {fileID: 59640253}
   - component: {fileID: 59640252}
-  - component: {fileID: 59640251}
   m_Layer: 0
   m_Name: Road Lane_02
   m_TagString: Untagged
@@ -4067,19 +3926,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1161
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &59640251
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 59640249}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: -4.5000245e-16, y: 0.1, z: 8.4703296e-23}
 --- !u!23 &59640252
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7515,7 +7361,6 @@ GameObject:
   - component: {fileID: 114106900}
   - component: {fileID: 114106903}
   - component: {fileID: 114106902}
-  - component: {fileID: 114106901}
   m_Layer: 0
   m_Name: Road T_Intersection_01
   m_TagString: Untagged
@@ -7538,19 +7383,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1195
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &114106901
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 114106899}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!23 &114106902
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8000,7 +7832,6 @@ GameObject:
   - component: {fileID: 121124092}
   - component: {fileID: 121124095}
   - component: {fileID: 121124094}
-  - component: {fileID: 121124093}
   m_Layer: 0
   m_Name: Road Tile
   m_TagString: Untagged
@@ -8023,19 +7854,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1217
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &121124093
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 121124091}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.0000008742278, z: 20}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &121124094
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8291,7 +8109,6 @@ GameObject:
   - component: {fileID: 125853340}
   - component: {fileID: 125853343}
   - component: {fileID: 125853342}
-  - component: {fileID: 125853341}
   m_Layer: 0
   m_Name: Road Split Line
   m_TagString: Untagged
@@ -8314,19 +8131,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1175
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &125853341
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 125853339}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.35999998, y: 0.20000044, z: 4}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &125853342
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9164,7 +8968,6 @@ GameObject:
   - component: {fileID: 139075370}
   - component: {fileID: 139075373}
   - component: {fileID: 139075372}
-  - component: {fileID: 139075371}
   m_Layer: 0
   m_Name: Road Split Line
   m_TagString: Untagged
@@ -9187,19 +8990,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1168
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &139075371
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 139075369}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.35999998, y: 0.20000044, z: 4}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &139075372
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9358,7 +9148,6 @@ GameObject:
   - component: {fileID: 140223241}
   - component: {fileID: 140223244}
   - component: {fileID: 140223243}
-  - component: {fileID: 140223242}
   m_Layer: 0
   m_Name: Road Split Line
   m_TagString: Untagged
@@ -9381,19 +9170,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1182
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &140223242
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 140223240}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.35999998, y: 0.20000044, z: 4}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &140223243
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10171,7 +9947,6 @@ GameObject:
   - component: {fileID: 152539931}
   - component: {fileID: 152539934}
   - component: {fileID: 152539933}
-  - component: {fileID: 152539932}
   m_Layer: 0
   m_Name: Road Lane_04
   m_TagString: Untagged
@@ -10194,19 +9969,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1164
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &152539932
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 152539930}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: -1.0462712e-22, y: 0.1, z: 0.00000047683716}
 --- !u!23 &152539933
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10365,7 +10127,6 @@ GameObject:
   - component: {fileID: 153978163}
   - component: {fileID: 153978166}
   - component: {fileID: 153978165}
-  - component: {fileID: 153978164}
   m_Layer: 0
   m_Name: Road Concrete Tile
   m_TagString: Untagged
@@ -10388,19 +10149,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1061
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &153978164
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 153978162}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.0000008742278, z: 20}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &153978165
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10462,7 +10210,6 @@ GameObject:
   - component: {fileID: 155294006}
   - component: {fileID: 155294009}
   - component: {fileID: 155294008}
-  - component: {fileID: 155294007}
   m_Layer: 0
   m_Name: Road Tile Small
   m_TagString: Untagged
@@ -10485,19 +10232,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1202
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &155294007
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 155294005}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 0.0000004371139, z: 10}
-  m_Center: {x: 0, y: -2.2737368e-13, z: 0}
 --- !u!23 &155294008
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11120,7 +10854,6 @@ GameObject:
   - component: {fileID: 164735468}
   - component: {fileID: 164735471}
   - component: {fileID: 164735470}
-  - component: {fileID: 164735469}
   m_Layer: 0
   m_Name: Road Lane Half
   m_TagString: Untagged
@@ -11143,19 +10876,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1099
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &164735469
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 164735467}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000045, z: 10}
-  m_Center: {x: 4.5000245e-16, y: 0.1, z: 8.4703296e-23}
 --- !u!23 &164735470
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11799,7 +11519,6 @@ GameObject:
   - component: {fileID: 177388972}
   - component: {fileID: 177388975}
   - component: {fileID: 177388974}
-  - component: {fileID: 177388973}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -11822,19 +11541,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1150
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &177388973
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 177388971}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 4.5000245e-16, y: 0.1, z: 8.4703296e-23}
 --- !u!23 &177388974
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13448,7 +13154,6 @@ GameObject:
   - component: {fileID: 197741462}
   - component: {fileID: 197741465}
   - component: {fileID: 197741464}
-  - component: {fileID: 197741463}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -13471,19 +13176,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1121
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &197741463
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 197741461}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!23 &197741464
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14903,7 +14595,6 @@ GameObject:
   - component: {fileID: 224194752}
   - component: {fileID: 224194755}
   - component: {fileID: 224194754}
-  - component: {fileID: 224194753}
   m_Layer: 0
   m_Name: Road Concrete Tile
   m_TagString: Untagged
@@ -14926,19 +14617,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1066
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &224194753
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 224194751}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.0000008742278, z: 20}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &224194754
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15194,7 +14872,6 @@ GameObject:
   - component: {fileID: 226639236}
   - component: {fileID: 226639239}
   - component: {fileID: 226639238}
-  - component: {fileID: 226639237}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -15217,19 +14894,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1108
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &226639237
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 226639235}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 4.5000245e-16, y: 0.1, z: 8.4703296e-23}
 --- !u!23 &226639238
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15388,7 +15052,6 @@ GameObject:
   - component: {fileID: 232637882}
   - component: {fileID: 232637885}
   - component: {fileID: 232637884}
-  - component: {fileID: 232637883}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -15411,19 +15074,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1118
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &232637883
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 232637881}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 4.5000245e-16, y: 0.1, z: 8.4703296e-23}
 --- !u!23 &232637884
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15658,7 +15308,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.558
+  m_Value: 0.334
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -16352,7 +16002,6 @@ GameObject:
   - component: {fileID: 253800947}
   - component: {fileID: 253800950}
   - component: {fileID: 253800949}
-  - component: {fileID: 253800948}
   m_Layer: 0
   m_Name: Road Split Line
   m_TagString: Untagged
@@ -16375,19 +16024,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1177
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &253800948
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 253800946}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.35999998, y: 0.20000044, z: 4}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &253800949
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18278,7 +17914,6 @@ GameObject:
   - component: {fileID: 273153800}
   - component: {fileID: 273153803}
   - component: {fileID: 273153802}
-  - component: {fileID: 273153801}
   m_Layer: 0
   m_Name: Road Intersection_01
   m_TagString: Untagged
@@ -18301,19 +17936,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1093
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &273153801
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 273153799}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!23 &273153802
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18455,7 +18077,6 @@ GameObject:
   - component: {fileID: 279628157}
   - component: {fileID: 279628160}
   - component: {fileID: 279628159}
-  - component: {fileID: 279628158}
   m_Layer: 0
   m_Name: Road Concrete Tile
   m_TagString: Untagged
@@ -18478,19 +18099,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1082
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &279628158
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 279628156}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.0000008742278, z: 20}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &279628159
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18843,7 +18451,6 @@ GameObject:
   - component: {fileID: 285436566}
   - component: {fileID: 285436569}
   - component: {fileID: 285436568}
-  - component: {fileID: 285436567}
   m_Layer: 0
   m_Name: Road Tile Small
   m_TagString: Untagged
@@ -18866,19 +18473,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1208
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &285436567
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 285436565}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 0.00000043711395, z: 10}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &285436568
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20589,7 +20183,6 @@ GameObject:
   - component: {fileID: 315658520}
   - component: {fileID: 315658523}
   - component: {fileID: 315658522}
-  - component: {fileID: 315658521}
   m_Layer: 0
   m_Name: Road Intersection_01
   m_TagString: Untagged
@@ -20612,19 +20205,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1094
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &315658521
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 315658519}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!23 &315658522
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21559,7 +21139,6 @@ GameObject:
   - component: {fileID: 325705709}
   - component: {fileID: 325705712}
   - component: {fileID: 325705711}
-  - component: {fileID: 325705710}
   m_Layer: 0
   m_Name: Road Concrete Tile
   m_TagString: Untagged
@@ -21582,19 +21161,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1080
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &325705710
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 325705708}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.0000008742278, z: 20}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &325705711
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23870,7 +23436,6 @@ GameObject:
   - component: {fileID: 366124733}
   - component: {fileID: 366124736}
   - component: {fileID: 366124735}
-  - component: {fileID: 366124734}
   m_Layer: 0
   m_Name: Road Split Line
   m_TagString: Untagged
@@ -23893,19 +23458,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1173
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &366124734
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 366124732}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.35999998, y: 0.20000044, z: 4}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &366124735
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24743,7 +24295,6 @@ GameObject:
   - component: {fileID: 378061656}
   - component: {fileID: 378061659}
   - component: {fileID: 378061658}
-  - component: {fileID: 378061657}
   m_Layer: 0
   m_Name: Road T_Intersection_01
   m_TagString: Untagged
@@ -24766,19 +24317,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1197
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &378061657
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 378061655}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 4.5000245e-16, y: 0.1, z: 8.4703296e-23}
 --- !u!23 &378061658
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25325,7 +24863,6 @@ GameObject:
   - component: {fileID: 385734801}
   - component: {fileID: 385734804}
   - component: {fileID: 385734803}
-  - component: {fileID: 385734802}
   m_Layer: 0
   m_Name: Road Tile
   m_TagString: Untagged
@@ -25348,19 +24885,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1218
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &385734802
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 385734800}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.0000008742278, z: 20}
-  m_Center: {x: 0, y: -6.82121e-13, z: 0}
 --- !u!23 &385734803
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25422,7 +24946,6 @@ GameObject:
   - component: {fileID: 385931935}
   - component: {fileID: 385931938}
   - component: {fileID: 385931937}
-  - component: {fileID: 385931936}
   m_Layer: 0
   m_Name: Road Tile
   m_TagString: Untagged
@@ -25445,19 +24968,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1221
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &385931936
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 385931934}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.0000008742278, z: 20}
-  m_Center: {x: 0, y: -3.9790393e-13, z: 0}
 --- !u!23 &385931937
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26896,7 +26406,6 @@ GameObject:
   - component: {fileID: 409154058}
   - component: {fileID: 409154061}
   - component: {fileID: 409154060}
-  - component: {fileID: 409154059}
   m_Layer: 0
   m_Name: Road Lane_04
   m_TagString: Untagged
@@ -26919,19 +26428,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1163
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &409154059
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 409154057}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: -1.0462712e-22, y: 0.1, z: 0.00000047683716}
 --- !u!23 &409154060
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27381,7 +26877,6 @@ GameObject:
   - component: {fileID: 414023069}
   - component: {fileID: 414023072}
   - component: {fileID: 414023071}
-  - component: {fileID: 414023070}
   m_Layer: 0
   m_Name: Road Lane Half
   m_TagString: Untagged
@@ -27404,19 +26899,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1101
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &414023070
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 414023068}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000045, z: 10}
-  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!23 &414023071
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30134,7 +29616,6 @@ GameObject:
   - component: {fileID: 447972390}
   - component: {fileID: 447972393}
   - component: {fileID: 447972392}
-  - component: {fileID: 447972391}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -30157,19 +29638,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1114
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &447972391
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 447972389}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!23 &447972392
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30716,7 +30184,6 @@ GameObject:
   - component: {fileID: 455614230}
   - component: {fileID: 455614233}
   - component: {fileID: 455614232}
-  - component: {fileID: 455614231}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -30739,19 +30206,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1113
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &455614231
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 455614229}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 4.5000245e-16, y: 0.1, z: 8.4703296e-23}
 --- !u!23 &455614232
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -31298,7 +30752,6 @@ GameObject:
   - component: {fileID: 468231956}
   - component: {fileID: 468231959}
   - component: {fileID: 468231958}
-  - component: {fileID: 468231957}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -31321,19 +30774,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1154
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &468231957
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 468231955}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!23 &468231958
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -32074,7 +31514,6 @@ GameObject:
   - component: {fileID: 484109136}
   - component: {fileID: 484109139}
   - component: {fileID: 484109138}
-  - component: {fileID: 484109137}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -32097,19 +31536,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1145
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &484109137
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 484109135}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!23 &484109138
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -32559,7 +31985,6 @@ GameObject:
   - component: {fileID: 488472486}
   - component: {fileID: 488472489}
   - component: {fileID: 488472488}
-  - component: {fileID: 488472487}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -32582,19 +32007,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1104
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &488472487
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 488472485}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!23 &488472488
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -33141,7 +32553,6 @@ GameObject:
   - component: {fileID: 494105228}
   - component: {fileID: 494105231}
   - component: {fileID: 494105230}
-  - component: {fileID: 494105229}
   m_Layer: 0
   m_Name: Road Split Line
   m_TagString: Untagged
@@ -33164,19 +32575,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1183
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &494105229
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 494105227}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.35999998, y: 0.20000044, z: 4}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &494105230
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -33837,8 +33235,8 @@ RectTransform:
   m_GameObject: {fileID: 505207655}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1308380383}
   m_Father: {fileID: 1197299365}
@@ -35365,7 +34763,6 @@ GameObject:
   - component: {fileID: 527897474}
   - component: {fileID: 527897477}
   - component: {fileID: 527897476}
-  - component: {fileID: 527897475}
   m_Layer: 0
   m_Name: Road Split Line
   m_TagString: Untagged
@@ -35388,19 +34785,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1174
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &527897475
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 527897473}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.35999998, y: 0.20000044, z: 4}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &527897476
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -36142,7 +35526,6 @@ GameObject:
   - component: {fileID: 538058835}
   - component: {fileID: 538058838}
   - component: {fileID: 538058837}
-  - component: {fileID: 538058836}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -36165,19 +35548,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1120
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &538058836
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 538058834}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!23 &538058837
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -37067,7 +36437,6 @@ GameObject:
   - component: {fileID: 551527832}
   - component: {fileID: 551527835}
   - component: {fileID: 551527834}
-  - component: {fileID: 551527833}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -37090,19 +36459,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1157
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &551527833
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 551527831}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!23 &551527834
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -39411,7 +38767,6 @@ GameObject:
   - component: {fileID: 577455855}
   - component: {fileID: 577455858}
   - component: {fileID: 577455857}
-  - component: {fileID: 577455856}
   m_Layer: 0
   m_Name: Road Split Line
   m_TagString: Untagged
@@ -39434,19 +38789,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1179
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &577455856
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 577455854}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.35999998, y: 0.20000044, z: 4}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &577455857
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -39891,7 +39233,6 @@ GameObject:
   - component: {fileID: 584386429}
   - component: {fileID: 584386432}
   - component: {fileID: 584386431}
-  - component: {fileID: 584386430}
   m_Layer: 0
   m_Name: Road T_Intersection_01
   m_TagString: Untagged
@@ -39914,19 +39255,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1194
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &584386430
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 584386428}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: -4.5000245e-16, y: 0.1, z: 8.4703296e-23}
 --- !u!23 &584386431
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -41734,7 +41062,6 @@ GameObject:
   - component: {fileID: 612925537}
   - component: {fileID: 612925540}
   - component: {fileID: 612925539}
-  - component: {fileID: 612925538}
   m_Layer: 0
   m_Name: Road Concrete Tile
   m_TagString: Untagged
@@ -41757,19 +41084,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1083
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &612925538
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 612925536}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.0000008742278, z: 20}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &612925539
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -41831,7 +41145,6 @@ GameObject:
   - component: {fileID: 613060575}
   - component: {fileID: 613060578}
   - component: {fileID: 613060577}
-  - component: {fileID: 613060576}
   m_Layer: 0
   m_Name: Road Split Line
   m_TagString: Untagged
@@ -41854,19 +41167,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1180
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &613060576
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 613060574}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.35999998, y: 0.20000044, z: 4}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &613060577
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -43075,7 +42375,6 @@ GameObject:
   - component: {fileID: 636332590}
   - component: {fileID: 636332593}
   - component: {fileID: 636332592}
-  - component: {fileID: 636332591}
   m_Layer: 0
   m_Name: Road Intersection_01
   m_TagString: Untagged
@@ -43098,19 +42397,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1092
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &636332591
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 636332589}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!23 &636332592
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -44223,7 +43509,6 @@ GameObject:
   - component: {fileID: 652566469}
   - component: {fileID: 652566472}
   - component: {fileID: 652566471}
-  - component: {fileID: 652566470}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -44246,19 +43531,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1112
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &652566470
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 652566468}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 4.5000245e-16, y: 0.1, z: 8.4703296e-23}
 --- !u!23 &652566471
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -48151,7 +47423,6 @@ GameObject:
   - component: {fileID: 708632045}
   - component: {fileID: 708632048}
   - component: {fileID: 708632047}
-  - component: {fileID: 708632046}
   m_Layer: 0
   m_Name: Road T_Intersection_01
   m_TagString: Untagged
@@ -48174,19 +47445,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1199
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &708632046
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 708632044}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: -4.5000245e-16, y: 0.1, z: 8.4703296e-23}
 --- !u!23 &708632047
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -48442,7 +47700,6 @@ GameObject:
   - component: {fileID: 711787150}
   - component: {fileID: 711787153}
   - component: {fileID: 711787152}
-  - component: {fileID: 711787151}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -48465,19 +47722,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1144
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &711787151
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 711787149}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!23 &711787152
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -48733,7 +47977,6 @@ GameObject:
   - component: {fileID: 714700287}
   - component: {fileID: 714700290}
   - component: {fileID: 714700289}
-  - component: {fileID: 714700288}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -48756,19 +47999,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1106
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &714700288
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 714700286}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 4.5000245e-16, y: 0.1, z: 8.4703296e-23}
 --- !u!23 &714700289
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -48927,7 +48157,6 @@ GameObject:
   - component: {fileID: 716512214}
   - component: {fileID: 716512217}
   - component: {fileID: 716512216}
-  - component: {fileID: 716512215}
   m_Layer: 0
   m_Name: Road T_Intersection_01
   m_TagString: Untagged
@@ -48950,19 +48179,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1192
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &716512215
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 716512213}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: -1.0462712e-22, y: 0.1, z: 0}
 --- !u!23 &716512216
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -49024,7 +48240,6 @@ GameObject:
   - component: {fileID: 717746003}
   - component: {fileID: 717746006}
   - component: {fileID: 717746005}
-  - component: {fileID: 717746004}
   m_Layer: 0
   m_Name: Road Split Line
   m_TagString: Untagged
@@ -49047,19 +48262,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1186
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &717746004
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 717746002}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.35999998, y: 0.20000044, z: 4}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &717746005
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -52669,7 +51871,6 @@ GameObject:
   - component: {fileID: 791765424}
   - component: {fileID: 791765427}
   - component: {fileID: 791765426}
-  - component: {fileID: 791765425}
   m_Layer: 0
   m_Name: Road T_Intersection_01
   m_TagString: Untagged
@@ -52692,19 +51893,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1198
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &791765425
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 791765423}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 4.5000245e-16, y: 0.1, z: 8.4703296e-23}
 --- !u!23 &791765426
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -54065,7 +53253,6 @@ GameObject:
   - component: {fileID: 811033665}
   - component: {fileID: 811033668}
   - component: {fileID: 811033667}
-  - component: {fileID: 811033666}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -54088,19 +53275,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1156
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &811033666
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 811033664}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!23 &811033667
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -54910,7 +54084,6 @@ GameObject:
   - component: {fileID: 822329307}
   - component: {fileID: 822329310}
   - component: {fileID: 822329309}
-  - component: {fileID: 822329308}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -54933,19 +54106,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1142
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &822329308
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 822329306}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!23 &822329309
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -55880,7 +55040,6 @@ GameObject:
   - component: {fileID: 833273059}
   - component: {fileID: 833273062}
   - component: {fileID: 833273061}
-  - component: {fileID: 833273060}
   m_Layer: 0
   m_Name: Road Lane_04
   m_TagString: Untagged
@@ -55903,19 +55062,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1162
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &833273060
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 833273058}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: -1.0462712e-22, y: 0.1, z: 0.00000047683716}
 --- !u!23 &833273061
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -56584,7 +55730,6 @@ GameObject:
   - component: {fileID: 846414592}
   - component: {fileID: 846414595}
   - component: {fileID: 846414594}
-  - component: {fileID: 846414593}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -56607,19 +55752,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1130
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &846414593
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 846414591}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 4.5000245e-16, y: 0.1, z: 8.4703296e-23}
 --- !u!23 &846414594
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -56681,7 +55813,6 @@ GameObject:
   - component: {fileID: 850045928}
   - component: {fileID: 850045931}
   - component: {fileID: 850045930}
-  - component: {fileID: 850045929}
   m_Layer: 0
   m_Name: Road Lane Half
   m_TagString: Untagged
@@ -56704,19 +55835,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1098
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &850045929
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 850045927}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000045, z: 10}
-  m_Center: {x: 4.5000245e-16, y: 0.1, z: 8.4703296e-23}
 --- !u!23 &850045930
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -56972,7 +56090,6 @@ GameObject:
   - component: {fileID: 855061490}
   - component: {fileID: 855061493}
   - component: {fileID: 855061492}
-  - component: {fileID: 855061491}
   m_Layer: 0
   m_Name: Road Concrete Tile
   m_TagString: Untagged
@@ -56995,19 +56112,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1068
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &855061491
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 855061489}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.0000008742278, z: 20}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &855061492
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -57360,7 +56464,6 @@ GameObject:
   - component: {fileID: 860546276}
   - component: {fileID: 860546279}
   - component: {fileID: 860546278}
-  - component: {fileID: 860546277}
   m_Layer: 0
   m_Name: Road Concrete Tile
   m_TagString: Untagged
@@ -57383,19 +56486,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1070
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &860546277
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 860546275}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.0000008742278, z: 20}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &860546278
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -58136,7 +57226,6 @@ GameObject:
   - component: {fileID: 893755141}
   - component: {fileID: 893755144}
   - component: {fileID: 893755143}
-  - component: {fileID: 893755142}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -58159,19 +57248,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1155
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &893755142
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 893755140}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!23 &893755143
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -58718,7 +57794,6 @@ GameObject:
   - component: {fileID: 900005973}
   - component: {fileID: 900005976}
   - component: {fileID: 900005975}
-  - component: {fileID: 900005974}
   m_Layer: 0
   m_Name: Road Concrete Tile
   m_TagString: Untagged
@@ -58741,19 +57816,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1078
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &900005974
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 900005972}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.0000008742278, z: 20}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &900005975
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -59203,7 +58265,6 @@ GameObject:
   - component: {fileID: 908687722}
   - component: {fileID: 908687725}
   - component: {fileID: 908687724}
-  - component: {fileID: 908687723}
   m_Layer: 0
   m_Name: Road Concrete Tile
   m_TagString: Untagged
@@ -59226,19 +58287,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1088
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &908687723
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 908687721}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.0000008742278, z: 20}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &908687724
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -59300,7 +58348,6 @@ GameObject:
   - component: {fileID: 909432210}
   - component: {fileID: 909432213}
   - component: {fileID: 909432212}
-  - component: {fileID: 909432211}
   m_Layer: 0
   m_Name: Road Lane_02
   m_TagString: Untagged
@@ -59323,19 +58370,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1160
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &909432211
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 909432209}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: -6.802882e-22, y: 0.1, z: 0}
 --- !u!23 &909432212
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -59494,7 +58528,6 @@ GameObject:
   - component: {fileID: 911578340}
   - component: {fileID: 911578343}
   - component: {fileID: 911578342}
-  - component: {fileID: 911578341}
   m_Layer: 0
   m_Name: Road Concrete Tile
   m_TagString: Untagged
@@ -59517,19 +58550,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1063
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &911578341
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 911578339}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.0000008742278, z: 20}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &911578342
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -61462,7 +60482,6 @@ GameObject:
   - component: {fileID: 935168134}
   - component: {fileID: 935168137}
   - component: {fileID: 935168136}
-  - component: {fileID: 935168135}
   m_Layer: 0
   m_Name: Road Concrete Tile
   m_TagString: Untagged
@@ -61485,19 +60504,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1071
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &935168135
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 935168133}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.0000008742278, z: 20}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &935168136
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -61656,7 +60662,6 @@ GameObject:
   - component: {fileID: 935741989}
   - component: {fileID: 935741992}
   - component: {fileID: 935741991}
-  - component: {fileID: 935741990}
   m_Layer: 0
   m_Name: Road Lane_02
   m_TagString: Untagged
@@ -61679,19 +60684,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1159
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &935741990
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 935741988}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 4.5000235e-16, y: 0.1, z: 4.2351648e-23}
 --- !u!23 &935741991
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -62432,7 +61424,6 @@ GameObject:
   - component: {fileID: 947103369}
   - component: {fileID: 947103372}
   - component: {fileID: 947103371}
-  - component: {fileID: 947103370}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -62455,19 +61446,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1140
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &947103370
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 947103368}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!23 &947103371
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -62529,7 +61507,6 @@ GameObject:
   - component: {fileID: 947578147}
   - component: {fileID: 947578150}
   - component: {fileID: 947578149}
-  - component: {fileID: 947578148}
   m_Layer: 0
   m_Name: Road Tile Small
   m_TagString: Untagged
@@ -62552,19 +61529,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1212
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &947578148
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 947578146}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 0.00000043711395, z: 10}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &947578149
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -63111,7 +62075,6 @@ GameObject:
   - component: {fileID: 953828707}
   - component: {fileID: 953828710}
   - component: {fileID: 953828709}
-  - component: {fileID: 953828708}
   m_Layer: 0
   m_Name: Road Concrete Tile
   m_TagString: Untagged
@@ -63134,19 +62097,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1084
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &953828708
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 953828706}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.0000008742278, z: 20}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &953828709
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -63887,7 +62837,6 @@ GameObject:
   - component: {fileID: 963022544}
   - component: {fileID: 963022547}
   - component: {fileID: 963022546}
-  - component: {fileID: 963022545}
   m_Layer: 0
   m_Name: Road Concrete Tile Small
   m_TagString: Untagged
@@ -63910,19 +62859,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1056
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &963022545
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963022543}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 0.0000004371139, z: 10}
-  m_Center: {x: 0, y: -5.684342e-14, z: 0}
 --- !u!23 &963022546
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -64372,7 +63308,6 @@ GameObject:
   - component: {fileID: 969044099}
   - component: {fileID: 969044102}
   - component: {fileID: 969044101}
-  - component: {fileID: 969044100}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -64395,19 +63330,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1129
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &969044100
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 969044098}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 4.5000245e-16, y: 0.1, z: 8.4703296e-23}
 --- !u!23 &969044101
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -64469,7 +63391,6 @@ GameObject:
   - component: {fileID: 969471042}
   - component: {fileID: 969471045}
   - component: {fileID: 969471044}
-  - component: {fileID: 969471043}
   m_Layer: 0
   m_Name: Road Tile
   m_TagString: Untagged
@@ -64492,19 +63413,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1216
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &969471043
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 969471041}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.0000008742278, z: 20}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &969471044
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -65924,7 +64832,6 @@ GameObject:
   - component: {fileID: 997147160}
   - component: {fileID: 997147163}
   - component: {fileID: 997147162}
-  - component: {fileID: 997147161}
   m_Layer: 0
   m_Name: Road Tile
   m_TagString: Untagged
@@ -65947,19 +64854,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1219
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &997147161
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 997147159}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.0000008742278, z: 20}
-  m_Center: {x: 0, y: -6.82121e-13, z: 0}
 --- !u!23 &997147162
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -68409,7 +67303,6 @@ GameObject:
   - component: {fileID: 1024014151}
   - component: {fileID: 1024014154}
   - component: {fileID: 1024014153}
-  - component: {fileID: 1024014152}
   m_Layer: 0
   m_Name: Road Concrete Tile Small
   m_TagString: Untagged
@@ -68432,19 +67325,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1058
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1024014152
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1024014150}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 0.0000004371139, z: 10}
-  m_Center: {x: 0, y: 3.410605e-13, z: 0}
 --- !u!23 &1024014153
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -71871,7 +70751,6 @@ GameObject:
   - component: {fileID: 1076346480}
   - component: {fileID: 1076346483}
   - component: {fileID: 1076346482}
-  - component: {fileID: 1076346481}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -71894,19 +70773,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1123
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1076346481
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1076346479}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 4.5000245e-16, y: 0.1, z: 8.4703296e-23}
 --- !u!23 &1076346482
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -73043,7 +71909,6 @@ GameObject:
   - component: {fileID: 1091211750}
   - component: {fileID: 1091211753}
   - component: {fileID: 1091211752}
-  - component: {fileID: 1091211751}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -73066,19 +71931,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1131
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1091211751
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1091211749}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 4.5000245e-16, y: 0.1, z: 8.4703296e-23}
 --- !u!23 &1091211752
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -73140,7 +71992,6 @@ GameObject:
   - component: {fileID: 1095508716}
   - component: {fileID: 1095508719}
   - component: {fileID: 1095508718}
-  - component: {fileID: 1095508717}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -73163,19 +72014,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1138
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1095508717
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1095508715}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!23 &1095508718
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -73431,7 +72269,6 @@ GameObject:
   - component: {fileID: 1100505524}
   - component: {fileID: 1100505527}
   - component: {fileID: 1100505526}
-  - component: {fileID: 1100505525}
   m_Layer: 0
   m_Name: Road Lane Bus Stop
   m_TagString: Untagged
@@ -73454,19 +72291,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1097
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1100505525
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1100505523}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 27.002441, y: 0.20000176, z: 40}
-  m_Center: {x: -3.5012207, y: 0.1, z: 0.0000038146973}
 --- !u!23 &1100505526
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -74984,7 +73808,6 @@ GameObject:
   - component: {fileID: 1135781986}
   - component: {fileID: 1135781989}
   - component: {fileID: 1135781988}
-  - component: {fileID: 1135781987}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -75007,19 +73830,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1128
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1135781987
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1135781985}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 4.5000245e-16, y: 0.1, z: 8.4703296e-23}
 --- !u!23 &1135781988
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -76476,7 +75286,6 @@ GameObject:
   - component: {fileID: 1158113579}
   - component: {fileID: 1158113582}
   - component: {fileID: 1158113581}
-  - component: {fileID: 1158113580}
   m_Layer: 0
   m_Name: Road T_Intersection_01
   m_TagString: Untagged
@@ -76499,19 +75308,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1191
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1158113580
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1158113578}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: -1.0462712e-22, y: 0.1, z: 0}
 --- !u!23 &1158113581
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -77382,7 +76178,6 @@ GameObject:
   - component: {fileID: 1162190483}
   - component: {fileID: 1162190486}
   - component: {fileID: 1162190485}
-  - component: {fileID: 1162190484}
   m_Layer: 0
   m_Name: Road Concrete Tile
   m_TagString: Untagged
@@ -77405,19 +76200,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1085
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1162190484
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1162190482}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.0000008742278, z: 20}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1162190485
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -78744,7 +77526,6 @@ GameObject:
   - component: {fileID: 1178919991}
   - component: {fileID: 1178919994}
   - component: {fileID: 1178919993}
-  - component: {fileID: 1178919992}
   m_Layer: 0
   m_Name: Road Tile Small
   m_TagString: Untagged
@@ -78767,19 +77548,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1206
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1178919992
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1178919990}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 0.00000043711395, z: 10}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1178919993
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -79423,7 +78191,6 @@ GameObject:
   - component: {fileID: 1187400421}
   - component: {fileID: 1187400424}
   - component: {fileID: 1187400423}
-  - component: {fileID: 1187400422}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -79446,19 +78213,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1153
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1187400422
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1187400420}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!23 &1187400423
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -79714,7 +78468,6 @@ GameObject:
   - component: {fileID: 1189590145}
   - component: {fileID: 1189590148}
   - component: {fileID: 1189590147}
-  - component: {fileID: 1189590146}
   m_Layer: 0
   m_Name: Road Tile Small
   m_TagString: Untagged
@@ -79737,19 +78490,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1205
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1189590146
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1189590144}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 0.00000043711395, z: 10}
-  m_Center: {x: 0, y: 3.637979e-12, z: 0}
 --- !u!23 &1189590147
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -79811,7 +78551,6 @@ GameObject:
   - component: {fileID: 1190034243}
   - component: {fileID: 1190034246}
   - component: {fileID: 1190034245}
-  - component: {fileID: 1190034244}
   m_Layer: 0
   m_Name: Road Tile Small
   m_TagString: Untagged
@@ -79834,19 +78573,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1213
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1190034244
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1190034242}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 0.00000043711395, z: 10}
-  m_Center: {x: 0, y: 3.637979e-12, z: 0}
 --- !u!23 &1190034245
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -80393,7 +79119,6 @@ GameObject:
   - component: {fileID: 1194512758}
   - component: {fileID: 1194512761}
   - component: {fileID: 1194512760}
-  - component: {fileID: 1194512759}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -80416,19 +79141,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1147
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1194512759
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1194512757}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 4.5000245e-16, y: 0.1, z: 8.4703296e-23}
 --- !u!23 &1194512760
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -80742,7 +79454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -80882,7 +79594,6 @@ GameObject:
   - component: {fileID: 1199772539}
   - component: {fileID: 1199772542}
   - component: {fileID: 1199772541}
-  - component: {fileID: 1199772540}
   m_Layer: 0
   m_Name: Road Corner_01
   m_TagString: Untagged
@@ -80905,19 +79616,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1091
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1199772540
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1199772538}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000085, z: 20}
-  m_Center: {x: -2.6865617e-17, y: 0.099999994, z: 0}
 --- !u!23 &1199772541
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -81565,7 +80263,6 @@ GameObject:
   - component: {fileID: 1208761739}
   - component: {fileID: 1208761742}
   - component: {fileID: 1208761741}
-  - component: {fileID: 1208761740}
   m_Layer: 0
   m_Name: Road Split Line
   m_TagString: Untagged
@@ -81588,19 +80285,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1166
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1208761740
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1208761738}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.35999998, y: 0.20000044, z: 4}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1208761741
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -83193,7 +81877,6 @@ GameObject:
   - component: {fileID: 1232409418}
   - component: {fileID: 1232409421}
   - component: {fileID: 1232409420}
-  - component: {fileID: 1232409419}
   m_Layer: 0
   m_Name: Road Concrete Tile Small
   m_TagString: Untagged
@@ -83216,19 +81899,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1060
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1232409419
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1232409417}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 0.0000004371139, z: 10}
-  m_Center: {x: 0, y: 3.410605e-13, z: 0}
 --- !u!23 &1232409420
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -86423,7 +85093,6 @@ GameObject:
   - component: {fileID: 1255298329}
   - component: {fileID: 1255298332}
   - component: {fileID: 1255298331}
-  - component: {fileID: 1255298330}
   m_Layer: 0
   m_Name: Road T_Intersection_01
   m_TagString: Untagged
@@ -86446,19 +85115,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1196
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1255298330
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1255298328}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!23 &1255298331
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -86908,7 +85564,6 @@ GameObject:
   - component: {fileID: 1262392780}
   - component: {fileID: 1262392783}
   - component: {fileID: 1262392782}
-  - component: {fileID: 1262392781}
   m_Layer: 0
   m_Name: Road Tile Small
   m_TagString: Untagged
@@ -86931,19 +85586,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1210
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1262392781
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1262392779}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 0.00000043711395, z: 10}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1262392782
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -87393,7 +86035,6 @@ GameObject:
   - component: {fileID: 1269179791}
   - component: {fileID: 1269179794}
   - component: {fileID: 1269179793}
-  - component: {fileID: 1269179792}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -87416,19 +86057,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1132
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1269179792
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1269179790}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 4.5000245e-16, y: 0.1, z: 8.4703296e-23}
 --- !u!23 &1269179793
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -87781,7 +86409,6 @@ GameObject:
   - component: {fileID: 1274373683}
   - component: {fileID: 1274373686}
   - component: {fileID: 1274373685}
-  - component: {fileID: 1274373684}
   m_Layer: 0
   m_Name: Road Split Line
   m_TagString: Untagged
@@ -87804,19 +86431,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1172
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1274373684
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1274373682}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.35999998, y: 0.20000044, z: 4}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1274373685
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -87878,7 +86492,6 @@ GameObject:
   - component: {fileID: 1275703925}
   - component: {fileID: 1275703928}
   - component: {fileID: 1275703927}
-  - component: {fileID: 1275703926}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -87901,19 +86514,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1117
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1275703926
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1275703924}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 4.5000245e-16, y: 0.1, z: 8.4703296e-23}
 --- !u!23 &1275703927
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -88051,7 +86651,6 @@ GameObject:
   - component: {fileID: 1278880012}
   - component: {fileID: 1278880015}
   - component: {fileID: 1278880014}
-  - component: {fileID: 1278880013}
   m_Layer: 0
   m_Name: Road Tile Small
   m_TagString: Untagged
@@ -88074,19 +86673,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1204
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1278880013
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1278880011}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 0.00000043711395, z: 10}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1278880014
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -88439,7 +87025,6 @@ GameObject:
   - component: {fileID: 1283688122}
   - component: {fileID: 1283688125}
   - component: {fileID: 1283688124}
-  - component: {fileID: 1283688123}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -88462,19 +87047,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1122
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1283688123
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1283688121}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 4.5000245e-16, y: 0.1, z: 8.4703296e-23}
 --- !u!23 &1283688124
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -88577,6 +87149,11 @@ MonoBehaviour:
   - {fileID: 578594868}
   - {fileID: 414556849}
   - {fileID: 1338940370}
+  MainSound: {fileID: 2081977693}
+  EffectSound: {fileID: 237214596}
+  MouseSensitivity: {fileID: 2020621155}
+  _1stView: {fileID: 2039820868}
+  _3rdView: {fileID: 57248474}
 --- !u!1 &1285820635
 GameObject:
   m_ObjectHideFlags: 0
@@ -89170,7 +87747,6 @@ GameObject:
   - component: {fileID: 1295532825}
   - component: {fileID: 1295532828}
   - component: {fileID: 1295532827}
-  - component: {fileID: 1295532826}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -89193,19 +87769,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1152
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1295532826
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1295532824}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 4.5000245e-16, y: 0.1, z: 8.4703296e-23}
 --- !u!23 &1295532827
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -90417,7 +88980,6 @@ GameObject:
   - component: {fileID: 1317313874}
   - component: {fileID: 1317313877}
   - component: {fileID: 1317313876}
-  - component: {fileID: 1317313875}
   m_Layer: 0
   m_Name: Road Split Line
   m_TagString: Untagged
@@ -90440,19 +89002,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1171
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1317313875
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1317313873}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.35999998, y: 0.20000044, z: 4}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1317313876
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -90999,7 +89548,6 @@ GameObject:
   - component: {fileID: 1331918866}
   - component: {fileID: 1331918869}
   - component: {fileID: 1331918868}
-  - component: {fileID: 1331918867}
   m_Layer: 0
   m_Name: Road T_Intersection_01
   m_TagString: Untagged
@@ -91022,19 +89570,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1190
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1331918867
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1331918865}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: -1.0462712e-22, y: 0.1, z: 0}
 --- !u!23 &1331918868
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -92019,7 +90554,6 @@ GameObject:
   - component: {fileID: 1351317038}
   - component: {fileID: 1351317041}
   - component: {fileID: 1351317040}
-  - component: {fileID: 1351317039}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -92042,19 +90576,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1133
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1351317039
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1351317037}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 4.5000245e-16, y: 0.1, z: 8.4703296e-23}
 --- !u!23 &1351317040
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -92892,7 +91413,6 @@ GameObject:
   - component: {fileID: 1364032181}
   - component: {fileID: 1364032184}
   - component: {fileID: 1364032183}
-  - component: {fileID: 1364032182}
   m_Layer: 0
   m_Name: Road Corner_01
   m_TagString: Untagged
@@ -92915,19 +91435,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1090
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1364032182
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1364032180}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000085, z: 20}
-  m_Center: {x: 4.500024e-16, y: 0.099999994, z: 8.470329e-23}
 --- !u!23 &1364032183
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -93415,7 +91922,6 @@ GameObject:
   - component: {fileID: 1367113036}
   - component: {fileID: 1367113039}
   - component: {fileID: 1367113038}
-  - component: {fileID: 1367113037}
   m_Layer: 0
   m_Name: Road Split Line
   m_TagString: Untagged
@@ -93438,19 +91944,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1165
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1367113037
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1367113035}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.35999998, y: 0.20000044, z: 4}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1367113038
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -94773,7 +93266,6 @@ GameObject:
   - component: {fileID: 1397553991}
   - component: {fileID: 1397553994}
   - component: {fileID: 1397553993}
-  - component: {fileID: 1397553992}
   m_Layer: 0
   m_Name: Road Concrete Tile
   m_TagString: Untagged
@@ -94796,19 +93288,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1086
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1397553992
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1397553990}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.0000008742278, z: 20}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1397553993
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -95161,7 +93640,6 @@ GameObject:
   - component: {fileID: 1402827785}
   - component: {fileID: 1402827788}
   - component: {fileID: 1402827787}
-  - component: {fileID: 1402827786}
   m_Layer: 0
   m_Name: Road Concrete Tile Small
   m_TagString: Untagged
@@ -95184,19 +93662,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1059
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1402827786
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1402827784}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 0.0000004371139, z: 10}
-  m_Center: {x: 0, y: 3.410605e-13, z: 0}
 --- !u!23 &1402827787
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -95452,7 +93917,6 @@ GameObject:
   - component: {fileID: 1408220563}
   - component: {fileID: 1408220566}
   - component: {fileID: 1408220565}
-  - component: {fileID: 1408220564}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -95475,19 +93939,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1158
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1408220564
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1408220562}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!23 &1408220565
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -95646,7 +94097,6 @@ GameObject:
   - component: {fileID: 1409446374}
   - component: {fileID: 1409446377}
   - component: {fileID: 1409446376}
-  - component: {fileID: 1409446375}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -95669,19 +94119,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1125
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1409446375
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1409446373}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 4.5000245e-16, y: 0.1, z: 8.4703296e-23}
 --- !u!23 &1409446376
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -95840,7 +94277,6 @@ GameObject:
   - component: {fileID: 1411139589}
   - component: {fileID: 1411139592}
   - component: {fileID: 1411139591}
-  - component: {fileID: 1411139590}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -95863,19 +94299,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1151
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1411139590
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1411139588}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 4.5000245e-16, y: 0.1, z: 8.4703296e-23}
 --- !u!23 &1411139591
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -98373,7 +96796,6 @@ GameObject:
   - component: {fileID: 1445104716}
   - component: {fileID: 1445104719}
   - component: {fileID: 1445104718}
-  - component: {fileID: 1445104717}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -98396,19 +96818,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1127
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1445104717
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1445104715}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!23 &1445104718
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -100216,7 +98625,6 @@ GameObject:
   - component: {fileID: 1478754350}
   - component: {fileID: 1478754353}
   - component: {fileID: 1478754352}
-  - component: {fileID: 1478754351}
   m_Layer: 0
   m_Name: Road Split Line
   m_TagString: Untagged
@@ -100239,19 +98647,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1181
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1478754351
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1478754349}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.35999998, y: 0.20000044, z: 4}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1478754352
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -100874,7 +99269,6 @@ GameObject:
   - component: {fileID: 1481790430}
   - component: {fileID: 1481790433}
   - component: {fileID: 1481790432}
-  - component: {fileID: 1481790431}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -100897,19 +99291,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1146
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1481790431
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1481790429}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!23 &1481790432
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -101456,7 +99837,6 @@ GameObject:
   - component: {fileID: 1491612097}
   - component: {fileID: 1491612100}
   - component: {fileID: 1491612099}
-  - component: {fileID: 1491612098}
   m_Layer: 0
   m_Name: Road Concrete Tile Small
   m_TagString: Untagged
@@ -101479,19 +99859,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1057
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1491612098
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1491612096}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 0.0000004371139, z: 10}
-  m_Center: {x: 0, y: 3.410605e-13, z: 0}
 --- !u!23 &1491612099
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -102603,7 +100970,6 @@ GameObject:
   - component: {fileID: 1511925244}
   - component: {fileID: 1511925247}
   - component: {fileID: 1511925246}
-  - component: {fileID: 1511925245}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -102626,19 +100992,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1110
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1511925245
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1511925243}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!23 &1511925246
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -104543,7 +102896,6 @@ GameObject:
   - component: {fileID: 1534733205}
   - component: {fileID: 1534733208}
   - component: {fileID: 1534733207}
-  - component: {fileID: 1534733206}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -104566,19 +102918,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1135
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1534733206
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1534733204}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 4.5000245e-16, y: 0.1, z: 8.4703296e-23}
 --- !u!23 &1534733207
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -104640,7 +102979,6 @@ GameObject:
   - component: {fileID: 1535645646}
   - component: {fileID: 1535645649}
   - component: {fileID: 1535645648}
-  - component: {fileID: 1535645647}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -104663,19 +103001,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1136
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1535645647
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1535645645}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!23 &1535645648
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -105416,7 +103741,6 @@ GameObject:
   - component: {fileID: 1550209951}
   - component: {fileID: 1550209954}
   - component: {fileID: 1550209953}
-  - component: {fileID: 1550209952}
   m_Layer: 0
   m_Name: Road Concrete Tile
   m_TagString: Untagged
@@ -105439,19 +103763,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1062
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1550209952
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1550209950}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.0000008742278, z: 20}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1550209953
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -105513,7 +103824,6 @@ GameObject:
   - component: {fileID: 1552548068}
   - component: {fileID: 1552548071}
   - component: {fileID: 1552548070}
-  - component: {fileID: 1552548069}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -105536,19 +103846,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1111
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1552548069
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552548067}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!23 &1552548070
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -106677,7 +104974,6 @@ GameObject:
   - component: {fileID: 1572546298}
   - component: {fileID: 1572546301}
   - component: {fileID: 1572546300}
-  - component: {fileID: 1572546299}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -106700,19 +104996,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1119
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1572546299
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1572546297}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 4.5000245e-16, y: 0.1, z: 8.4703296e-23}
 --- !u!23 &1572546300
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -108520,7 +106803,6 @@ GameObject:
   - component: {fileID: 1593574980}
   - component: {fileID: 1593574983}
   - component: {fileID: 1593574982}
-  - component: {fileID: 1593574981}
   m_Layer: 0
   m_Name: Road Tile
   m_TagString: Untagged
@@ -108543,19 +106825,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1220
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1593574981
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1593574979}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.0000008742278, z: 20}
-  m_Center: {x: 0, y: -3.9790393e-13, z: 0}
 --- !u!23 &1593574982
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -109864,7 +108133,6 @@ GameObject:
   - component: {fileID: 1603932106}
   - component: {fileID: 1603932109}
   - component: {fileID: 1603932108}
-  - component: {fileID: 1603932107}
   m_Layer: 0
   m_Name: Road Concrete Tile
   m_TagString: Untagged
@@ -109887,19 +108155,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1077
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1603932107
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1603932105}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.0000008742278, z: 20}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1603932108
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -110277,7 +108532,6 @@ GameObject:
   - component: {fileID: 1611011364}
   - component: {fileID: 1611011367}
   - component: {fileID: 1611011366}
-  - component: {fileID: 1611011365}
   m_Layer: 0
   m_Name: Road Split Line
   m_TagString: Untagged
@@ -110300,19 +108554,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1185
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1611011365
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1611011363}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.35999998, y: 0.20000044, z: 4}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1611011366
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -110756,7 +108997,6 @@ GameObject:
   - component: {fileID: 1620802406}
   - component: {fileID: 1620802409}
   - component: {fileID: 1620802408}
-  - component: {fileID: 1620802407}
   m_Layer: 0
   m_Name: Road Lane Half
   m_TagString: Untagged
@@ -110779,19 +109019,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1102
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1620802407
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1620802405}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000045, z: 10}
-  m_Center: {x: 4.5000245e-16, y: 0.1, z: 8.4703296e-23}
 --- !u!23 &1620802408
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -112197,7 +110424,6 @@ GameObject:
   - component: {fileID: 1649309029}
   - component: {fileID: 1649309032}
   - component: {fileID: 1649309031}
-  - component: {fileID: 1649309030}
   m_Layer: 0
   m_Name: Road Split Line
   m_TagString: Untagged
@@ -112220,19 +110446,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1167
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1649309030
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1649309028}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.35999998, y: 0.20000044, z: 4}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1649309031
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -114472,7 +112685,6 @@ GameObject:
   - component: {fileID: 1700983095}
   - component: {fileID: 1700983098}
   - component: {fileID: 1700983097}
-  - component: {fileID: 1700983096}
   m_Layer: 0
   m_Name: Road Concrete Tile
   m_TagString: Untagged
@@ -114495,19 +112707,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1069
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1700983096
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1700983094}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.0000008742278, z: 20}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1700983097
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -115442,7 +113641,6 @@ GameObject:
   - component: {fileID: 1713589810}
   - component: {fileID: 1713589813}
   - component: {fileID: 1713589812}
-  - component: {fileID: 1713589811}
   m_Layer: 0
   m_Name: Road Split Line
   m_TagString: Untagged
@@ -115465,19 +113663,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1184
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1713589811
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1713589809}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.35999998, y: 0.20000044, z: 4}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1713589812
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -116606,7 +114791,6 @@ GameObject:
   - component: {fileID: 1736819357}
   - component: {fileID: 1736819360}
   - component: {fileID: 1736819359}
-  - component: {fileID: 1736819358}
   m_Layer: 0
   m_Name: Road Concrete Tile
   m_TagString: Untagged
@@ -116629,19 +114813,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1075
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1736819358
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736819356}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.0000008742278, z: 20}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1736819359
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -117077,7 +115248,6 @@ GameObject:
   - component: {fileID: 1749398880}
   - component: {fileID: 1749398883}
   - component: {fileID: 1749398882}
-  - component: {fileID: 1749398881}
   m_Layer: 0
   m_Name: Road Tile Small
   m_TagString: Untagged
@@ -117100,19 +115270,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1203
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1749398881
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1749398879}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 0.0000004371139, z: 10}
-  m_Center: {x: 0, y: -4.5474735e-13, z: 0}
 --- !u!23 &1749398882
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -117572,7 +115729,6 @@ GameObject:
   - component: {fileID: 1752047841}
   - component: {fileID: 1752047844}
   - component: {fileID: 1752047843}
-  - component: {fileID: 1752047842}
   m_Layer: 0
   m_Name: Road Split Line
   m_TagString: Untagged
@@ -117595,19 +115751,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1169
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1752047842
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1752047840}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.35999998, y: 0.20000044, z: 4}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1752047843
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -117943,7 +116086,6 @@ GameObject:
   - component: {fileID: 1767206027}
   - component: {fileID: 1767206030}
   - component: {fileID: 1767206029}
-  - component: {fileID: 1767206028}
   m_Layer: 0
   m_Name: Road Concrete Tile
   m_TagString: Untagged
@@ -117966,19 +116108,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1067
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1767206028
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1767206026}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.0000008742278, z: 20}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1767206029
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -118428,7 +116557,6 @@ GameObject:
   - component: {fileID: 1774740508}
   - component: {fileID: 1774740511}
   - component: {fileID: 1774740510}
-  - component: {fileID: 1774740509}
   m_Layer: 0
   m_Name: Road Split Line
   m_TagString: Untagged
@@ -118451,19 +116579,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1170
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1774740509
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1774740507}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.35999998, y: 0.20000044, z: 4}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1774740510
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -118525,7 +116640,6 @@ GameObject:
   - component: {fileID: 1777247254}
   - component: {fileID: 1777247257}
   - component: {fileID: 1777247256}
-  - component: {fileID: 1777247255}
   m_Layer: 0
   m_Name: Road Concrete Tile
   m_TagString: Untagged
@@ -118548,19 +116662,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1087
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1777247255
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1777247253}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.0000008742278, z: 20}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1777247256
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -120369,7 +118470,6 @@ GameObject:
   - component: {fileID: 1817935336}
   - component: {fileID: 1817935339}
   - component: {fileID: 1817935338}
-  - component: {fileID: 1817935337}
   m_Layer: 0
   m_Name: Road Concrete Tile Small
   m_TagString: Untagged
@@ -120392,19 +118492,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1053
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1817935337
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1817935335}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 0.0000004371139, z: 10}
-  m_Center: {x: 0, y: -5.684342e-14, z: 0}
 --- !u!23 &1817935338
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -121609,7 +119696,6 @@ GameObject:
   - component: {fileID: 1839050222}
   - component: {fileID: 1839050225}
   - component: {fileID: 1839050224}
-  - component: {fileID: 1839050223}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -121632,19 +119718,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1139
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1839050223
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1839050221}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!23 &1839050224
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -122870,7 +120943,6 @@ GameObject:
   - component: {fileID: 1857800572}
   - component: {fileID: 1857800575}
   - component: {fileID: 1857800574}
-  - component: {fileID: 1857800573}
   m_Layer: 0
   m_Name: Road Lane Half
   m_TagString: Untagged
@@ -122893,19 +120965,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1100
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1857800573
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1857800571}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000045, z: 10}
-  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!23 &1857800574
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -123258,7 +121317,6 @@ GameObject:
   - component: {fileID: 1863737885}
   - component: {fileID: 1863737888}
   - component: {fileID: 1863737887}
-  - component: {fileID: 1863737886}
   m_Layer: 0
   m_Name: Road Tile Small
   m_TagString: Untagged
@@ -123281,19 +121339,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1200
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1863737886
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1863737884}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 0.0000004371139, z: 10}
-  m_Center: {x: 0, y: 5.684342e-14, z: 0}
 --- !u!23 &1863737887
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -125332,7 +123377,6 @@ GameObject:
   - component: {fileID: 1901631723}
   - component: {fileID: 1901631726}
   - component: {fileID: 1901631725}
-  - component: {fileID: 1901631724}
   m_Layer: 0
   m_Name: Road Intersection_01
   m_TagString: Untagged
@@ -125355,19 +123399,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1096
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1901631724
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1901631722}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!23 &1901631725
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -125429,7 +123460,6 @@ GameObject:
   - component: {fileID: 1901656883}
   - component: {fileID: 1901656886}
   - component: {fileID: 1901656885}
-  - component: {fileID: 1901656884}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -125452,19 +123482,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1148
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1901656884
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1901656882}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 4.5000245e-16, y: 0.1, z: 8.4703296e-23}
 --- !u!23 &1901656885
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -126690,7 +124707,6 @@ GameObject:
   - component: {fileID: 1920565034}
   - component: {fileID: 1920565037}
   - component: {fileID: 1920565036}
-  - component: {fileID: 1920565035}
   m_Layer: 0
   m_Name: Road Tile Small
   m_TagString: Untagged
@@ -126713,19 +124729,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1201
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1920565035
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1920565033}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 0.0000004371139, z: 10}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1920565036
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -126787,7 +124790,6 @@ GameObject:
   - component: {fileID: 1922558475}
   - component: {fileID: 1922558478}
   - component: {fileID: 1922558477}
-  - component: {fileID: 1922558476}
   m_Layer: 0
   m_Name: Road T_Intersection_01
   m_TagString: Untagged
@@ -126810,19 +124812,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1193
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1922558476
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1922558474}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: -4.5000245e-16, y: 0.1, z: 8.4703296e-23}
 --- !u!23 &1922558477
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -127272,7 +125261,6 @@ GameObject:
   - component: {fileID: 1929561698}
   - component: {fileID: 1929561701}
   - component: {fileID: 1929561700}
-  - component: {fileID: 1929561699}
   m_Layer: 0
   m_Name: Road Concrete Tile
   m_TagString: Untagged
@@ -127295,19 +125283,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1079
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1929561699
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1929561697}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.0000008742278, z: 20}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1929561700
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -128183,7 +126158,6 @@ GameObject:
   - component: {fileID: 1945337463}
   - component: {fileID: 1945337466}
   - component: {fileID: 1945337465}
-  - component: {fileID: 1945337464}
   m_Layer: 0
   m_Name: Road Tile Small
   m_TagString: Untagged
@@ -128206,19 +126180,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1211
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1945337464
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1945337462}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 0.00000043711395, z: 10}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1945337465
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -129056,7 +127017,6 @@ GameObject:
   - component: {fileID: 1957074882}
   - component: {fileID: 1957074885}
   - component: {fileID: 1957074884}
-  - component: {fileID: 1957074883}
   m_Layer: 0
   m_Name: Road Concrete Tile
   m_TagString: Untagged
@@ -129079,19 +127039,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1064
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1957074883
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1957074881}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.0000008742278, z: 20}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1957074884
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -129832,7 +127779,6 @@ GameObject:
   - component: {fileID: 1965307059}
   - component: {fileID: 1965307062}
   - component: {fileID: 1965307061}
-  - component: {fileID: 1965307060}
   m_Layer: 0
   m_Name: Road Concrete Tile Small
   m_TagString: Untagged
@@ -129855,19 +127801,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1054
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1965307060
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1965307058}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 0.0000004371139, z: 10}
-  m_Center: {x: 0, y: -5.684342e-14, z: 0}
 --- !u!23 &1965307061
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -130591,7 +128524,6 @@ GameObject:
   - component: {fileID: 1975708124}
   - component: {fileID: 1975708127}
   - component: {fileID: 1975708126}
-  - component: {fileID: 1975708125}
   m_Layer: 0
   m_Name: Road Intersection_01
   m_TagString: Untagged
@@ -130614,19 +128546,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1095
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1975708125
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1975708123}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!23 &1975708126
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -130688,7 +128607,6 @@ GameObject:
   - component: {fileID: 1976853842}
   - component: {fileID: 1976853845}
   - component: {fileID: 1976853844}
-  - component: {fileID: 1976853843}
   m_Layer: 0
   m_Name: Road Concrete Tile
   m_TagString: Untagged
@@ -130711,19 +128629,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1073
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1976853843
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1976853841}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.0000008742278, z: 20}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1976853844
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -132725,7 +130630,6 @@ GameObject:
   - component: {fileID: 2013127241}
   - component: {fileID: 2013127244}
   - component: {fileID: 2013127243}
-  - component: {fileID: 2013127242}
   m_Layer: 0
   m_Name: Road Split Line
   m_TagString: Untagged
@@ -132748,19 +130652,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1178
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2013127242
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2013127240}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.35999998, y: 0.20000044, z: 4}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2013127243
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -133383,7 +131274,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.558
+  m_Value: 0.863
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -133398,7 +131289,6 @@ GameObject:
   - component: {fileID: 2021025430}
   - component: {fileID: 2021025433}
   - component: {fileID: 2021025432}
-  - component: {fileID: 2021025431}
   m_Layer: 0
   m_Name: Road Tile Small
   m_TagString: Untagged
@@ -133421,19 +131311,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1215
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2021025431
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2021025429}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 0.00000043711395, z: 10}
-  m_Center: {x: 0, y: 3.637979e-12, z: 0}
 --- !u!23 &2021025432
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -134078,7 +131955,6 @@ GameObject:
   - component: {fileID: 2037544182}
   - component: {fileID: 2037544185}
   - component: {fileID: 2037544184}
-  - component: {fileID: 2037544183}
   m_Layer: 0
   m_Name: Road Concrete Tile
   m_TagString: Untagged
@@ -134101,19 +131977,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1081
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2037544183
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2037544181}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.0000008742278, z: 20}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2037544184
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -134491,7 +132354,6 @@ GameObject:
   - component: {fileID: 2040559270}
   - component: {fileID: 2040559273}
   - component: {fileID: 2040559272}
-  - component: {fileID: 2040559271}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -134514,19 +132376,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1115
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2040559271
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2040559269}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!23 &2040559272
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -134879,7 +132728,6 @@ GameObject:
   - component: {fileID: 2045490702}
   - component: {fileID: 2045490705}
   - component: {fileID: 2045490704}
-  - component: {fileID: 2045490703}
   m_Layer: 0
   m_Name: Road Tile Small
   m_TagString: Untagged
@@ -134902,19 +132750,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1207
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2045490703
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2045490701}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 0.00000043711395, z: 10}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2045490704
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -135267,7 +133102,6 @@ GameObject:
   - component: {fileID: 2051000729}
   - component: {fileID: 2051000732}
   - component: {fileID: 2051000731}
-  - component: {fileID: 2051000730}
   m_Layer: 0
   m_Name: Road Concrete Tile
   m_TagString: Untagged
@@ -135290,19 +133124,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1074
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2051000730
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2051000728}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.0000008742278, z: 20}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2051000731
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -135364,7 +133185,6 @@ GameObject:
   - component: {fileID: 2051582503}
   - component: {fileID: 2051582506}
   - component: {fileID: 2051582505}
-  - component: {fileID: 2051582504}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -135387,19 +133207,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1141
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2051582504
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2051582502}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!23 &2051582505
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -136029,7 +133836,6 @@ GameObject:
   - component: {fileID: 2072052075}
   - component: {fileID: 2072052078}
   - component: {fileID: 2072052077}
-  - component: {fileID: 2072052076}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -136052,19 +133858,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1134
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2072052076
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2072052074}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 4.5000245e-16, y: 0.1, z: 8.4703296e-23}
 --- !u!23 &2072052077
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -136126,7 +133919,6 @@ GameObject:
   - component: {fileID: 2072365005}
   - component: {fileID: 2072365008}
   - component: {fileID: 2072365007}
-  - component: {fileID: 2072365006}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -136149,19 +133941,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1143
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2072365006
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2072365004}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!23 &2072365007
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -138040,7 +135819,6 @@ GameObject:
   - component: {fileID: 2099780376}
   - component: {fileID: 2099780379}
   - component: {fileID: 2099780378}
-  - component: {fileID: 2099780377}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -138063,19 +135841,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1116
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2099780377
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2099780375}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 4.5000245e-16, y: 0.1, z: 8.4703296e-23}
 --- !u!23 &2099780378
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -139010,7 +136775,6 @@ GameObject:
   - component: {fileID: 2117116790}
   - component: {fileID: 2117116793}
   - component: {fileID: 2117116792}
-  - component: {fileID: 2117116791}
   m_Layer: 0
   m_Name: Road Split Line
   m_TagString: Untagged
@@ -139033,19 +136797,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1187
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2117116791
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2117116789}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.35999998, y: 0.20000044, z: 4}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2117116792
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -139107,7 +136858,6 @@ GameObject:
   - component: {fileID: 2118112134}
   - component: {fileID: 2118112137}
   - component: {fileID: 2118112136}
-  - component: {fileID: 2118112135}
   m_Layer: 0
   m_Name: Road Tile Small
   m_TagString: Untagged
@@ -139130,19 +136880,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1209
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2118112135
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2118112133}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 0.00000043711395, z: 10}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2118112136
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -139398,7 +137135,6 @@ GameObject:
   - component: {fileID: 2120557816}
   - component: {fileID: 2120557819}
   - component: {fileID: 2120557818}
-  - component: {fileID: 2120557817}
   m_Layer: 0
   m_Name: Road Concrete Tile
   m_TagString: Untagged
@@ -139421,19 +137157,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1072
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2120557817
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2120557815}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.0000008742278, z: 20}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2120557818
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -139495,7 +137218,6 @@ GameObject:
   - component: {fileID: 2121156811}
   - component: {fileID: 2121156814}
   - component: {fileID: 2121156813}
-  - component: {fileID: 2121156812}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -139518,19 +137240,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1126
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2121156812
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2121156810}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!23 &2121156813
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -140077,7 +137786,6 @@ GameObject:
   - component: {fileID: 2128414814}
   - component: {fileID: 2128414817}
   - component: {fileID: 2128414816}
-  - component: {fileID: 2128414815}
   m_Layer: 0
   m_Name: Road Concrete Tile
   m_TagString: Untagged
@@ -140100,19 +137808,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1089
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2128414815
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2128414813}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.0000008742278, z: 20}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2128414816
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -140251,7 +137946,6 @@ GameObject:
   - component: {fileID: 2129312127}
   - component: {fileID: 2129312130}
   - component: {fileID: 2129312129}
-  - component: {fileID: 2129312128}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -140274,19 +137968,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1137
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2129312128
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2129312126}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!23 &2129312129
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -140348,7 +138029,6 @@ GameObject:
   - component: {fileID: 2130139000}
   - component: {fileID: 2130139003}
   - component: {fileID: 2130139002}
-  - component: {fileID: 2130139001}
   m_Layer: 0
   m_Name: Road Lane_01
   m_TagString: Untagged
@@ -140371,19 +138051,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1149
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2130139001
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2130138999}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.20000087, z: 20}
-  m_Center: {x: 4.5000245e-16, y: 0.1, z: 8.4703296e-23}
 --- !u!23 &2130139002
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -140639,7 +138306,6 @@ GameObject:
   - component: {fileID: 2135251812}
   - component: {fileID: 2135251815}
   - component: {fileID: 2135251814}
-  - component: {fileID: 2135251813}
   m_Layer: 0
   m_Name: Road Concrete Tile
   m_TagString: Untagged
@@ -140662,19 +138328,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1065
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2135251813
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2135251811}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 0.0000008742278, z: 20}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2135251814
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -140833,7 +138486,6 @@ GameObject:
   - component: {fileID: 2141469624}
   - component: {fileID: 2141469627}
   - component: {fileID: 2141469626}
-  - component: {fileID: 2141469625}
   m_Layer: 0
   m_Name: Road Split Line
   m_TagString: Untagged
@@ -140856,19 +138508,6 @@ Transform:
   m_Father: {fileID: 1244229572}
   m_RootOrder: 1176
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2141469625
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2141469623}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.35999998, y: 0.20000044, z: 4}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2141469626
 MeshRenderer:
   m_ObjectHideFlags: 0

@@ -11,19 +11,13 @@ public class JSPlayerMgr : MonoBehaviour
     {
         if (!JSGMode.ActionObj[0].activeSelf)
         {
-            Debug.Log("파티클 쳐맞음");
-            JSGMode.PHealth -= 1.5f;
-        }
-        else
-        {
-            Debug.Log("파티클 쳐맞음");
-            JSGMode.PHealth -= 0.05f;
-        }
-        if (JSGMode.PHealth <= 0)
-        {
-            gameObject.SetActive(false);
-            //플레이어 담구기
-            JSGMode.GameOver();
+            JSGMode.SetGuideText("가스에 노출 되었습니다");
+            JSGMode.PHealth -= 3f;
+            if (JSGMode.PHealth <= 0)
+            {
+                gameObject.SetActive(false);
+                JSGMode.GameOver();
+            }
         }
     }
     private void OnTriggerEnter(Collider other)
