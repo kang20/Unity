@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/Lobby.unity
-    guid: 52c1799cd434c974cbc972ae4bd11605
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
@@ -26,10 +23,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Option.unity
     guid: 7ce4999184e1d4954a91854723b5e7a3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Kim Si Wan/Scenes/Indoor.unity
     guid: b80122945d1459f498f35faeda17e025
-  - enabled: 1
+  - enabled: 0
     path: Assets/Kim Si Wan/Scenes/OutDoor.unity
     guid: c490d761646f8be4e93260efff9dd5d8
+  - enabled: 1
+    path: Assets/Scenes/Lobby.unity
+    guid: 872b5094993eadf4789d6c93cd9cfa27
   m_configObjects: {}

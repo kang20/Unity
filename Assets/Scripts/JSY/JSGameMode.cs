@@ -62,11 +62,11 @@ public class JSGameMode : MonoBehaviour
 
     private IEnumerator SirenStartCoroutine()
     {
-        yield return new WaitForSeconds(10);
-        //10초 대기
+        yield return new WaitForSeconds(5);
+        //5초 대기
         //사이렌 키기
-        gameObject.GetComponent<AudioSource>().Play();
-        //가스 코루틴 키기
+        gameObject.GetComponent<AudioSource>().enabled = true;
+        //가스 코루틴 시작
         StartCoroutine(GasStartCoroutine());
     }
 
@@ -95,7 +95,7 @@ public class JSGameMode : MonoBehaviour
 
     public void GameOver()
     {
-        gameObject.GetComponent<AudioSource>().Stop();
+        gameObject.GetComponent<AudioSource>().enabled = false;
         PlayUI.SetActive(false);
         EndUI.SetActive(true);
         //endui 설정
@@ -103,21 +103,24 @@ public class JSGameMode : MonoBehaviour
         Text Result = EndUI.transform.Find("ResultText").GetComponent<Text>();
         Result.text = "    평가\n체력: " + PHealth.ToString("#.##") +
                         "\n시간: " + (Time.realtimeSinceStartup - TimeCount).ToString("#.##") +
-                        "\n점수: " + Point.ToString() + " \n\n한줄평\n";
-        switch(Rating)
+                        "\n점수: " + Point.ToString() + " \n\n숙련 등급\n";
+
+        //점수에 따른 평가 출력
+        if(Rating > 120)
         {
-            case 1:
-                Result.text += "너무 못했어요";
-                break;
-            case 2:
-                Result.text += "못했어요";
-                break;
-            case 3:
-                Result.text += "잘했어요";
-                break;
-            case 4:
-                Result.text += "진짜 잘했어요";
-                break;
+            Result.text += "S";
+        }
+        else if(Rating > 90)
+        {
+            Result.text += "A";
+        }
+        else if( Rating > 60)
+        {
+            Result.text += "B";
+        }
+        else
+        {
+            Result.text += "C";
         }
         Time.timeScale = 0;
         Camera.main.GetComponent<CameraMovement>().enabled = false;
@@ -136,6 +139,7 @@ public class JSGameMode : MonoBehaviour
 
     private void ToLobbyBtn()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("Lobby");
     }
 }

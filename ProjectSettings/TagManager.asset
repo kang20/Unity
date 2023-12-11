@@ -4,14 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - door
-  - button f6
-  - button f1
-  - button f5
-  - button f2
-  - button f4
-  - button f3
-  - Item
+  - CPRPlayer
   layers:
   - Default
   - TransparentFX
@@ -48,10 +41,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Inventory_Base
-    uniqueID: 3844517409
-    locked: 0
-  - name: Inventory_Slot
-    uniqueID: 3066114669
     locked: 0

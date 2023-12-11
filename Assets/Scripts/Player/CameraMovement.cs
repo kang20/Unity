@@ -27,13 +27,13 @@ public class CameraMovement : MonoBehaviour
     void Update()
     {
         if (!isESC)
-        { 
+        {
             float mouseX = Input.GetAxis("Mouse X");
             float mouseY = -Input.GetAxis("Mouse Y");
             mx += mouseX * sensitivity * Time.deltaTime;
             my += mouseY * sensitivity * Time.deltaTime;
 
-            if (PlayerManager.instance.PlayerPerson == 3)
+            if (LocalPlayerManager.instance.PlayerPerson == 3)
             {
                 my = Mathf.Clamp(my, -7, 35);
                 CameraArm.transform.localPosition = new Vector3(2, 6, -5);
