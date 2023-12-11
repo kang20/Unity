@@ -14,9 +14,14 @@ public class ShakeTester : MonoBehaviour
     private bool smoothShakeDone = false; // SmoothShake 완료 여부 체크
     private bool yeoflag = false;
     private bool isStop = false;
-    // 8초간 P파 -> 8초간 S파 -> 8초간 여진
+    private float gamecount = 18f;
+    [SerializeField]
+    private HJ_GameMode HJMode = HJ_GameMode.instance;
+    [SerializeField]
+    private QuakePlayerAnimation HJ_State = QuakePlayerAnimation.instance;
+
+    // 8초간 P파 -> 4초간 S파 -> 5초간 여진 -> 정지 -> 30초 뒤 5초간 여진
     private Resettable[] _resettables = new Resettable[0];
-    
     private void Awake()
     {
         _resettables = FindObjectsOfType<Resettable>();
@@ -24,6 +29,22 @@ public class ShakeTester : MonoBehaviour
 
     private void Update()
     {
+        gamecount -= Time.deltaTime;
+        if (gamecount <= 0f)
+        {
+            if (HJ_State._isCrouching)
+            {
+                HJMode.PHealth -= 0f;
+            }else if (HJ_State._ishandsUp)
+            {
+                HJMode.PHealth -= Time.deltaTime/4;
+            }
+            else
+            {
+                HJMode.PHealth -= Time.deltaTime;
+            }
+        }
+        
         if (hasShaken)
         {
             shakeTime -= Time.deltaTime;
