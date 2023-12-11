@@ -30,7 +30,7 @@ public class ShakeTester : MonoBehaviour
             // 8초 후 3f 힘으로 지진 발생
             if (shakeTime <= 0f && !smoothShakeDone)
             {
-                CameraShakerHandler.SetScaleAll(3f, true);
+                CameraShakerHandler.SetScaleAll(2.5f, true);
                 Invoke("StartSmoothShake", 4f); // 3초 후 SmoothShake 시작
                 smoothShakeDone = true;
             }
