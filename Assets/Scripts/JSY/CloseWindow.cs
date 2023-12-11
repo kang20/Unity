@@ -11,13 +11,16 @@ public class CloseWindow : MonoBehaviour
     [SerializeField]
     GameObject Playermodel;
 
+    [SerializeField]
+    private AudioClip WindowClip;
     private void OnMouseDown()
     {
         float distance = Vector3.Distance(Playermodel.transform.position, transform.position);
         if (distance < 5)
         {
+            Camera.main.GetComponent<AudioSource>().clip = WindowClip;
+            Camera.main.GetComponent<AudioSource>().Play();
             JSGameMode.instance.Point += 10;
-            StartCoroutine(JSGameMode.instance.SetGuideText("창문을 닫았습니다"));
             gameObject.SetActive(false);
             ClosedWindow.SetActive(true);
         }

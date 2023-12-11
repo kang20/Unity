@@ -14,6 +14,9 @@ public class GameMode : MonoBehaviour
 
     private void Start()
     {
+        Screen.SetResolution(1280, 800, false);
+        GetComponent<AudioSource>().volume = LocalPlayerManager.instance.MainSound;
+        Camera.main.GetComponent<AudioSource>().volume = LocalPlayerManager.instance.EffectSound;
         LocalPMgr = GameObject.Find("PlayerManager").GetComponent<LocalPlayerManager>();
     }
 
