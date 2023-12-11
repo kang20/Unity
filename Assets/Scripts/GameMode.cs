@@ -28,7 +28,7 @@ public class GameMode : MonoBehaviour
         }
         else if (OnlinePlayerInfo.ContainsKey(Key.nickname))
         { //이미 존재하는 플레이어의 init이 왔을 시
-            Debug.LogError("initfromReact: 이미 존재하는 플레이어" + Key.nickname);
+            Debug.LogError("initfromReact: 이미 존재하는 플레이어" + Key.nickname);   
         }
         else
         {//플레이 도중 새 플레이어 접속 시 플레이어 생성
@@ -36,6 +36,7 @@ public class GameMode : MonoBehaviour
             OP.GetComponent<OnlinePlayerManager>().Nickname = Key.nickname;
             OP.GetComponent<OnlinePlayerManager>().Score = Key.score;
             OP.GetComponent<OnlinePlayerManager>().isLogin = Key.islogin;
+            OP.GetComponent<OnlinePlayerManager>().SetName();
             OP.transform.position = new Vector3(-120, 0, -120);
             OnlinePlayerInfo.Add(Key.nickname, OP);
         }
@@ -54,6 +55,7 @@ public class GameMode : MonoBehaviour
             GameObject OP = Instantiate(OnlinePlayer);
             OP.GetComponent<OnlinePlayerManager>().Nickname = Key.nickname;
             OP.GetComponent<OnlinePlayerManager>().Score = Key.score;
+            OP.GetComponent<OnlinePlayerManager>().SetName();
             OP.transform.position = new Vector3(Key.pos_x, Key.pos_y, Key.pos_z);
             OP.transform.rotation = Quaternion.Euler(Key.rot_x, Key.rot_y, Key.rot_z);
             OP.GetComponent<PlayerAnimation>().UpdateStat(Key.is_walk, Key.is_run, Key.is_jump);
@@ -65,5 +67,9 @@ public class GameMode : MonoBehaviour
     {
         Destroy(OnlinePlayerInfo[Key.nickname]);
         OnlinePlayerInfo.Remove(Key.nickname);
+    }
+    public void SetMainSound()
+    {
+
     }
 }

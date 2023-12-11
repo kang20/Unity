@@ -11,6 +11,9 @@ public class getObj : MonoBehaviour
     [SerializeField]
     private GameObject InfoPanel;
 
+    [SerializeField]
+    private AudioSource GetSound;
+
     private void OnMouseDown()
     {
         float distance = Vector3.Distance(Obj.transform.position, transform.position);
