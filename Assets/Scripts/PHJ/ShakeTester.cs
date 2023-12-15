@@ -7,7 +7,7 @@ using FirstGearGames.SmoothCameraShaker.Demo;
 public class ShakeTester : MonoBehaviour
 {
     public ShakeData QuakeShake;
-    private float shakeTime = 8f; // 총 지진 지속 시간
+    private float shakeTime = 8f; // 최초 P파 지진 지속 시간
     private float smoothShakeTime = 5f; // SmoothShake 지속 시간
     private float yeoShakeTime = 30f; // 추가 지진 발생 시간
     private bool hasShaken = false; // 지진 발생 여부 체크
@@ -37,7 +37,7 @@ public class ShakeTester : MonoBehaviour
                 HJMode.PHealth -= 0f;
             }else if (HJ_State._ishandsUp)
             {
-                HJMode.PHealth -= Time.deltaTime/4;
+                HJMode.PHealth -= Time.deltaTime/6;
             }
             else
             {
@@ -48,11 +48,11 @@ public class ShakeTester : MonoBehaviour
         if (hasShaken)
         {
             shakeTime -= Time.deltaTime;
-            // 8초 후 3f 힘으로 지진 발생
+            // 8초 후 4f 힘으로 지진 발생
             if (shakeTime <= 0f && !smoothShakeDone)
             {
-                CameraShakerHandler.SetScaleAll(2.5f, true);
-                Invoke("StartSmoothShake", 4f); // 3초 후 SmoothShake 시작
+                CameraShakerHandler.SetScaleAll(3f, true);
+                Invoke("StartSmoothShake", 4f); // 4초 후 SmoothShake 시작
                 smoothShakeDone = true;
             }
         }
@@ -64,7 +64,7 @@ public class ShakeTester : MonoBehaviour
             if (yeoShakeTime <= 0f)
             {
                 CameraShakerHandler.SetScaleAll(1f, true); // 추가 지진 발생
-                Invoke("StopShake", 5f); // 5초 후 정지
+                Invoke("StopShake", 10f); // 5초 후 정지
                 smoothShakeDone = false; // 다음 지진 발생을 위해 리셋
                 yeoflag = false;
             }

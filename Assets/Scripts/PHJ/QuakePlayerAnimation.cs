@@ -42,7 +42,7 @@ public class QuakePlayerAnimation : MonoBehaviour
             {
                 animator.SetBool("isRun", false);
             }
-            if (_ishandsUp)
+            if (_ishandsUp && ! _isrun)
             {
                 animator.SetBool("ishandsUp", true);
             }
@@ -50,20 +50,20 @@ public class QuakePlayerAnimation : MonoBehaviour
             {
                 animator.SetBool("ishandsUp", false);
             }
-            if (_isCrouching)
-            {
-                animator.SetBool("isCrouching", true);
-            }
-            else
-            {
-                animator.SetBool("isCrouching", false);
-            }
+
         }
         else
         {
             animator.SetBool("isWalk", false);
         }
-
+        if (_isCrouching)
+        {
+            animator.SetBool("isCrouching", true);
+        }
+        else
+        {
+            animator.SetBool("isCrouching", false);
+        }
     }
 
 }

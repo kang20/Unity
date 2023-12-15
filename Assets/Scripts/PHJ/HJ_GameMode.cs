@@ -78,6 +78,12 @@ public class HJ_GameMode : MonoBehaviour
         Debug.Log(HP.value);
         HP.value = PHealth;
         HPtxt.text = "HP: " + PHealth.ToString("#.#");
+        if (PHealth <= 0)
+        {
+            gameObject.SetActive(false);
+            //플레이어 담구기
+            GameOver();
+        }
     }
     public void Detail_Load1()
     {
@@ -108,15 +114,8 @@ public class HJ_GameMode : MonoBehaviour
                              + "\n" + "안전하게 대피 장소로 도망치세요.";
             yield return new WaitForSeconds(1);
         }
-        GuideText.text = "지진이 곧 발생합니다 " + (0).ToString() + "초";
+        GuideText.text = "지진이 발생합니다 " + (0).ToString() + "초";
         yield return new WaitForSeconds(1);
-        GuideText.text = "";
-    }
-
-    public IEnumerator SetGuideText(string str)
-    {
-        GuideText.text = str;
-        yield return new WaitForSeconds(1.5f);
         GuideText.text = "";
     }
 
@@ -140,17 +139,17 @@ public class HJ_GameMode : MonoBehaviour
             Rating = 0;
             EndImage.GetComponent<Image>().sprite = End_Image[4];
         }
-        else if(PHealth > 85)
+        else if(PHealth > 80)
         {
             Result.text += "S";
             EndImage.GetComponent<Image>().sprite = End_Image[0];
         }
-        else if(PHealth <= 85 && PHealth > 80)
+        else if(PHealth <= 80 && PHealth > 75)
         {
             Result.text += "A";
             EndImage.GetComponent<Image>().sprite = End_Image[1];
         }
-        else if(PHealth <= 80 && PHealth > 75)
+        else if(PHealth <= 75 && PHealth > 70)
         {
             Result.text += "B";
             EndImage.GetComponent<Image>().sprite = End_Image[2];
@@ -170,6 +169,33 @@ public class HJ_GameMode : MonoBehaviour
     {
         StartPanel.SetActive(false);
         StartPanel2.SetActive(true);
+    }
+    
+    private IEnumerator AfterEarthquakeWarningCoroutine()
+    {
+        // 56초 뒤 여진
+        yield return new WaitForSeconds(56);
+        for (int i = 0; i < 5; i++)
+        {
+            GuideText.text = "여진이 곧 발생합니다 " + (5 - i).ToString() + "초"
+                             + "\n" + "안전하게 대피 장소로 도망치세요.";
+            yield return new WaitForSeconds(1);
+        }
+        GuideText.text = "여진이 발생합니다 " + (0).ToString() + "초";
+        yield return new WaitForSeconds(1);
+        GuideText.text = "";
+    }    
+    
+    private IEnumerator StopEarthquakeCoroutine()
+    {
+        yield return new WaitForSeconds(34);
+        GuideText.text = "지진이 멈추었습니다.\n지진 옥외대피장소로 대피하세요." ;
+        yield return new WaitForSeconds(5);
+        GuideText.text = "";
+        yield return new WaitForSeconds(34);
+        GuideText.text = "여진이 멈추었습니다.\n다시 옥외대피장소로 대피하세요." ;
+        yield return new WaitForSeconds(5);
+        GuideText.text = "";
     }
     private void StartBtn()
     {
@@ -200,6 +226,8 @@ public class HJ_GameMode : MonoBehaviour
             Debug.LogError("'ShakeTester' GameObject를 찾을 수 없습니다.");
         }
         StartCoroutine(SirenStartCoroutine());
+        StartCoroutine(AfterEarthquakeWarningCoroutine());
+        StartCoroutine(StopEarthquakeCoroutine());
     }
 
     private void ToLobbyBtn()
