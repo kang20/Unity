@@ -13,6 +13,8 @@ TagManager:
   - button f4
   - button f3
   - Building
+  - Item
+  - stranger
   layers:
   - Default
   - TransparentFX
