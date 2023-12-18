@@ -20,7 +20,7 @@ public class PlayerHP_Bar : MonoBehaviour
     private void Start()
     {
         gm = CPRGameMode.GetComponentInChildren<CPRgameMode>();
-
+        currenthp = 100;
         // 타이머 시작 시간 초기화
         startTime = Time.time;
         elapsedTime = 1f; // 원하는 시간 간격으로 설정
