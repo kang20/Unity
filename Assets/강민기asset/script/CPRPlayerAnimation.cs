@@ -21,11 +21,11 @@ public class CPRPlayerAnimation : MonoBehaviour
     {
         if (_isCPR)
         {
-            animator.SetBool("is_CPR", true);
+            animator.SetBool("isCPR", true);
         }
         else
         {
-            animator.SetBool("is_CPR", false);
+            animator.SetBool("isCPR", false);
             if (_isjump)
             {
                 animator.SetBool("isJump", true);
