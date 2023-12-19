@@ -13,6 +13,9 @@ public class FromReact : MonoBehaviour
     [DllImport("__Internal")] 
     private static extern void newplay(string initstr);// 플레이어의 플레이어가 생성했다는 메세지를 클라이언트(리액트)로 보내는 함수
 
+    [DllImport("__Internal")]
+    private static extern void BuildComplete(); // 플레이어의 상태 정보를 클라이언트(리액트로 보내는 함수)
+
     public initDTO _initDto;
     private string initstr;
 
@@ -22,6 +25,15 @@ public class FromReact : MonoBehaviour
     public LocalDTO _localDto;
 
     public GameMode LobbyMode;
+
+    private void Start()
+    {
+        if(LobbyMode.LocalPMgr.Nickname == "")
+        {
+            BuildCompleteFromUnity();
+        }
+    }
+
 
     private void Update()
     {
@@ -36,7 +48,7 @@ public class FromReact : MonoBehaviour
 
     // Unity -> React
     public void initfromUnity()
-    {//로비 씬 재입장 or 퇴장 시 사용
+    {//로비 씬 입장 or 퇴장 시 사용
         initstr = JsonUtility.ToJson(new initDTO(LobbyMode.LocalPMgr.Nickname, LobbyMode.LocalPMgr.Score, LobbyMode.LocalPMgr.isLogin));
 #if UNITY_WEBGL == true && UNITY_EDITOR == false
         newplay(initstr);
@@ -59,6 +71,17 @@ public class FromReact : MonoBehaviour
         Debug.Log("유니티(실행 위치) -> 리액트 : " + playerstr);
 #endif
         Debug.Log("유니티(실행 위치) -> 리액트: " + playerstr);
+    }
+
+    // Unity -> React
+    public void BuildCompleteFromUnity()
+    {//빌드 성공 후 호출
+#if UNITY_WEBGL == true && UNITY_EDITOR == false
+        BuildComplete();
+#else
+        Debug.Log("유니티(실행 위치) -> 리액트 : " + initstr);
+#endif
+        Debug.Log("유니티(실행 위치) -> 리액트 : " + initstr);
     }
 
     // React -> Unity
@@ -92,5 +115,6 @@ public class FromReact : MonoBehaviour
         _localDto = JsonUtility.FromJson<LocalDTO>(reactStat);
 
         LobbyMode.ConstructLocalPlayer(_localDto);
+        initfromUnity();
     }
 }
