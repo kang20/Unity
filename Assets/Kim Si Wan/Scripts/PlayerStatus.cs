@@ -12,7 +12,7 @@ public class PlayerStatus : MonoBehaviour
 
     public int currentHp;
     public ItemMaker[] belongings;
-    private int belongingsIndex = 0;
+    public int currentBelongingIndex = 0;
 
     public bool usedFood = false;
     public bool usedWater = false;
@@ -24,6 +24,8 @@ public class PlayerStatus : MonoBehaviour
     public bool usedTape = false;
     public bool usedTowel = false;
     public bool usedFlashLight = false;
+
+    public int countTape = 0;
     void Start()
     {
         currentHp = maxHp;
@@ -31,25 +33,30 @@ public class PlayerStatus : MonoBehaviour
     }
 
     public void setBelongings(ItemMaker itemMaker) {
-        belongings[belongingsIndex++] = itemMaker;
-    }
-    public void deleteBelongings(ItemMaker itemMaker) {
-        for (int i = 0; i < belongingsIndex; i++) {
-            if (belongings[i].itemName == itemMaker.itemName) {
-                belongings[i] = null;
+        for (int i = 0; i < 20; i++) {
+            if (belongings[i] == null)
+            {
+                belongings[i] = itemMaker;
                 break;
             }
         }
-        belongingsIndex--;
+    }
+    public void deleteBelongings(ItemMaker itemMaker) {
+        for (int i = 0; i < 20; i++)
+        {
+            if (belongings[i] != null) { 
+                if (belongings[i].itemName == itemMaker.itemName) {
+                belongings[i] = null;
+                break;
+                }
+            }
+        }
     }
 
-    public void volcanicAshTime() {
-    }
     public void gameover() {
         StopAllCoroutines();
         GameManager.instance.isGameover = true;
     }
-
 
     void checkHp()
     {
@@ -66,21 +73,4 @@ public class PlayerStatus : MonoBehaviour
             gameover();
         }
     }
-
-    
-    /*void setDebuffMsg() {
-        debuffMsg = "";
-        if (isHungry == true) 
-            debuffMsg += "배고픔, ";
-        if (isThirsty == true)
-            debuffMsg += "목마름, ";
-        if (isCold == true)
-            debuffMsg += "추움, ";
-        if (isSick == true)
-            debuffMsg += "감기, ";
-        if (isAsh == true)
-            debuffMsg += "화산재, ";
-        if (isLightOut == true)
-            debuffMsg += "정전";
-    }*/
 }

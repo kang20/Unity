@@ -62,6 +62,7 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler, I
         itemCount += _count;
         text_Count.text = itemCount.ToString();
 
+        Debug.Log(itemCount);
         if (itemCount <= 0)
             ClearSlot();
     }
@@ -106,8 +107,8 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler, I
                 if (itemMaker.itemType == ItemMaker.ItemType.Used)
                 {
                     // 단순 상태효과 상승
-                    Debug.Log(itemMaker.itemName + " 을 사용했습니다.");
                     useTool(itemMaker.itemName);
+                    Debug.Log(itemMaker.itemName + " 을 사용했습니다.");
                     SetSlotCount(-1);
                 }
                 else

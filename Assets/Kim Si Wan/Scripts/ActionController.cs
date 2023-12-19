@@ -63,7 +63,6 @@ public class ActionController : MonoBehaviour
     {
         pickupActivated = true;
         actionText.gameObject.SetActive(true);
-        Debug.Log("zzzzz");
         actionText.text = hitInfo.transform.GetComponent<Item>().itemMaker.itemName + " È¹µæ " + "<color=yellow>" + "(E)" + "</color>";
     }
 
