@@ -9,7 +9,7 @@ public class OnlinePlayerManager : MonoBehaviour
     public int Score;
     public bool isLogin;
 
-    public void SetName()
+    public void PrintOnlinePlayerName()
     {
         GetComponentInChildren<TextMeshPro>().text = Score.ToString() + "  " + Nickname;
     }
