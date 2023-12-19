@@ -7,72 +7,98 @@ using FirstGearGames.SmoothCameraShaker.Demo;
 public class ShakeTester : MonoBehaviour
 {
     public ShakeData QuakeShake;
-    private bool hasShaken = false; // 쉐이크가 이미 실행되었는지 확인하기 위한 플래그
-    private float shakeTime = 8f; // 쉐이크 지속 시간
-    private float stopShakeDelay = 8f; // 쉐이크 정지까지의 지연 시간
-    private float smoothShakeTime = 5f; // 여진 5초 발생
-    private bool isShakeStopped = false; // 쉐이크가 정지되었는지 확인하기 위한 플래그
-    private float yeoShakeTime = 60f; // 여진 5초 발생
-    
+    private float shakeTime = 8f; // 최초 P파 지진 지속 시간
+    private float smoothShakeTime = 5f; // SmoothShake 지속 시간
+    private float yeoShakeTime = 30f; // 추가 지진 발생 시간
+    private bool hasShaken = false; // 지진 발생 여부 체크
+    private bool smoothShakeDone = false; // SmoothShake 완료 여부 체크
+    private bool yeoflag = false;
+    private bool isStop = false;
+    private float gamecount = 18f;
     [SerializeField]
-    private ShakeData _earthquakeData = null;
-    // 8초간 P파 -> 8초간 S파 -> 8초간 여진
+    private HJ_GameMode HJMode = HJ_GameMode.instance;
+    [SerializeField]
+    private QuakePlayerAnimation HJ_State = QuakePlayerAnimation.instance;
+
+    // 8초간 P파 -> 4초간 S파 -> 5초간 여진 -> 정지 -> 30초 뒤 5초간 여진
     private Resettable[] _resettables = new Resettable[0];
-    private bool yeo = false;
-    
     private void Awake()
     {
         _resettables = FindObjectsOfType<Resettable>();
     }
-    
 
     private void Update()
     {
+        gamecount -= Time.deltaTime;
+        if (gamecount <= 0f)
+        {
+            if (HJ_State._isCrouching)
+            {
+                HJMode.PHealth -= 0f;
+            }else if (HJ_State._ishandsUp)
+            {
+                HJMode.PHealth -= Time.deltaTime/6;
+            }
+            else
+            {
+                HJMode.PHealth -= Time.deltaTime;
+            }
+        }
+        
         if (hasShaken)
         {
             shakeTime -= Time.deltaTime;
-            yeoShakeTime -= Time.deltaTime;
+            // 8초 후 4f 힘으로 지진 발생
+            if (shakeTime <= 0f && !smoothShakeDone)
+            {
+                CameraShakerHandler.SetScaleAll(3f, true);
+                Invoke("StartSmoothShake", 4f); // 4초 후 SmoothShake 시작
+                smoothShakeDone = true;
+            }
+        }
 
+        if (smoothShakeDone && yeoflag && isStop)
+        {
+            Debug.Log("smoothShake");
+            yeoShakeTime -= Time.deltaTime;
             if (yeoShakeTime <= 0f)
             {
-                Debug.Log("yeoShake");
-                CameraShakerHandler.SetScaleAll(1f, true);
-                // 8초 후에 쉐이크 정지
-                yeo = true;
-            }
-
-            if (shakeTime <= 0f && !isShakeStopped)
-            {
-                Debug.Log("S파");
-                CameraShakerHandler.SetScaleAll(3f, true);
-                // 8초 후에 쉐이크 여진 발생
-                Invoke("SmoothShake", stopShakeDelay);
+                CameraShakerHandler.SetScaleAll(1f, true); // 추가 지진 발생
+                Invoke("StopShake", 10f); // 5초 후 정지
+                smoothShakeDone = false; // 다음 지진 발생을 위해 리셋
+                yeoflag = false;
             }
         }
     }
-
+    
     public void StartShake()
     {
         Debug.Log("start");
         // 쉐이크 시작 후 1초 뒤 오디오 소스 활성화
         Invoke("EnableAudioSource", 1f);
-
         CameraShakerHandler.Shake(QuakeShake);
-        hasShaken = true;        
-        
-        // 코루틴을 시작하여 120초 뒤에 smoothShake를 10초간 실행
-        // StartCoroutine(DelayedSmoothShake(40f, 10f));
+        hasShaken = true;
+    }
+
+    private void StartSmoothShake()
+    {
+        Debug.Log("first_smoothShake");
+        CameraShakerHandler.SetScaleAll(1f, true);
+        Invoke("StopShake", smoothShakeTime); // SmoothShake 5초 후 정지
+    }
+
+    private void StopShake()
+    {
+        Debug.Log("stop");
+        CameraShakerHandler.SetScaleAll(0f, true);
+        if (!isStop)
+        {
+            yeoflag = true;
+            isStop = true;
+        }
     }
     
-    // 120초 기다린 후 10초간 smoothShake를 실행하는 코루틴
-    private IEnumerator DelayedSmoothShake(float delay, float duration)
-    {
-        Debug.Log("여진발생");
-        yield return new WaitForSeconds(delay);
-        SmoothShake();
-        yield return new WaitForSeconds(duration);
-        StopShake();
-    }
+    
     private void EnableAudioSource()
     {
         Debug.Log("enableaudio");
@@ -91,31 +117,6 @@ public class ShakeTester : MonoBehaviour
             audioSource.enabled = true;
         }
     }
-
-    void SmoothShake()
-    {
-        Debug.Log("smoothShake");
-        CameraShakerHandler.SetScaleAll(1f, true);
-        if (hasShaken)
-        {
-            smoothShakeTime -= Time.deltaTime;
-            
-            if (smoothShakeTime <= 0f && !isShakeStopped)
-            {
-                // 8초 후에 쉐이크 정지
-                Invoke("StopShake", stopShakeDelay);
-                isShakeStopped = true;
-            }
-        }
-    }
-
-    private void StopShake()
-    {
-        Debug.Log("stop");
-        CameraShakerHandler.StopAll();
-        smoothShakeTime = 8f;
-    }
-    
     private void MakeKinematic(GameObject obj, bool kinematic)
     {
         Rigidbody rb = obj.GetComponent<Rigidbody>();

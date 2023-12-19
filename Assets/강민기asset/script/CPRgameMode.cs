@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+#if UNITY_EDITOR
 using UnityEditor;
 using UnityEditor.Timeline.Actions;
+#endif
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -116,7 +118,7 @@ public class CPRgameMode : MonoBehaviour
         ke = Patient.GetComponentInChildren<CPRKeyEvent>();
 
         HP = Patient.GetComponentInChildren<PlayerHP_Bar>();
-        // 3ÃÊ ÈÄ¿¡ MyFunction ÇÔ¼ö ½ÇÇà
+        // 3ì´ˆ í›„ì— MyFunction í•¨ìˆ˜ ì‹¤í–‰
         Invoke("start_setting", 3f);
 
     }
@@ -159,7 +161,7 @@ public class CPRgameMode : MonoBehaviour
     {
         if(AEDQuiz_n == 2)
         {
-            AEDQuiz_n = 0; // ÃÊ±âÈ­
+            AEDQuiz_n = 0; // ì´ˆê¸°í™”
             AEDQuizto4();
         }
     }
@@ -177,13 +179,13 @@ public class CPRgameMode : MonoBehaviour
         breathDetail.SetActive(true);
     }
 
-    public void breathDetailnext() // cpr ½Ã³ª¸®¿À ³¡
+    public void breathDetailnext() // cpr ì‹œë‚˜ë¦¬ì˜¤ ë
     {
         breathDetail.SetActive(false);
         cprAEDending();
         isPerfect = true;
     }
-    public void AED6tonext() // aed ½Ã³ª¸®¿À ³¡
+    public void AED6tonext() // aed ì‹œë‚˜ë¦¬ì˜¤ ë
     {
         AEDdetail_6.SetActive(false);
         cprAEDending();
@@ -201,13 +203,13 @@ public class CPRgameMode : MonoBehaviour
 
         if (!isPerfect)
         {
-            uncorrectTXT.text = "Á¤È®ÇÏÁö ¾ÊÀº ÀÀ±ŞÃ³Ä¡";
+            uncorrectTXT.text = "ì •í™•í•˜ì§€ ì•Šì€ ì‘ê¸‰ì²˜ì¹˜";
             Invoke("RMtxt", 3f);
         }
         Invoke("CPR_anime", 3f);
         if (isPerfect)
         {
-            uncorrectTXT.text = "Á¤È®ÇÑ ÀÀ±ŞÃ³Ä¡";
+            uncorrectTXT.text = "ì •í™•í•œ ì‘ê¸‰ì²˜ì¹˜";
             Invoke("RMtxt", 3f);
             Invoke("Ending", 3f);
         }
@@ -228,18 +230,18 @@ public class CPRgameMode : MonoBehaviour
 
         if (HP.currenthp < 50)
         {
-            resultText = "ÃÖÀûÀÇ °ñµç Å¸ÀÓÀº ¾Æ´ÏÁö¸¸ ±×·¡µµ ¾Ë¸ÂÀº ÀÀ±ŞÃ³Ä¡´Â ÇÏ¿´½À´Ï´Ù\n ÇÑ »ç¶÷ÀÇ »ı¸íÀ» ±¸Çß½À´Ï´Ù!";
-            scoreText = $"°á°ú : 5 ºĞ ÀÌ»ó ¼Ò¿ä\nscore:{score}";
+            resultText = "ìµœì ì˜ ê³¨ë“  íƒ€ì„ì€ ì•„ë‹ˆì§€ë§Œ ê·¸ë˜ë„ ì•Œë§ì€ ì‘ê¸‰ì²˜ì¹˜ëŠ” í•˜ì˜€ìŠµë‹ˆë‹¤\n í•œ ì‚¬ëŒì˜ ìƒëª…ì„ êµ¬í–ˆìŠµë‹ˆë‹¤!";
+            scoreText = $"ê²°ê³¼ : 5 ë¶„ ì´ìƒ ì†Œìš”\nscore:{score}";
         }
         else if (HP.currenthp > 50 && HP.currenthp <= 100)
         {
-            resultText = "ÃàÇÏÇÕ´Ï´Ù!\nÁ¤È®ÇÏ°í ½Å¼ÓÇÑ ÀÀ±ŞÃ³Ä¡ ´ö¿¡ \n ÇÑ »ç¶÷ÀÇ »ı¸íÀ» ±¸Çß½À´Ï´Ù!!";
-            scoreText = $"°á°ú : 5 ºĞ ÀÌ³» ¼Ò¿ä\nscore:{score}";
+            resultText = "ì¶•í•˜í•©ë‹ˆë‹¤!\nì •í™•í•˜ê³  ì‹ ì†í•œ ì‘ê¸‰ì²˜ì¹˜ ë•ì— \n í•œ ì‚¬ëŒì˜ ìƒëª…ì„ êµ¬í–ˆìŠµë‹ˆë‹¤!!";
+            scoreText = $"ê²°ê³¼ : 5 ë¶„ ì´ë‚´ ì†Œìš”\nscore:{score}";
         }
         else if (HP.currenthp == 0)
         {
-            resultText = "Á¤È®ÇÏÁö ¸øÇÑ ÀÀ±ŞÃ³Ä¡ ¶§¹®¿¡ ÇÑ »ç¶÷ÀÇ ¸ñ¼ûÀ» ±¸ÇÏÁö ¸øÇß½À´Ï´Ù.\n ¿À¸¥ÂÊ CPR °¡ÀÌµå¸¦ Âü°íÇÏ¿© ÁÖ¼¼¿ä!";
-            scoreText = $"°á°ú : 10 ºĞ ÃÊ°ú\nscore:{score}";
+            resultText = "ì •í™•í•˜ì§€ ëª»í•œ ì‘ê¸‰ì²˜ì¹˜ ë•Œë¬¸ì— í•œ ì‚¬ëŒì˜ ëª©ìˆ¨ì„ êµ¬í•˜ì§€ ëª»í–ˆìŠµë‹ˆë‹¤.\n ì˜¤ë¥¸ìª½ CPR ê°€ì´ë“œë¥¼ ì°¸ê³ í•˜ì—¬ ì£¼ì„¸ìš”!";
+            scoreText = $"ê²°ê³¼ : 10 ë¶„ ì´ˆê³¼\nscore:{score}";
         }
 
         endingscore.text = scoreText;

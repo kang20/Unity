@@ -68,6 +68,6 @@ public class ToggleBtn : MonoBehaviour
         ButtonSound.Play();
         GameObject.Find("PlayerManager").GetComponent<LocalPlayerManager>().isLogin = false;
         _FromReact.initfromUnity();
-        LoadScene("Kim_Volcano");
+        LoadScene("indoor");
     }
 }
