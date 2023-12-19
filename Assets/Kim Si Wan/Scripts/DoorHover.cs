@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class WindowHover : MonoBehaviour, IPointerClickHandler
+public class DoorHover : MonoBehaviour, IPointerClickHandler
 {
     public GameObject player;
     public GameObject Btn;
@@ -11,6 +11,7 @@ public class WindowHover : MonoBehaviour, IPointerClickHandler
     private Renderer rend;
     private Color originalColor;
     [SerializeField] private Color highlightColor = Color.white;
+
 
     void Start()
     {
@@ -20,14 +21,14 @@ public class WindowHover : MonoBehaviour, IPointerClickHandler
 
     private void OnMouseEnter()
     {
-        if (!player.GetComponent<PlayerStatus>().usedTape)
+        if (!player.GetComponent<PlayerStatus>().usedTowel)
         {
             rend.material.color = highlightColor; //온커서시 하이라이트 색상 변경
         }
     }
     private void OnMouseExit()
     {
-        if (!player.GetComponent<PlayerStatus>().usedTape)
+        if (!player.GetComponent<PlayerStatus>().usedTowel)
         {
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
@@ -37,8 +38,9 @@ public class WindowHover : MonoBehaviour, IPointerClickHandler
     }
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (eventData.button == PointerEventData.InputButton.Left) { 
-            if (!player.GetComponent<PlayerStatus>().usedTape)
+        if (eventData.button == PointerEventData.InputButton.Left)
+        {
+            if (!player.GetComponent<PlayerStatus>().usedTowel)
             {
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
@@ -48,4 +50,5 @@ public class WindowHover : MonoBehaviour, IPointerClickHandler
             }
         }
     }
+
 }

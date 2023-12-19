@@ -16,5 +16,6 @@ MonoBehaviour:
   itemType: 2
   itemImage: {fileID: 21300000, guid: 8e3e47523e896864f9d7ae3fcb4b0b77, type: 3}
   itemPrefab: {fileID: 4824565680992534142, guid: b4f1e813de09ea349bed9d9bfbdd4333, type: 3}
+  usePermit: 0
   itemDescription: "\uC218\uAC74 : \uBB38\uC5D0 \uC0AC\uC6A9\uD560 \uC218 \uC788\uB294
     \uC218\uAC74\uC774\uB2E4."
