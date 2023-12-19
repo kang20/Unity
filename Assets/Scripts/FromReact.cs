@@ -19,25 +19,12 @@ public class FromReact : MonoBehaviour
     public PlayerDTO _playerDto;
     private string playerstr;
 
-    public GameMode LobbyMode;
+    public LocalDTO _localDto;
 
-    void Start()
-    {
-        if(LobbyMode.LocalPMgr.Nickname != "")
-        { //플레이어 로비 복귀 시 호출
-            Debug.LogError("플레이어 복귀");
-            initfromUnity();
-        }
-    }
+    public GameMode LobbyMode;
 
     private void Update()
     {
-        //플레이어 입/퇴장시 호출
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    initfromUnity();
-        //}
-
         //플레이어 정보 변경 시 호출
         if (LobbyMode.LocalPlayer.GetComponentInChildren<PlayerAnimation>().transform.hasChanged)
         {
@@ -59,7 +46,7 @@ public class FromReact : MonoBehaviour
         Debug.Log("유니티(실행 위치) -> 리액트 : " + initstr);
     }
 
-    // Unity -> React    
+    // Unity -> React
     // player 정보를 리액트로 보내는 유니티 내부 함수
     public void playerfromUnity()
     {//로컬 플레이어 정보 변경 시 호출
@@ -74,7 +61,6 @@ public class FromReact : MonoBehaviour
         Debug.Log("유니티(실행 위치) -> 리액트: " + playerstr);
     }
 
-    
     // React -> Unity
     public void initfromReact(string reactInit)
     {
@@ -98,5 +84,13 @@ public class FromReact : MonoBehaviour
         LobbyMode.UpdatePlayerInfo(_playerDto);
         
         Debug.Log("리액트 -> 유니티 player(실행위치) : " + reactPlayer);
+    }
+
+    //React -> Unity 추가 (플레이어 로그인 정보 획득)
+    public void StatfromReact(string reactStat)
+    {
+        _localDto = JsonUtility.FromJson<LocalDTO>(reactStat);
+
+        LobbyMode.ConstructLocalPlayer(_localDto);
     }
 }

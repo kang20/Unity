@@ -172,5 +172,6 @@ public class JSGameMode : MonoBehaviour
     {
         Time.timeScale = 1;
         SceneManager.LoadScene("Lobby");
+        GameObject.Find("PlayerManager").GetComponent<LocalPlayerManager>().isLogin = true;
     }
 }

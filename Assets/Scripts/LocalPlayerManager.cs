@@ -55,14 +55,15 @@ public class LocalPlayerManager : MonoBehaviour
             LocalPlayerDTO.setWalk(LocalPlayerModel.GetComponent<PlayerAnimation>()._iswalk);
             LocalPlayerDTO.setRun(LocalPlayerModel.GetComponent<PlayerAnimation>()._isrun);
             LocalPlayerDTO.setJump(LocalPlayerModel.GetComponent<PlayerAnimation>()._isjump);
-            if (LocalPlayerModel.GetComponentInChildren<TextMeshPro>().text == "")
-            {
-                LocalPlayerModel.GetComponentInChildren<TextMeshPro>().text = Score.ToString() + "  " + Nickname;
-            }
         }
-        else
-        {
-            LocalPlayerModel = GameObject.Find("LPO");
-        }
+        //else
+        //{//이거 굳이 안해도 될거같은데..,.,.
+        //    LocalPlayerModel = GameObject.Find("LPO");
+        //}
+    }
+
+    public void PrintLocalPlayerName()
+    {
+        LocalPlayerModel.GetComponentInChildren<TextMeshPro>().text = Score.ToString() + "  " + Nickname;
     }
 }
