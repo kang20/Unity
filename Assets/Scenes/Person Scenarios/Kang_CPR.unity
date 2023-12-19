@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -443,7 +443,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 800418143}
+      - m_Target: {fileID: 800418145}
         m_TargetAssemblyTypeName: CPRgameMode, Assembly-CSharp
         m_MethodName: AEDQuiztrue
         m_Mode: 1
@@ -719,7 +719,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 800418143}
+      - m_Target: {fileID: 800418145}
         m_TargetAssemblyTypeName: CPRgameMode, Assembly-CSharp
         m_MethodName: ToLobbyBtn
         m_Mode: 1
@@ -1224,7 +1224,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &159670795
 MonoBehaviour:
@@ -2265,7 +2265,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 800418143}
+      - m_Target: {fileID: 800418145}
         m_TargetAssemblyTypeName: CPRgameMode, Assembly-CSharp
         m_MethodName: AED1to2
         m_Mode: 1
@@ -2797,7 +2797,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 800418143}
+      - m_Target: {fileID: 800418145}
         m_TargetAssemblyTypeName: CPRgameMode, Assembly-CSharp
         m_MethodName: AED4to5
         m_Mode: 1
@@ -2931,7 +2931,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 800418143}
+      - m_Target: {fileID: 800418145}
         m_TargetAssemblyTypeName: CPRgameMode, Assembly-CSharp
         m_MethodName: chestDetail
         m_Mode: 1
@@ -3455,7 +3455,7 @@ Transform:
   - {fileID: 369948599}
   - {fileID: 1681199560}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &427834480
 MonoBehaviour:
@@ -3573,7 +3573,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 800418143}
+      - m_Target: {fileID: 800418145}
         m_TargetAssemblyTypeName: CPRgameMode, Assembly-CSharp
         m_MethodName: BreathFalsenext
         m_Mode: 1
@@ -3707,7 +3707,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 800418143}
+      - m_Target: {fileID: 800418145}
         m_TargetAssemblyTypeName: CPRgameMode, Assembly-CSharp
         m_MethodName: BreathFalsenext
         m_Mode: 1
@@ -3924,7 +3924,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 800418143}
+      - m_Target: {fileID: 800418145}
         m_TargetAssemblyTypeName: CPRgameMode, Assembly-CSharp
         m_MethodName: AEDQuiztrue
         m_Mode: 1
@@ -4302,7 +4302,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 800418143}
+      - m_Target: {fileID: 800418145}
         m_TargetAssemblyTypeName: CPRgameMode, Assembly-CSharp
         m_MethodName: chestFalsenext
         m_Mode: 1
@@ -4608,7 +4608,7 @@ RectTransform:
   - {fileID: 155655583}
   - {fileID: 516680968}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4937,7 +4937,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &664490443
 PrefabInstance:
@@ -5104,7 +5104,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 800418143}
+      - m_Target: {fileID: 800418145}
         m_TargetAssemblyTypeName: CPRgameMode, Assembly-CSharp
         m_MethodName: chestFalsenext
         m_Mode: 1
@@ -5420,7 +5420,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 800418143}
+      - m_Target: {fileID: 800418145}
         m_TargetAssemblyTypeName: CPRgameMode, Assembly-CSharp
         m_MethodName: StartBtn
         m_Mode: 1
@@ -5634,7 +5634,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 800418143}
+      - m_Target: {fileID: 800418145}
         m_TargetAssemblyTypeName: CPRgameMode, Assembly-CSharp
         m_MethodName: chestFalsenext
         m_Mode: 1
@@ -6005,7 +6005,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 800418144}
-  - component: {fileID: 800418143}
+  - component: {fileID: 800418145}
   m_Layer: 0
   m_Name: CPRGameMode
   m_TagString: Untagged
@@ -6013,7 +6013,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &800418143
+--- !u!4 &800418144
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800418142}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -92.91321, y: 23.773193, z: -106.0681}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &800418145
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6022,7 +6037,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 800418142}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c9d1d3ba2be0d146a3615227d36063c, type: 3}
+  m_Script: {fileID: 11500000, guid: c93b090f8a9d84472bb221b4e0f00bf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   StartUI: {fileID: 1313099428}
@@ -6044,21 +6059,6 @@ MonoBehaviour:
   AEDdetail_5: {fileID: 471010419}
   AEDdetail_6: {fileID: 1055803720}
   uncorrectTXT: {fileID: 319724810}
---- !u!4 &800418144
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 800418142}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -92.91321, y: 23.773193, z: -106.0681}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &862846700
 GameObject:
   m_ObjectHideFlags: 0
@@ -6223,7 +6223,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 800418143}
+      - m_Target: {fileID: 800418145}
         m_TargetAssemblyTypeName: CPRgameMode, Assembly-CSharp
         m_MethodName: AEDQuizfalse
         m_Mode: 1
@@ -6433,7 +6433,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 800418143}
+      - m_Target: {fileID: 800418145}
         m_TargetAssemblyTypeName: CPRgameMode, Assembly-CSharp
         m_MethodName: chestFalsenext
         m_Mode: 1
@@ -7238,7 +7238,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 800418143}
+      - m_Target: {fileID: 800418145}
         m_TargetAssemblyTypeName: CPRgameMode, Assembly-CSharp
         m_MethodName: AED6tonext
         m_Mode: 1
@@ -7372,7 +7372,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 800418143}
+      - m_Target: {fileID: 800418145}
         m_TargetAssemblyTypeName: CPRgameMode, Assembly-CSharp
         m_MethodName: chestFalsenext
         m_Mode: 1
@@ -7814,7 +7814,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 800418143}
+      - m_Target: {fileID: 800418145}
         m_TargetAssemblyTypeName: CPRgameMode, Assembly-CSharp
         m_MethodName: chestTruenext
         m_Mode: 1
@@ -8107,7 +8107,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 800418143}
+      - m_Target: {fileID: 800418145}
         m_TargetAssemblyTypeName: CPRgameMode, Assembly-CSharp
         m_MethodName: BreathFalsenext
         m_Mode: 1
@@ -8614,7 +8614,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 800418143}
+      - m_Target: {fileID: 800418145}
         m_TargetAssemblyTypeName: CPRgameMode, Assembly-CSharp
         m_MethodName: AED5to6
         m_Mode: 1
@@ -8902,7 +8902,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 800418143}
+      - m_Target: {fileID: 800418145}
         m_TargetAssemblyTypeName: CPRgameMode, Assembly-CSharp
         m_MethodName: breathDetailnext
         m_Mode: 1
@@ -9270,7 +9270,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 800418143}
+      - m_Target: {fileID: 800418145}
         m_TargetAssemblyTypeName: CPRgameMode, Assembly-CSharp
         m_MethodName: AEDQuizfalse
         m_Mode: 1
@@ -9989,7 +9989,7 @@ RectTransform:
   - {fileID: 471010420}
   - {fileID: 1055803721}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -10006,7 +10006,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1365728298}
   - component: {fileID: 1365728297}
-  - component: {fileID: 1365728299}
+  - component: {fileID: 1365728302}
   - component: {fileID: 1365728300}
   - component: {fileID: 1365728301}
   m_Layer: 0
@@ -10046,24 +10046,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1365728299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1365728295}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a4b7c24a47fb2c46838f9c27511d5c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1365728298}
-  hpbar: {fileID: 1792018006}
-  maxHp: 100
-  currenthp: 100
-  elapsedTime: 0
-  CPRGameMode: {fileID: 800418142}
 --- !u!114 &1365728300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10101,6 +10083,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1365728302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365728295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef7a25bb29e06474997357ccb639dd72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1365728298}
+  hpbar: {fileID: 1792018006}
+  maxHp: 100
+  currenthp: 100
+  elapsedTime: 0
+  CPRGameMode: {fileID: 800418142}
 --- !u!1 &1386764097
 GameObject:
   m_ObjectHideFlags: 0
@@ -10533,7 +10533,7 @@ Transform:
   m_Children:
   - {fileID: 424576430}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: -50, z: 0}
 --- !u!65 &1430704858
 BoxCollider:
@@ -10769,7 +10769,7 @@ Transform:
   - {fileID: 1953747720}
   - {fileID: 201946003}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1521921210
 GameObject:
@@ -10855,9 +10855,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 800418143}
+      - m_Target: {fileID: 800418142}
         m_TargetAssemblyTypeName: CPRgameMode, Assembly-CSharp
-        m_MethodName: chestFalsenext
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11171,7 +11171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2d5ee0a8ce63040888e1ee9814308b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerPerson: 3
   Nickname: 
   Score: 0
   isLogin: 0
@@ -11188,6 +11187,10 @@ MonoBehaviour:
     is_jump: 0
     is_walk: 0
     is_run: 0
+  MainSound: 0
+  EffectSound: 0
+  MouseSensitivity: 0
+  PlayerPerson: 3
 --- !u!4 &1599016564
 Transform:
   m_ObjectHideFlags: 0
@@ -11605,7 +11608,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 800418143}
+      - m_Target: {fileID: 800418145}
         m_TargetAssemblyTypeName: CPRgameMode, Assembly-CSharp
         m_MethodName: chestFalsenext
         m_Mode: 1
@@ -11776,7 +11779,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 800418143}
+      - m_Target: {fileID: 800418145}
         m_TargetAssemblyTypeName: CPRgameMode, Assembly-CSharp
         m_MethodName: chestFalsenext
         m_Mode: 1
@@ -12753,7 +12756,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 800418143}
+      - m_Target: {fileID: 800418145}
         m_TargetAssemblyTypeName: CPRgameMode, Assembly-CSharp
         m_MethodName: AED2to3
         m_Mode: 1
@@ -13789,7 +13792,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 800418143}
+      - m_Target: {fileID: 800418145}
         m_TargetAssemblyTypeName: CPRgameMode, Assembly-CSharp
         m_MethodName: AEDQuizfalse
         m_Mode: 1
@@ -14003,7 +14006,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 800418143}
+      - m_Target: {fileID: 800418145}
         m_TargetAssemblyTypeName: CPRgameMode, Assembly-CSharp
         m_MethodName: BreathFalsenext
         m_Mode: 1
@@ -14350,7 +14353,7 @@ Transform:
   - {fileID: 2134931303}
   - {fileID: 177701387}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &2083648070
 GameObject:
@@ -14630,7 +14633,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 800418143}
+      - m_Target: {fileID: 800418145}
         m_TargetAssemblyTypeName: CPRgameMode, Assembly-CSharp
         m_MethodName: BreathTruenext
         m_Mode: 1
@@ -118508,7 +118511,7 @@ Transform:
   - {fileID: 1931258507}
   - {fileID: 1718125502}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1061354188442641328
 Transform:

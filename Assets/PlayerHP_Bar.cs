@@ -9,26 +9,24 @@ public class PlayerHP_Bar : MonoBehaviour
     public Slider hpbar;
     public float maxHp;
     public float currenthp;
-    private float startTime; // Å¸ÀÌ¸Ó ½ÃÀÛ ½Ã°£
-    public float elapsedTime; // °æ°ú ½Ã°£
+    private float startTime; // íƒ€ì´ë¨¸ ì‹œì‘ ì‹œê°„
+    public float elapsedTime; // ê²½ê³¼ ì‹œê°„
 
     public GameObject CPRGameMode;
     private CPRgameMode gm;
-
-
-
+    
     private void Start()
     {
         gm = CPRGameMode.GetComponentInChildren<CPRgameMode>();
         currenthp = 100;
-        // Å¸ÀÌ¸Ó ½ÃÀÛ ½Ã°£ ÃÊ±âÈ­
+        // íƒ€ì´ë¨¸ ì‹œì‘ ì‹œê°„ ì´ˆê¸°í™”
         startTime = Time.time;
-        elapsedTime = 1f; // ¿øÇÏ´Â ½Ã°£ °£°İÀ¸·Î ¼³Á¤
+        elapsedTime = 1f; // ì›í•˜ëŠ” ì‹œê°„ ê°„ê²©ìœ¼ë¡œ ì„¤ì •
     }
 
     void Update()
     {
-        transform.position = player.position; // ºÒÇÊ¿äÇÑ Vector3(0, 0, 0) Á¦°Å
+        transform.position = player.position; // ë¶ˆí•„ìš”í•œ Vector3(0, 0, 0) ì œê±°
 
         if (Time.time - startTime >= elapsedTime)
         {
