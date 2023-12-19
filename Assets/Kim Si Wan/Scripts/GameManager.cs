@@ -50,8 +50,7 @@ public class GameManager : MonoBehaviour
 
     public string PermitUseItemName;
 
-    public int MAX_SCORE = 1000;
-    public int finalScore;
+    public int finalScore = 1000;
     public void startPlay() {
         StartCoroutine(Play());
     }
@@ -73,7 +72,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(8f);
 
         // 화산재 대응준비 시간
-        string guidText = "화산재가 몰려오기 전에 대처하세요!";
+        string guidText = "화산재가 몰려오기 전에 대처하세요!\n\n" + "<color=yellow>" + "<노란색 화살표를 따라가 물품을 획득하세요!>" + "</color>";
         Camera.GetComponent<CameraMovement>().enabled = true;
         isPrepareTime = true;
         GuideText.text = guidText;
@@ -84,58 +83,34 @@ public class GameManager : MonoBehaviour
             countDownTime--;
         }
 
-        // 화산재 대응 시간
-
-        /*
-        isvolcanioAshTime = true;
-        gameInformPanel.SetActive(true);
-        gameInformText.text = */
-
-        /*
-        guidText = "화산재가 낙하중입니다.\n피해를 최소화하세요!";
-        isvolcanioAshTime = true; countDownTime = 180;
+        guidText = "<color=green>" + "시나리오에 맞춰서 행동하세요!" + "</color>";
         GuideText.text = guidText;
-        player.GetComponent<PlayerStatus>().volcanicAshTime();
-        while (countDownTime > 0)
-        {
-            TimeText.text = countDownTime.ToString();
-            yield return new WaitForSeconds(1f);
-            countDownTime--;
+        TimeText.text = null;
 
-            if (countDownTime == 100){
-                player.GetComponent<PlayerStatus>().isCold = true;
-            }
-            else if (countDownTime == 50){
-                player.GetComponent<PlayerStatus>().isSick = true;
-            }
-
-            if (isGameover == true)
-                break;
-        }
-        */
-        
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        canvasManager.GetComponent<CanvasManager11>().init();
     }
 
     // 최종 결과
-    void end() {
+    public void end() {
         isvolcanioAshTime = false;
-        int finalHp = player.GetComponent<PlayerStatus>().currentHp;
-        int surviveTime = 180 - countDownTime;
-        finalScore = surviveTime * 2 + finalHp;
 
         char rank;
-        if (finalScore <= 460 && finalScore > 360)
+        if (finalScore <= 1000 && finalScore > 900)
             rank = 'A';
-        else if (finalScore <= 360 && finalScore > 260)
+        else if (finalScore <= 900 && finalScore > 800)
             rank = 'B';
-        else if (finalScore <= 260 && finalScore > 160)
-            rank = 'B';
-        else//else if (finalScore <= 160)
+        else if (finalScore <= 800 && finalScore > 700)
+            rank = 'C';
+        else if (finalScore <= 700 && finalScore > 600)
             rank = 'D';
+        else if(finalScore <= 600 && finalScore > 500)
+            rank = 'E';
+        else
+            rank = 'F';
 
-        resultText.text = "<결과>\n\n체력 : " + "<color=red>" + finalHp + "</color>"
-            + "\n시간 : " + "<color=red>" + surviveTime + "</color>"
-            + "\n\n점수 : " + "<color=red>" + finalScore + "</color>"
+        resultText.text = "<결과>\n\n점수 : " + "<color=red>" + finalScore + "</color>"
             + "\n\n최종 등급 : " + rank;
         playUi.SetActive(false);
         endUi.SetActive(true);
