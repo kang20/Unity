@@ -8,4 +8,5 @@ mergeInto(LibraryManager.library, {
 		var infostr = UTF8ToString(playerstr);
 		window.dispatchReactUnityEvent("info", infostr);
 	},
+	BuildComplete: function(){},
 });

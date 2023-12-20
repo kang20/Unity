@@ -12,13 +12,14 @@ public class GameMode : MonoBehaviour
 
     [SerializeField]
     private GameObject OnlinePlayer;
-
-    private void Start()
+    private void Awake()
     {
         GetComponent<AudioSource>().volume = LocalPlayerManager.instance.MainSound;
         Camera.main.GetComponent<AudioSource>().volume = LocalPlayerManager.instance.EffectSound;
-
         LocalPMgr = GameObject.Find("PlayerManager").GetComponent<LocalPlayerManager>();
+    }
+    private void Start()
+    {
         if (LocalPMgr.Nickname != "")
         {//로비 씬으로 되돌아올때 플레이어 닉네임 출력 설정 (첫 접속일땐 호출 x)
             Debug.LogError("플레이어 복귀");
