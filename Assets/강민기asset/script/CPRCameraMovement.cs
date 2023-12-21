@@ -31,6 +31,7 @@ public class CPRCameraMovement : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = false;
         pa = LocalPlayerObj.GetComponentInChildren<CPRPlayerAnimation>();
+        sensitivity = 100 + LocalPlayerManager.instance.MouseSensitivity * 400;
         isMove = true;
     }
     // Update is called once per frame

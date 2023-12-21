@@ -114,6 +114,7 @@ public class ShakeTester : MonoBehaviour
         AudioSource audioSource = gameObject.GetComponent<AudioSource>();
         if (audioSource != null)
         {
+            audioSource.volume = LocalPlayerManager.instance.MainSound + 50;
             audioSource.enabled = true;
         }
     }
