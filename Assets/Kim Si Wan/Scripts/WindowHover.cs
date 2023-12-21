@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class WindowHover : MonoBehaviour, IPointerClickHandler
+public class WindowHover : MonoBehaviour
 {
     public GameObject player;
     public GameObject Btn;
+    public GameObject Use;
+    public GameObject Tape;
+
+    public bool isTape = false;
 
     private Renderer rend;
     private Color originalColor;
@@ -20,32 +24,32 @@ public class WindowHover : MonoBehaviour, IPointerClickHandler
 
     private void OnMouseEnter()
     {
-        if (!player.GetComponent<PlayerStatus>().usedTape)
+
+        if (!isTape)
         {
             rend.material.color = highlightColor; //온커서시 하이라이트 색상 변경
         }
     }
     private void OnMouseExit()
     {
-        if (!player.GetComponent<PlayerStatus>().usedTape)
+        if (!isTape)
         {
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
             rend.material.color = originalColor;
-            Btn.SetActive(false);
         }
     }
-    public void OnPointerClick(PointerEventData eventData)
+    private void OnMouseDown()
     {
-        if (eventData.button == PointerEventData.InputButton.Left) { 
-            if (!player.GetComponent<PlayerStatus>().usedTape)
-            {
-                Cursor.visible = true;
-                Cursor.lockState = CursorLockMode.None;
-                Vector3 mousePosition = Input.mousePosition;
-                Btn.transform.position = mousePosition;
-                Btn.SetActive(true);
-            }
+        if (!isTape)
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+
+            Vector3 mousePosition = Input.mousePosition;
+            Btn.transform.position = mousePosition;
+
+            Use.GetComponent<WindowButton>().Tape = Tape;
+            Use.GetComponent<WindowButton>().Window = this.gameObject;
+            Btn.SetActive(true);
         }
     }
 }

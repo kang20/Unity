@@ -3,18 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - CPRPlayer
-  - door
-  - button f6
-  - button f1
-  - button f5
-  - button f2
-  - button f4
-  - button f3
-  - Building
-  - Item
-  - stranger
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -22,10 +11,10 @@ TagManager:
   - 
   - Water
   - UI
-  - Ground
-  - Item
-  - door
-  - wall
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 

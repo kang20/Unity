@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DoorHover : MonoBehaviour, IPointerClickHandler
+public class DoorHover : MonoBehaviour
 {
     public GameObject player;
     public GameObject Btn;
+    public GameObject Use;
+    public GameObject Towel;
 
     private Renderer rend;
     private Color originalColor;
@@ -30,24 +32,20 @@ public class DoorHover : MonoBehaviour, IPointerClickHandler
     {
         if (!player.GetComponent<PlayerStatus>().usedTowel)
         {
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
             rend.material.color = originalColor;
-            Btn.SetActive(false);
         }
     }
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        if (eventData.button == PointerEventData.InputButton.Left)
+    private void OnMouseDown() {
+        if (!player.GetComponent<PlayerStatus>().usedTowel)
         {
-            if (!player.GetComponent<PlayerStatus>().usedTowel)
-            {
-                Cursor.visible = true;
-                Cursor.lockState = CursorLockMode.None;
-                Vector3 mousePosition = Input.mousePosition;
-                Btn.transform.position = mousePosition;
-                Btn.SetActive(true);
-            }
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+
+            Vector3 mousePosition = Input.mousePosition;
+            Btn.transform.position = mousePosition;
+
+            Use.GetComponent<DoorButton>().Towel = Towel;
+            Btn.SetActive(true);
         }
     }
 

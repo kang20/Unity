@@ -17,7 +17,10 @@ public class CanvasManager11 : MonoBehaviour
         panel.SetActive(true);
         canvas[0].SetActive(true);
     }
-    public void nextBtn(){
+    public void nextBtn()
+    {
+        SWAudio.instance.playSound("Button");
+
         if (player.GetComponent<PlayerStatus>().currentBelongingIndex == 15){
             canvas[player.GetComponent<PlayerStatus>().currentBelongingIndex].SetActive(false);
             GameManager.instance.end();
@@ -28,7 +31,11 @@ public class CanvasManager11 : MonoBehaviour
         }
         Debug.Log(GameManager.instance.finalScore);
     }
-    public void skipBtn(){
+
+    public void skipBtn()
+    {
+        SWAudio.instance.playSound("Button");
+
         canvas[player.GetComponent<PlayerStatus>().currentBelongingIndex].SetActive(false);
         canvas[++player.GetComponent<PlayerStatus>().currentBelongingIndex].SetActive(true);
         GameManager.instance.finalScore -= 100;

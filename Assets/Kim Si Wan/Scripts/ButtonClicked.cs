@@ -12,16 +12,19 @@ public class ButtonClicked : MonoBehaviour
     public GameObject play;
     public void OnClickNext1()
     {
+        SWAudio.instance.playSound("Button");
         Description1.SetActive(false);
         Description2.SetActive(true);
     }
     public void OnClickNext2()
     {
+        SWAudio.instance.playSound("Button");
         Description2.SetActive(false);
         Description3.SetActive(true);
     }
     public void OnClickNext3()
     {
+        SWAudio.instance.playSound("Button");
         start.SetActive(false);
         play.SetActive(true);
         GameManager.instance.startPlay();

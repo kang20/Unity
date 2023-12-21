@@ -66,6 +66,8 @@ public class GameManager : MonoBehaviour
         GameObject VolcanoObject = Instantiate(Volcano);
         VolcanoObject.transform.position = VolcanoPos;
 
+        SWAudio.instance.playSound("Alarm");
+
         Camera.GetComponent<CameraMovement>().enabled = false;
         Camera.transform.position = VolcanoCameraPos;
         Camera.transform.rotation = Quaternion.Euler(VolcanoCameraRot);
@@ -112,6 +114,7 @@ public class GameManager : MonoBehaviour
 
         resultText.text = "<결과>\n\n점수 : " + "<color=red>" + finalScore + "</color>"
             + "\n\n최종 등급 : " + rank;
+        LocalPlayerManager.instance.Score += (int)(finalScore / 1000 * 100);
         playUi.SetActive(false);
         endUi.SetActive(true);
     }
