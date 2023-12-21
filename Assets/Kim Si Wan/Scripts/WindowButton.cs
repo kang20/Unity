@@ -45,16 +45,28 @@ public class WindowButton : MonoBehaviour
         Tape.SetActive(true);
         Window.GetComponent<WindowHover>().isTape = true;
 
-        Cursor.visible = false;
+        CameraMovement cmm = Camera.main.GetComponent<CameraMovement>();
+        cmm.isESC = false;
+        cmm.CameraArm.transform.parent.GetComponent<PlayerMovement>().enabled = true;
         Cursor.lockState = CursorLockMode.Locked;
+
         Btn.SetActive(false);
     }
     public void OnClickCancel()
     {
         SWAudio.instance.playSound("Button");
 
-        Cursor.visible = false;
+        CameraMovement cmm = Camera.main.GetComponent<CameraMovement>();
+        cmm.isESC = false;
+        cmm.CameraArm.transform.parent.GetComponent<PlayerMovement>().enabled = true;
         Cursor.lockState = CursorLockMode.Locked;
+        Window.GetComponent<WindowHover>().isActable = true;
+        StartCoroutine(Wait());
         Btn.SetActive(false);
+    }
+
+    IEnumerator Wait()
+    {
+        yield return null;
     }
 }

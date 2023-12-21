@@ -50,6 +50,9 @@ public class GameManager : MonoBehaviour
 
     public string PermitUseItemName;
 
+    public WindowHover[] ActionWindow;
+    public DoorHover[] ActionDoor;
+
     public int finalScore = 1000;
     public void startPlay() {
         StartCoroutine(Play());
@@ -76,6 +79,11 @@ public class GameManager : MonoBehaviour
         // 화산재 대응준비 시간
         string guidText = "화산재가 몰려오기 전에 대처하세요!\n\n" + "<color=yellow>" + "<노란색 화살표를 따라가 물품을 획득하세요!>" + "</color>";
         Camera.GetComponent<CameraMovement>().enabled = true;
+        for(int i = 0; i < 4; i++)
+        {
+            ActionWindow[i].enabled = true;
+        }
+        ActionDoor[0].enabled = true;
         isPrepareTime = true;
         GuideText.text = guidText;
         while (countDownTime > 0)
@@ -89,8 +97,6 @@ public class GameManager : MonoBehaviour
         GuideText.text = guidText;
         TimeText.text = null;
 
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
         canvasManager.GetComponent<CanvasManager11>().init();
     }
 

@@ -10,6 +10,7 @@ public class DoorButton : MonoBehaviour
     public Button Cancel;
     public GameObject player;
     public GameObject Towel;
+    public GameObject _Door;
 
     private bool isTowel = false;
 
@@ -39,15 +40,23 @@ public class DoorButton : MonoBehaviour
         player.GetComponent<PlayerStatus>().usedTowel = true;
         Towel.SetActive(true);
 
-        Cursor.visible = false;
+        CameraMovement cmm = Camera.main.GetComponent<CameraMovement>();
+        cmm.isESC = false;
+        cmm.CameraArm.transform.parent.GetComponent<PlayerMovement>().enabled = true;
         Cursor.lockState = CursorLockMode.Locked;
+
         Btn.SetActive(false);
     }
     public void OnClickCancel()
     {
         SWAudio.instance.playSound("Button");
-        Cursor.visible = false;
+
+        CameraMovement cmm = Camera.main.GetComponent<CameraMovement>();
+        cmm.isESC = false;
+        cmm.CameraArm.transform.parent.GetComponent<PlayerMovement>().enabled = true;
         Cursor.lockState = CursorLockMode.Locked;
+        _Door.GetComponent<DoorHover>().isActable = true;
+
         Btn.SetActive(false);
     }
 }

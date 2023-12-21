@@ -111,12 +111,6 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler, I
                     Debug.Log(itemMaker.itemName + " 을 사용했습니다.");
                     SetSlotCount(-1);
                 }
-                else
-                {
-                    // 외부 물체가 있는지 없는지 판단 후 외부 물체에 사용
-                    Debug.Log(itemMaker.itemName + " 을 사용했습니다.");
-                    SetSlotCount(-1);
-                }
             }
         }
     }
