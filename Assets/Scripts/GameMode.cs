@@ -42,7 +42,7 @@ public class GameMode : MonoBehaviour
             OP.GetComponent<OnlinePlayerManager>().Score = Key.score;
             OP.GetComponent<OnlinePlayerManager>().isLogin = Key.islogin;
             OP.GetComponent<OnlinePlayerManager>().PrintOnlinePlayerName();
-            OP.transform.position = new Vector3(-120, 0, -120);
+            OP.transform.position = new Vector3(-150, 0.15f, -87);
             OnlinePlayerInfo.Add(Key.nickname, OP);
             //내 정보 전달
             GetComponent<FromReact>().playerfromUnity();
@@ -83,10 +83,5 @@ public class GameMode : MonoBehaviour
         LocalPMgr.Score = Key.score;
         LocalPMgr.isLogin = true;
         LocalPMgr.PrintLocalPlayerName();
-    }
-
-    public void SetMainSound()
-    {
-
     }
 }

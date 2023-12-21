@@ -170,8 +170,8 @@ public class JSGameMode : MonoBehaviour
 
     private void ToLobbyBtn()
     {
+        GameObject.Find("PlayerManager").GetComponent<LocalPlayerManager>().isLogin = true;
         Time.timeScale = 1;
         SceneManager.LoadScene("Lobby");
-        GameObject.Find("PlayerManager").GetComponent<LocalPlayerManager>().isLogin = true;
     }
 }
