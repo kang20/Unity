@@ -34,7 +34,6 @@ public class FromReact : MonoBehaviour
         }
     }
 
-
     private void Update()
     {
         //플레이어 정보 변경 시 호출
@@ -113,7 +112,6 @@ public class FromReact : MonoBehaviour
     public void StatfromReact(string reactStat)
     {
         _localDto = JsonUtility.FromJson<LocalDTO>(reactStat);
-
         LobbyMode.ConstructLocalPlayer(_localDto);
         initfromUnity();
     }

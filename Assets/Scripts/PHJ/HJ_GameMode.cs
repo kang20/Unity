@@ -159,7 +159,7 @@ public class HJ_GameMode : MonoBehaviour
             Result.text += "C";
             EndImage.GetComponent<Image>().sprite = End_Image[3];
         }
-        LocalPlayerManager.instance.Score += (int)(Rating / 400 * 100);
+        LocalPlayerManager.instance.Score += (int)(Rating);
         Time.timeScale = 0;
         Camera.main.GetComponent<HJ_CameraMovement>().enabled = false;
         Cursor.lockState = CursorLockMode.None;
@@ -232,6 +232,7 @@ public class HJ_GameMode : MonoBehaviour
 
     private void ToLobbyBtn()
     {
+        GameObject.Find("PlayerManager").GetComponent<LocalPlayerManager>().isLogin = true;
         Time.timeScale = 1;
         SceneManager.LoadScene("Lobby");
     }
