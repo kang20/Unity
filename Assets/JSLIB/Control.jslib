@@ -9,4 +9,8 @@ mergeInto(LibraryManager.library, {
 		window.dispatchReactUnityEvent("info", infostr);
 	},
 	BuildComplete: function(){},
+	chat: function(sendchat){
+		var sendchatstr = UTF8ToString(sendchat);
+		window.dispatchReactUnityEvent("chat", sendchatstr);
+	},
 });

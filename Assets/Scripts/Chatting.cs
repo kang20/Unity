@@ -9,6 +9,8 @@ public class Chatting : MonoBehaviour
     public Text Chat;
     public PlayerMovement Pm;
     public CameraMovement Cm;
+
+    public FromReact FReact;
     // Start is called before the first frame update
     private void Start()
     {
@@ -18,16 +20,19 @@ public class Chatting : MonoBehaviour
     void Update()
     {
         _InputField.ActivateInputField();
-        Debug.Log("포커스 1 enabled" + _InputField.enabled);
-        Debug.Log("포커스 2 focus" + _InputField.isFocused);
+        //Debug.Log("포커스 1 enabled" + _InputField.enabled);
+        //Debug.Log("포커스 2 focus" + _InputField.isFocused);
         if (Input.GetKeyDown(KeyCode.Return))
         {
             if (_InputField.enabled)
             {
                 string Chatt = _InputField.text;
                 _InputField.text = "";
-                if(Chatt != "")
-                    Chat.text += LocalPlayerManager.instance.Nickname + ":" + Chatt + "\n";
+                if (Chatt != "")
+                {
+                    FReact.ChatfromUnity(LocalPlayerManager.instance.Nickname, Chatt);
+                }
+                //Chat.text += LocalPlayerManager.instance.Nickname + ":" + Chatt + "\n";
                 _InputField.enabled = false;
                 Pm.enabled = true;
                 Cm.isESC = false;
@@ -40,5 +45,9 @@ public class Chatting : MonoBehaviour
                 Cm.enabled = false;
             }
         }
+    }
+    public void PrintText(string str)
+    {
+        Chat.text += str + "\n";
     }
 }
