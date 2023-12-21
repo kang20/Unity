@@ -2014,6 +2014,7 @@ MonoBehaviour:
   Cancel: {fileID: 1834170219}
   player: {fileID: 1789021482}
   Towel: {fileID: 0}
+  _Door: {fileID: 0}
 --- !u!114 &118733128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10386,6 +10387,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1789021482}
+    - target: {fileID: 3833698314586081814, guid: 7a6f862ca8c727d4c8a3ef7bc92f4b5d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a6f862ca8c727d4c8a3ef7bc92f4b5d, type: 3}
 --- !u!1 &734068393 stripped
@@ -13301,6 +13306,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1789021482}
+    - target: {fileID: 3833698314586081814, guid: 7a6f862ca8c727d4c8a3ef7bc92f4b5d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a6f862ca8c727d4c8a3ef7bc92f4b5d, type: 3}
 --- !u!1 &982518033
@@ -16282,6 +16291,13 @@ MonoBehaviour:
   DefaultCameraPos: {x: -4.83, y: 22.23, z: -24.19}
   DefaultCameraRot: {x: 35, y: 0, z: 0}
   PermitUseItemName: 
+  ActionWindow:
+  - {fileID: 1537711245}
+  - {fileID: 1184288828}
+  - {fileID: 1539913834}
+  - {fileID: 1388379438}
+  ActionDoor:
+  - {fileID: 1656165659}
   finalScore: 1000
 --- !u!1 &1129642590
 GameObject:
@@ -16637,6 +16653,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1789021482}
+    - target: {fileID: 3833698314586081814, guid: 7a6f862ca8c727d4c8a3ef7bc92f4b5d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a6f862ca8c727d4c8a3ef7bc92f4b5d, type: 3}
 --- !u!1 &1155485728
@@ -17475,6 +17495,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0828514, y: 0.16112383, z: 1.4855429}
   m_Center: {x: 0.997581, y: 0.0723234, z: 1.4736824}
+--- !u!114 &1184288828 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3833698314586081814, guid: 7a6f862ca8c727d4c8a3ef7bc92f4b5d, type: 3}
+  m_PrefabInstance: {fileID: 1154756141}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184288822}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e18bce99c86df804e82112d4faea5895, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1190954329
 GameObject:
   m_ObjectHideFlags: 0
@@ -19576,9 +19607,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 85407585}
     - target: {fileID: 3833698314586081814, guid: 7a6f862ca8c727d4c8a3ef7bc92f4b5d, type: 3}
+      propertyPath: Cancel
+      value: 
+      objectReference: {fileID: 964794088}
+    - target: {fileID: 3833698314586081814, guid: 7a6f862ca8c727d4c8a3ef7bc92f4b5d, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1789021482}
+    - target: {fileID: 3833698314586081814, guid: 7a6f862ca8c727d4c8a3ef7bc92f4b5d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4630023263827812534, guid: 7a6f862ca8c727d4c8a3ef7bc92f4b5d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a6f862ca8c727d4c8a3ef7bc92f4b5d, type: 3}
 --- !u!1001 &1313487475
@@ -21287,6 +21330,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0828512, y: 0.16112381, z: 1.4855429}
   m_Center: {x: 0.99758077, y: 0.07232177, z: 1.4736824}
+--- !u!114 &1388379438 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3833698314586081814, guid: 7a6f862ca8c727d4c8a3ef7bc92f4b5d, type: 3}
+  m_PrefabInstance: {fileID: 977993976}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388379432}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e18bce99c86df804e82112d4faea5895, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1392412734
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23779,6 +23833,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0828512, y: 0.16112381, z: 1.4855429}
   m_Center: {x: 0.99758077, y: 0.072322726, z: 1.4736824}
+--- !u!114 &1537711245 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3833698314586081814, guid: 7a6f862ca8c727d4c8a3ef7bc92f4b5d, type: 3}
+  m_PrefabInstance: {fileID: 1309244648}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537711239}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e18bce99c86df804e82112d4faea5895, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1539913828 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4630023263827812534, guid: 7a6f862ca8c727d4c8a3ef7bc92f4b5d, type: 3}
@@ -23797,6 +23862,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0828514, y: 0.16112383, z: 1.4855429}
   m_Center: {x: 0.99758005, y: 0.07232273, z: 1.4736824}
+--- !u!114 &1539913834 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3833698314586081814, guid: 7a6f862ca8c727d4c8a3ef7bc92f4b5d, type: 3}
+  m_PrefabInstance: {fileID: 733008074}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539913828}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e18bce99c86df804e82112d4faea5895, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1540979939
 GameObject:
   m_ObjectHideFlags: 0
@@ -26061,7 +26137,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1656165647}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39a6ab8c0ef491c469c579be1425e1b5, type: 3}
   m_Name: 
@@ -26069,7 +26145,9 @@ MonoBehaviour:
   player: {fileID: 1789021482}
   Btn: {fileID: 1043521039}
   Use: {fileID: 118733125}
+  Cancel: {fileID: 1834170216}
   Towel: {fileID: 1329010156}
+  isActable: 1
   highlightColor: {r: 0.18039216, g: 1, b: 0, a: 1}
 --- !u!1 &1659471846
 GameObject:
@@ -28976,6 +29054,7 @@ MonoBehaviour:
   Cancel: {fileID: 1834170219}
   player: {fileID: 1789021482}
   Towel: {fileID: 0}
+  _Door: {fileID: 0}
 --- !u!114 &1834170219
 MonoBehaviour:
   m_ObjectHideFlags: 0

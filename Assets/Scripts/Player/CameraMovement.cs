@@ -9,7 +9,7 @@ public class CameraMovement : MonoBehaviour
     [SerializeField]
     private GameObject LocalPlayerObj;
     [SerializeField]
-    private GameObject CameraArm;
+    public GameObject CameraArm;
     [SerializeField]
     private float sensitivity;
 

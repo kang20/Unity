@@ -39,16 +39,22 @@ public class Inventory : MonoBehaviour
 
     private void OpenInventory()
     {
-        go_InventoryBase.SetActive(true);
-        Cursor.visible = true;
+        CameraMovement cmm = Camera.main.GetComponent<CameraMovement>();
+        cmm.isESC = true;
+        cmm.CameraArm.transform.parent.GetComponent<PlayerMovement>().enabled = false;
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        go_InventoryBase.SetActive(true);
     }
 
     private void CloseInventory()
     {
-        go_InventoryBase.SetActive(false);
-        Cursor.visible = false;
+        CameraMovement cmm = Camera.main.GetComponent<CameraMovement>();
+        cmm.isESC = false;
+        cmm.CameraArm.transform.parent.GetComponent<PlayerMovement>().enabled = true;
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        go_InventoryBase.SetActive(false);
     }
 
     public void AcquireItem(ItemMaker _itemMaker, int _count = 1)

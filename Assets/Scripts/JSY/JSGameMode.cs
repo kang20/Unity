@@ -126,7 +126,7 @@ public class JSGameMode : MonoBehaviour
 
         //점수에 따른 평가 출력
         //체력 100, 점수 170
-        if(PHealth < 0)
+        if(PHealth < 0 || Rating <= 0)
         {
             Result.text += "F";
             Rating = 0;
