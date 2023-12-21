@@ -6,8 +6,12 @@ public class StrangerManager : MonoBehaviour
 {
     public GameObject[] StrangerPrefab; // Stranger 프리팹 배열
     public Transform[] spawnPoints; // 생성 위치를 가지고 있는 Transform 배열
-    public float spawnInterval = 1.5f; // 생성 간격 (3초로 설정)
-    public float spawnChance = 0.7f; // 5분의 1 확률로 생성 (0.2로 설정)
+    public float spawnInterval = 0.1f; // 생성 간격 (3초로 설정)
+    private float spawnChance = 0.7f; // 5분의 1 확률로 생성 (0.2로 설정)
+
+    public Transform[] targetPoinsts;
+
+
 
     private float timer = 0.0f;
 
@@ -30,7 +34,9 @@ public class StrangerManager : MonoBehaviour
                 int prefabIndex = Random.Range(0, StrangerPrefab.Length);
 
                 // 선택한 위치에 Stranger 생성
-                Instantiate(StrangerPrefab[prefabIndex], spawnPoints[spawnIndex].position, Quaternion.identity);
+                GameObject instance = Instantiate(StrangerPrefab[prefabIndex], spawnPoints[spawnIndex].position, Quaternion.identity);
+                instance.GetComponent<StrangerMovement>().target = targetPoinsts[Random.Range(0, targetPoinsts.Length)];
+                
             }
         }
     }

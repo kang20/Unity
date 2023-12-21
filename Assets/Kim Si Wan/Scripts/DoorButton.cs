@@ -9,6 +9,7 @@ public class DoorButton : MonoBehaviour
     public Button use;
     public Button Cancel;
     public GameObject player;
+    public GameObject Towel;
 
     private bool isTowel = false;
 
@@ -16,10 +17,13 @@ public class DoorButton : MonoBehaviour
     {
         for (int i = 0; i < 20; i++)
         {
-            if (player.GetComponent<PlayerStatus>().belongings[i].itemName == "Towel")
+            if (player.GetComponent<PlayerStatus>().belongings[i] != null)
             {
-                isTowel = true;
-                break;
+                if (player.GetComponent<PlayerStatus>().belongings[i].itemName == "Towel")
+                {
+                    isTowel = true;
+                    break;
+                }
             }
         }
 
@@ -30,11 +34,20 @@ public class DoorButton : MonoBehaviour
     }
     public void OnClickUse()
     {
-        player.GetComponent<PlayerStatus>().usedTowel = true;
+        SWAudio.instance.playSound("Button");
 
+        player.GetComponent<PlayerStatus>().usedTowel = true;
+        Towel.SetActive(true);
+
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Btn.SetActive(false);
     }
     public void OnClickCancel()
     {
+        SWAudio.instance.playSound("Button");
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         Btn.SetActive(false);
     }
 }
