@@ -119,7 +119,7 @@ public class FromReact : MonoBehaviour
         initfromUnity();
     }
 
-
+    //chat obj
     private class Chat
     {
         public Chat(string nn, string cm)
@@ -127,16 +127,19 @@ public class FromReact : MonoBehaviour
             nickname = nn;
             command = cm;
         }
-        string nickname;
-        string command;
+        public string nickname;
+        public string command;
     }
+
     // Unity -> React
     // 채팅 정보를 보내는 함수
     public void ChatfromUnity(string nickname, string command)
     {//채팅 엔터 입력시
+        Debug.Log("abcdef 1:" + nickname + command);
         Chat ct = new Chat(nickname, command);
+        Debug.Log("abcdef 2:" + nickname + command);
         string chatstr = JsonUtility.ToJson(ct);
-        Debug.Log(chatstr);
+        Debug.Log("abcdef 3:" + chatstr);
 
 #if UNITY_WEBGL == true && UNITY_EDITOR == false
         chat(chatstr);
