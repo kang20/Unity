@@ -22,6 +22,7 @@ public class CPRPlayerAnimation : MonoBehaviour
         if (_isCPR)
         {
             animator.SetBool("isCPR", true);
+            _isCPR = false;
         }
         else
         {
@@ -34,7 +35,6 @@ public class CPRPlayerAnimation : MonoBehaviour
             {
                 animator.SetBool("isJump", false);
             }
-
             if (_iswalk)
             {
                 animator.SetBool("isWalk", true);

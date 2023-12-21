@@ -27,25 +27,18 @@ public class SWAudio : MonoBehaviour
 
     public void playSound(string soundName)
     {
-        AudioClip nowAudioClip;
         if (soundName.Equals("Alarm"))
         {
-            nowAudioClip = alarmClip;
+            audioSource[0].clip = alarmClip;
+            audioSource[0].volume = LocalPlayerManager.instance.MainSound;
+            audioSource[0].Play();
         }
         // 버튼 효과음
         else
         {
-            nowAudioClip = buttonClip;
-        }
-
-        for (int i = 0; i < audioSource.Length; i++)
-        {
-            if (!audioSource[i].isPlaying)
-            {
-                audioSource[i].clip = nowAudioClip;
-                audioSource[i].Play();
-                return;
-            }
+            audioSource[1].clip = buttonClip;
+            audioSource[1].volume = LocalPlayerManager.instance.EffectSound;
+            audioSource[1].Play();
         }
     }
 }

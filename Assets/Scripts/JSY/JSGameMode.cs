@@ -50,7 +50,7 @@ public class JSGameMode : MonoBehaviour
 
     void Start()
     {
-        SirenAudio.volume = LocalPlayerManager.instance.MainSound + 50;
+        SirenAudio.volume = LocalPlayerManager.instance.MainSound;
         Camera.main.GetComponent<AudioSource>().volume = LocalPlayerManager.instance.EffectSound;
         StartUI.GetComponentInChildren<Button>().onClick.AddListener(StartBtn);
 

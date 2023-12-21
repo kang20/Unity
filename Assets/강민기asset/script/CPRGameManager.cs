@@ -12,7 +12,6 @@ public class CPRGameManager : MonoBehaviour
         startscreen.alpha = 0;
         startscreen.interactable = false;
         startscreen.enabled = false;
-
     }
 
     public void startscreen_Active()
@@ -27,7 +26,4 @@ public class CPRGameManager : MonoBehaviour
         startscreen.interactable = false;
         startscreen.enabled = false;
     }
-
-
-
 }

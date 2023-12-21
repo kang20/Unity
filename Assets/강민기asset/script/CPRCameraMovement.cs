@@ -7,9 +7,9 @@ public class CPRCameraMovement : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField]
-    private GameObject LocalPlayerObj;
+    public GameObject LocalPlayerObj;
     [SerializeField]
-    private GameObject CameraArm;
+    public GameObject CameraArm;
 
 
     [SerializeField]
@@ -18,13 +18,10 @@ public class CPRCameraMovement : MonoBehaviour
     private float mx = 0;
     private float my = 0;
 
-    private bool isESC = false;
+    public bool isESC = false;
     private CPRPlayerAnimation pa;
 
-
     public bool isMove;
-
-
 
     private void Start()
     {
@@ -39,8 +36,7 @@ public class CPRCameraMovement : MonoBehaviour
     {
         if(isMove) // 카메라 이동 가능 여부
         {
-
-            if (!pa._isCPR )
+            if (!pa._isCPR)
             {
                 if (!isESC)
                 {
@@ -84,11 +80,7 @@ public class CPRCameraMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F) )
         {
             clickOn();
-
         }
-
-
-
     }
 
     public void clickOn()
