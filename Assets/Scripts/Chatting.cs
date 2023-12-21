@@ -30,6 +30,7 @@ public class Chatting : MonoBehaviour
                     Chat.text += LocalPlayerManager.instance.Nickname + ":" + Chatt + "\n";
                 _InputField.enabled = false;
                 Pm.enabled = true;
+                Cm.isESC = false;
                 Cm.enabled = true;
             }
             else

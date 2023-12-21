@@ -16,7 +16,7 @@ public class CameraMovement : MonoBehaviour
     private float mx = 0;
     private float my = 0;
 
-    private bool isESC = false;
+    public bool isESC = false;
 
     private void Start()
     {
