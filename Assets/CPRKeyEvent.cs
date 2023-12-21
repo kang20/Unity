@@ -19,12 +19,16 @@ public class CPRKeyEvent : MonoBehaviour
     public GameObject AEDPanel;
     public GameObject startAEDpanel;
 
+    public GameObject camera;
+    private CPRCameraMovement cm;
     private void Start()
     {
         checkstat.SetActive(false);
         AEDPanel.SetActive(false);
         startAEDpanel.SetActive(false);
         pa = cpr.GetComponentInChildren<CPRPlayerAnimation>();
+        cm = camera.GetComponent<CPRCameraMovement>(); 
+
     }
 
 
@@ -41,6 +45,7 @@ public class CPRKeyEvent : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Q) && !is_statQ)
             {
+                cm.isMove = false;
                 pa._isCPR = true;
                 is_statQ = true;
                 checkstat.SetActive(false);
@@ -50,6 +55,7 @@ public class CPRKeyEvent : MonoBehaviour
             }
             if(Input.GetKeyDown(KeyCode.E) && !is_statQ && has_AED)
             {
+                cm.isMove = false;
                 pa._isCPR = true;
                 is_statQ = true;
                 checkstat.SetActive(false);

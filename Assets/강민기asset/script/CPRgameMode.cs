@@ -53,6 +53,11 @@ public class CPRgameMode : MonoBehaviour
     public GameObject AEDdetail_5;
     public GameObject AEDdetail_6;
 
+    public Text uncorrectTXT;
+
+
+    public GameObject camera;
+    private CPRCameraMovement cm;
     public void AED1to2()
     {
         AEDdetail_1.SetActive(false);
@@ -97,7 +102,6 @@ public class CPRgameMode : MonoBehaviour
 
 
 
-    public Text uncorrectTXT;
 
 
 
@@ -120,6 +124,7 @@ public class CPRgameMode : MonoBehaviour
         HP = Patient.GetComponentInChildren<PlayerHP_Bar>();
         // 3초 후에 MyFunction 함수 실행
         Invoke("start_setting", 3f);
+        cm = camera.GetComponent<CPRCameraMovement>();
 
     }
 
@@ -200,7 +205,7 @@ public class CPRgameMode : MonoBehaviour
 
         ke.is_statQ = false;
         pa._isCPR = true;
-
+        Debug.Log(isPerfect);
         if (!isPerfect)
         {
             uncorrectTXT.text = "정확하지 않은 응급처치";
@@ -224,7 +229,7 @@ public class CPRgameMode : MonoBehaviour
     {
         ending.SetActive(true);
         int score = (int)HP.currenthp;
-
+        cm.isMove = true;
         string resultText ="";
         string scoreText = "";
 
@@ -235,8 +240,10 @@ public class CPRgameMode : MonoBehaviour
         }
         else if (HP.currenthp > 50 && HP.currenthp <= 100)
         {
+
             resultText = "축하합니다!\n정확하고 신속한 응급처치 덕에 \n 한 사람의 생명을 구했습니다!!";
             scoreText = $"결과 : 5 분 이내 소요\nscore:{score}";
+
         }
         else if (HP.currenthp == 0)
         {
