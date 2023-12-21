@@ -52,6 +52,11 @@ public class CPRKeyEvent : MonoBehaviour
                 cprstartpanel.SetActive(true);
                 CPRplayer.position = cprspot.position;
                 CPRplayer.rotation = cprspot.rotation;
+
+                cm.isESC = true;
+                cm.CameraArm.transform.parent.GetComponent<CPRPlayerMovement>().enabled = false;
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
             }
             if(Input.GetKeyDown(KeyCode.E) && !is_statQ && has_AED)
             {
@@ -62,6 +67,11 @@ public class CPRKeyEvent : MonoBehaviour
                 startAEDpanel.SetActive(true);
                 CPRplayer.position = cprspot.position;
                 CPRplayer.rotation = cprspot.rotation;
+
+                cm.isESC = true;
+                cm.CameraArm.transform.parent.GetComponent<CPRPlayerMovement>().enabled = false;
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
             }
         }
     }

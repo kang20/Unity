@@ -130,14 +130,26 @@ public class CPRgameMode : MonoBehaviour
 
     public void start_setting()
     {
-        Camera.main.GetComponent<CPRCameraMovement>().enabled = false;
+        CPRCameraMovement cmm = Camera.main.GetComponent<CPRCameraMovement>();
+        cmm.isMove = false;
+        cmm.isESC = true;
+        cmm.CameraArm.transform.parent.GetComponent<CPRPlayerMovement>().enabled = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
         StartUI.SetActive(true);
     }
 
     public void StartBtn()
     {
+        CPRCameraMovement cmm = Camera.main.GetComponent<CPRCameraMovement>();
+        cmm.isMove = true;
+        cmm.isESC = false;
+        cmm.CameraArm.transform.parent.GetComponent<CPRPlayerMovement>().enabled = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 
-        Camera.main.GetComponent<CPRCameraMovement>().enabled = true;
+        //Camera.main.GetComponent<CPRCameraMovement>().enabled = true;
         StartUI.SetActive(false);
 
     }
@@ -209,7 +221,14 @@ public class CPRgameMode : MonoBehaviour
         if (!isPerfect)
         {
             uncorrectTXT.text = "정확하지 않은 응급처치";
-            Invoke("RMtxt", 3f);
+            Invoke("RMtxt", 3f);//여기서 무브 가능하게 설정
+
+            CPRCameraMovement cmm = Camera.main.GetComponent<CPRCameraMovement>();
+            cmm.isMove = true;
+            cmm.isESC = false;
+            cmm.CameraArm.transform.parent.GetComponent<CPRPlayerMovement>().enabled = true;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
         Invoke("CPR_anime", 3f);
         if (isPerfect)

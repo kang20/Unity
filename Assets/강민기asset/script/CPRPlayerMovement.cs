@@ -10,6 +10,7 @@ public class CPRPlayerMovement : MonoBehaviour
     [SerializeField]
     private float speed = 3;
     private Rigidbody rb;
+    public CPRCameraMovement cmm;
 
     private const float RAY_DISTANCE = 2f;
     private RaycastHit slopeHit;
@@ -27,53 +28,56 @@ public class CPRPlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //jump
-        if(Input.GetKeyDown(KeyCode.Space) && !pa._isCPR)
+        if (cmm.isMove)
         {
-            pa._isjump = true;
-
-            //ground check by raycast
-            Ray ray = new Ray(transform.position, Vector3.down);
-            if(Physics.Raycast(ray, 0.15f))
+            //jump
+            if (Input.GetKeyDown(KeyCode.Space) && !pa._isCPR)
             {
-                rb.AddForce(new Vector3(0, 200, 0));
-            }
-        }
-        else
-        {
-            pa._isjump = false;
-        }
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
-        moveDirection = transform.TransformDirection(new Vector3(x, 0, z)); //local position
+                pa._isjump = true;
 
-        //if (IsOnSlope())
-        //{
-        //    moveDirection = AdjustDirectionToSlope(moveDirection);
-        //}
-
-        if (moveDirection != Vector3.zero)
-        {
-            pa._iswalk = true;
-            if(Input.GetKey(KeyCode.LeftShift)) //run
-            {
-                pa._isrun = true;
-                speed = 7;
+                //ground check by raycast
+                Ray ray = new Ray(transform.position, Vector3.down);
+                if (Physics.Raycast(ray, 0.15f))
+                {
+                    rb.AddForce(new Vector3(0, 200, 0));
+                }
             }
             else
             {
-                pa._isrun = false;
-                speed = 3;
+                pa._isjump = false;
             }
-        }
-        else
-        {
-            pa._iswalk = false;
-        }
+            float x = Input.GetAxis("Horizontal");
+            float z = Input.GetAxis("Vertical");
+            moveDirection = transform.TransformDirection(new Vector3(x, 0, z)); //local position
 
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            pa._isCPR = false;
+            //if (IsOnSlope())
+            //{
+            //    moveDirection = AdjustDirectionToSlope(moveDirection);
+            //}
+
+            if (moveDirection != Vector3.zero)
+            {
+                pa._iswalk = true;
+                if (Input.GetKey(KeyCode.LeftShift)) //run
+                {
+                    pa._isrun = true;
+                    speed = 7;
+                }
+                else
+                {
+                    pa._isrun = false;
+                    speed = 3;
+                }
+            }
+            else
+            {
+                pa._iswalk = false;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                pa._isCPR = false;
+            }
         }
     }
     private void FixedUpdate()
