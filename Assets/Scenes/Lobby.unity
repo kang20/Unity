@@ -52393,7 +52393,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 100.000374}
+  m_AnchoredPosition: {x: 0, y: 100.00093}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &779372981
@@ -55433,8 +55433,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 666660567}
   m_HandleRect: {fileID: 666660565}
   m_Direction: 2
-  m_Value: -0.0000036621093
-  m_Size: 0.6666667
+  m_Value: -0.00000961304
+  m_Size: 0.66666675
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -94015,6 +94015,7 @@ MonoBehaviour:
   Chat: {fileID: 2001980066}
   Pm: {fileID: 584188104}
   Cm: {fileID: 1441423670}
+  FReact: {fileID: 2129187512}
 --- !u!1 &1388374972
 GameObject:
   m_ObjectHideFlags: 0
@@ -139666,6 +139667,7 @@ MonoBehaviour:
     is_walk: 0
     is_run: 0
   LobbyMode: {fileID: 2129187510}
+  Chatter: {fileID: 1387356839}
 --- !u!82 &2129187513
 AudioSource:
   m_ObjectHideFlags: 0

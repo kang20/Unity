@@ -12,9 +12,11 @@ public class FromReact : MonoBehaviour
     private static extern void info(string playerstr); // 플레이어의 상태 정보를 클라이언트(리액트로 보내는 함수)
     [DllImport("__Internal")] 
     private static extern void newplay(string initstr);// 플레이어의 플레이어가 생성했다는 메세지를 클라이언트(리액트)로 보내는 함수
-
     [DllImport("__Internal")]
     private static extern void BuildComplete(); // 플레이어의 상태 정보를 클라이언트(리액트로 보내는 함수)
+    [DllImport("__Internal")]
+    private static extern void chat(string sendchat);
+
 
     public initDTO _initDto;
     private string initstr;
@@ -26,6 +28,7 @@ public class FromReact : MonoBehaviour
 
     public GameMode LobbyMode;
 
+    public Chatting Chatter;
     private void Start()
     {
         if(LobbyMode.LocalPMgr.Nickname == "")
@@ -114,5 +117,39 @@ public class FromReact : MonoBehaviour
         _localDto = JsonUtility.FromJson<LocalDTO>(reactStat);
         LobbyMode.ConstructLocalPlayer(_localDto);
         initfromUnity();
+    }
+
+
+    private class Chat
+    {
+        public Chat(string nn, string cm)
+        {
+            nickname = nn;
+            command = cm;
+        }
+        string nickname;
+        string command;
+    }
+    // Unity -> React
+    // 채팅 정보를 보내는 함수
+    public void ChatfromUnity(string nickname, string command)
+    {//채팅 엔터 입력시
+        Chat ct = new Chat(nickname, command);
+        string chatstr = JsonUtility.ToJson(ct);
+        Debug.Log(chatstr);
+
+#if UNITY_WEBGL == true && UNITY_EDITOR == false
+        chat(chatstr);
+#else
+        Debug.Log("유니티(실행 위치) -> 리액트 : " + chatstr);
+#endif
+        Debug.Log("유니티(실행 위치) -> 리액트: " + chatstr);
+    }
+
+    //React -> Unity 추가 채팅 입력값이 넘어옴
+    public void ChatfromReact(string reactchat)
+    {
+        //  여기에 reactchat은 json의 문자열이 아닌 사용자 이름: command 형태의 바로 채팅 줄에 쓰일 문자열
+        Chatter.PrintText(reactchat);
     }
 }
