@@ -23,7 +23,7 @@ public class CameraMovement : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
-    
+
     void Update()
     {
         if (!isESC)
@@ -52,15 +52,15 @@ public class CameraMovement : MonoBehaviour
             Vector3 cameraRot = CameraArm.transform.eulerAngles;
             cameraRot.x = my;
             CameraArm.transform.eulerAngles = cameraRot; //rotate camera arm to mouse y axis
-
-            if(sensitivity != LocalPlayerManager.instance.MouseSensitivity)
-            {
-                sensitivity = 100 + LocalPlayerManager.instance.MouseSensitivity * 400;
-            }
         }
         if (Input.GetKeyDown(KeyCode.F))
         {
             RevertMouseInput();
+        }
+
+        if (sensitivity != 100 + LocalPlayerManager.instance.MouseSensitivity * 400)
+        {
+            sensitivity = 100 + LocalPlayerManager.instance.MouseSensitivity * 400;
         }
     }
     public void RevertMouseInput()

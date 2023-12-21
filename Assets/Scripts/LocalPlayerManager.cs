@@ -30,7 +30,6 @@ public class LocalPlayerManager : MonoBehaviour
     public float MouseSensitivity;
     public int PlayerPerson; //카메라 인칭
 
-
     void Start()
     {
         LocalPlayerModel = GameObject.Find("LPO");
