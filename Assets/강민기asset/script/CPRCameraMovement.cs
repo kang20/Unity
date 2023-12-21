@@ -22,6 +22,8 @@ public class CPRCameraMovement : MonoBehaviour
     private CPRPlayerAnimation pa;
 
 
+    public bool isMove;
+
 
 
     private void Start()
@@ -29,53 +31,59 @@ public class CPRCameraMovement : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = false;
         pa = LocalPlayerObj.GetComponentInChildren<CPRPlayerAnimation>();
+        isMove = true;
     }
     // Update is called once per frame
     void Update()
     {
-        if (!pa._isCPR )
+        if(isMove) // 카메라 이동 가능 여부
         {
-            if (!isESC)
+
+            if (!pa._isCPR )
             {
-                float mouseX = Input.GetAxis("Mouse X");
-                float mouseY = -Input.GetAxis("Mouse Y");
-                mx += mouseX * sensitivity * Time.deltaTime;
-                my += mouseY * sensitivity * Time.deltaTime;
-
-                if (LocalPlayerManager.instance.PlayerPerson == 3)
+                if (!isESC)
                 {
-                    my = Mathf.Clamp(my, -7, 35);
-                    CameraArm.transform.localPosition = new Vector3(2, 6, -5);
-                }
-                else
-                {
-                    my = Mathf.Clamp(my, -90, 60);
-                    CameraArm.transform.localPosition = new Vector3(0, 5, 0.5f);
-                }
+                    float mouseX = Input.GetAxis("Mouse X");
+                    float mouseY = -Input.GetAxis("Mouse Y");
+                    mx += mouseX * sensitivity * Time.deltaTime;
+                    my += mouseY * sensitivity * Time.deltaTime;
 
-                transform.position = CameraArm.transform.position;
-                transform.rotation = CameraArm.transform.rotation;
+                    if (LocalPlayerManager.instance.PlayerPerson == 3)
+                    {
+                        my = Mathf.Clamp(my, -7, 35);
+                        CameraArm.transform.localPosition = new Vector3(2, 6, -5);
+                    }
+                    else
+                    {
+                        my = Mathf.Clamp(my, -90, 60);
+                        CameraArm.transform.localPosition = new Vector3(0, 5, 0.5f);
+                    }
 
-                LocalPlayerObj.transform.eulerAngles = new Vector3(0, mx, 0); //rotate player to mouse x axis
+                    transform.position = CameraArm.transform.position;
+                    transform.rotation = CameraArm.transform.rotation;
 
-                Vector3 cameraRot = CameraArm.transform.eulerAngles;
-                cameraRot.x = my;
-                CameraArm.transform.eulerAngles = cameraRot; //rotate camera arm to mouse y axis
+                    LocalPlayerObj.transform.eulerAngles = new Vector3(0, mx, 0); //rotate player to mouse x axis
 
-                if (Input.GetKeyDown("["))
-                {
-                    sensitivity -= 100f;
-                }
+                    Vector3 cameraRot = CameraArm.transform.eulerAngles;
+                    cameraRot.x = my;
+                    CameraArm.transform.eulerAngles = cameraRot; //rotate camera arm to mouse y axis
 
-                if (Input.GetKeyDown("]"))
-                {
-                    sensitivity += 100f;
+                    if (Input.GetKeyDown("["))
+                    {
+                        sensitivity -= 100f;
+                    }
+
+                    if (Input.GetKeyDown("]"))
+                    {
+                        sensitivity += 100f;
+                    }
                 }
             }
-            if (Input.GetKeyDown(KeyCode.F) )
-            {
-                clickOn();
-            }
+        }
+        if (Input.GetKeyDown(KeyCode.F) )
+        {
+            clickOn();
+
         }
 
 
